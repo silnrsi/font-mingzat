@@ -4,10 +4,10 @@
   <unicode hex="02C7"/>
   <outline>
     <contour>
-      <point x="290" y="770" type="line" name="hr00"/>
+      <point x="290" y="770" type="line"/>
       <point x="200" y="600" type="line"/>
       <point x="90" y="600" type="line"/>
-      <point x="-0" y="770" type="line"/>
+      <point x="0" y="770" type="line"/>
       <point x="60" y="770" type="line"/>
       <point x="145" y="660" type="line"/>
       <point x="230" y="770" type="line"/>
@@ -16,14 +16,12 @@
   <lib>
     <dict>
       <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList>
-          <hintset pointTag="hr00">
-            <hstem pos="621" width="-21"/>
-            <hstem pos="770" width="-20"/>
-          </hintset>
-        </hintSetList>
-      </data>
+      <string>b''</string>
+      <key>com.schriftgestaltung.Glyphs.nodeUserData.0.6</key>
+      <dict>
+        <key>name</key>
+        <string>hr00</string>
+      </dict>
     </dict>
   </lib>
 </glyph>

@@ -4,14 +4,14 @@
   <unicode hex="FB01"/>
   <outline>
     <contour>
-      <point x="508" y="630" type="line" name="hr00"/>
+      <point x="508" y="630" type="line"/>
       <point x="410" y="630" type="line"/>
       <point x="410" y="722" type="line"/>
       <point x="508" y="722" type="line"/>
     </contour>
     <contour>
-      <point x="504" y="-0" type="line"/>
-      <point x="414" y="-0" type="line"/>
+      <point x="504" y="0" type="line"/>
+      <point x="414" y="0" type="line"/>
       <point x="414" y="500" type="line"/>
       <point x="504" y="500" type="line"/>
     </contour>
@@ -19,7 +19,7 @@
       <point x="330" y="648" type="line"/>
       <point x="314" y="655"/>
       <point x="296" y="660"/>
-      <point x="277" y="660" type="curve" smooth="yes" name="hr01"/>
+      <point x="277" y="660" type="curve" smooth="yes"/>
       <point x="223" y="660"/>
       <point x="200" y="637"/>
       <point x="200" y="573" type="curve" smooth="yes"/>
@@ -27,8 +27,8 @@
       <point x="320" y="500" type="line"/>
       <point x="320" y="435" type="line"/>
       <point x="200" y="435" type="line"/>
-      <point x="200" y="-0" type="line"/>
-      <point x="110" y="-0" type="line"/>
+      <point x="200" y="0" type="line"/>
+      <point x="110" y="0" type="line"/>
       <point x="110" y="435" type="line"/>
       <point x="10" y="435" type="line"/>
       <point x="10" y="500" type="line"/>
@@ -39,25 +39,28 @@
       <point x="265" y="732" type="curve" smooth="yes"/>
       <point x="289" y="732"/>
       <point x="311" y="729"/>
-      <point x="330" y="722" type="curve" name="hr02"/>
+      <point x="330" y="722" type="curve"/>
     </contour>
   </outline>
   <lib>
     <dict>
       <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList>
-          <hintset pointTag="hr00">
-            <hstem pos="21" width="-21"/>
-            <hstem pos="435" width="65"/>
-            <hstem pos="630" width="102"/>
-            <hstem pos="660" width="72"/>
-            <vstem pos="110" width="90"/>
-            <vstem pos="110" width="220"/>
-            <vstem pos="414" width="90"/>
-          </hintset>
-        </hintSetList>
-      </data>
+      <string>b''</string>
+      <key>com.schriftgestaltung.Glyphs.nodeUserData.0.3</key>
+      <dict>
+        <key>name</key>
+        <string>hr00</string>
+      </dict>
+      <key>com.schriftgestaltung.Glyphs.nodeUserData.2.2</key>
+      <dict>
+        <key>name</key>
+        <string>hr01</string>
+      </dict>
+      <key>com.schriftgestaltung.Glyphs.nodeUserData.2.22</key>
+      <dict>
+        <key>name</key>
+        <string>hr02</string>
+      </dict>
     </dict>
   </lib>
 </glyph>

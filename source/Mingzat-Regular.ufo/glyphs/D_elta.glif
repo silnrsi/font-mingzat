@@ -4,8 +4,8 @@
   <unicode hex="2206"/>
   <outline>
     <contour>
-      <point x="635" y="-0" type="line" name="hr00"/>
-      <point x="6" y="-0" type="line"/>
+      <point x="635" y="0" type="line"/>
+      <point x="6" y="0" type="line"/>
       <point x="340" y="718" type="line"/>
     </contour>
     <contour>
@@ -17,14 +17,12 @@
   <lib>
     <dict>
       <key>com.adobe.type.autohint</key>
-      <data>
-        <hintSetList>
-          <hintset pointTag="hr00">
-            <hstem pos="0" width="56"/>
-            <hstem pos="718" width="-20"/>
-          </hintset>
-        </hintSetList>
-      </data>
+      <string>b''</string>
+      <key>com.schriftgestaltung.Glyphs.nodeUserData.0.2</key>
+      <dict>
+        <key>name</key>
+        <string>hr00</string>
+      </dict>
     </dict>
   </lib>
 </glyph>

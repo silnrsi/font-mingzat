@@ -2,7 +2,9 @@ languagesystem DFLT dflt;
 languagesystem latn dflt;
 languagesystem grek dflt;
 languagesystem lepc dflt;
-feature kern { # Kerning
+
+feature kern {
+# Kerning
  # Latin
 lookup kern0 {
     pos uni1C23 uni1C06 -128;
@@ -330,42 +332,5 @@ lookup kern0 {
     pos uni1C151C251C24 uni1C07 -78;
     pos uni1C1D1C251C24 uni1C07 -50;
 } kern0;
+
 } kern;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
