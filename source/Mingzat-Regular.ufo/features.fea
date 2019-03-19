@@ -1,0 +1,371 @@
+languagesystem DFLT dflt;
+languagesystem latn dflt;
+languagesystem grek dflt;
+languagesystem lepc dflt;
+feature kern { # Kerning
+ # Latin
+lookup kern0 {
+    pos uni1C23 uni1C06 -128;
+    pos uni1C23 uni1C00 -104;
+    pos uni1C23 uni1C19 -108;
+    pos uni1C23 uni1C001C24 -144;
+    pos uni1C23 uni1C001C25 -132;
+    pos uni1C07 uni1C07 -94;
+    pos uni1C07 uni1C14 -46;
+    pos uni1C07 uni1C12 -41;
+    pos uni1C07 uni1C18 -34;
+    pos uni1C07 uni1C13 -39;
+    pos uni1C07 uni1C06 -140;
+    pos uni1C07 uni1C0C -58;
+    pos uni1C07 uni1C03 -63;
+    pos uni1C07 uni1C1D -104;
+    pos uni1C07 uni1C08 -79;
+    pos uni1C07 uni1C00 -140;
+    pos uni1C07 uni1C1C -41;
+    pos uni1C07 uni1C20 -55;
+    pos uni1C07 uni1C0A -113;
+    pos uni1C07 uni1C22 -91;
+    pos uni1C07 uni1C04 -111;
+    pos uni1C07 uni1C19 -89;
+    pos uni1C07 uni1C001C24 -137;
+    pos uni1C07 uni1C021C24 -43;
+    pos uni1C07 uni1C031C24 -63;
+    pos uni1C07 uni1C0A1C24 -94;
+    pos uni1C07 uni1C0C1C24 -55;
+    pos uni1C07 uni1C131C24 -58;
+    pos uni1C07 uni1C1C1C24 -48;
+    pos uni1C07 uni1C1D1C24 -79;
+    pos uni1C07 uni1C1F1C24 -55;
+    pos uni1C07 uni1C041C24 -82;
+    pos uni1C07 uni1C121C24 -51;
+    pos uni1C07 uni1C001C25 -87;
+    pos uni1C07 uni1C001C251C24 -167;
+    pos uni1C07 uni1C131C251C24 -46;
+    pos uni1C07 uni1C1D1C251C24 -77;
+    pos uni1C14 uni1C07 -37;
+    pos uni1C12 uni1C07 -59;
+    pos uni1C05 uni1C07 -86;
+    pos uni1C05 uni1C02 -37;
+    pos uni1C05 uni1C18 -25;
+    pos uni1C05 uni1C13 -53;
+    pos uni1C05 uni1C06 -127;
+    pos uni1C05 uni1C03 -71;
+    pos uni1C05 uni1C1D -53;
+    pos uni1C05 uni1C08 -49;
+    pos uni1C05 uni1C00 -170;
+    pos uni1C05 uni1C15 -46;
+    pos uni1C05 uni1C0D -142;
+    pos uni1C05 uni1C20 -71;
+    pos uni1C05 uni1C0A -133;
+    pos uni1C05 uni1C1F -46;
+    pos uni1C05 uni1C04 -74;
+    pos uni1C05 uni1C19 -120;
+    pos uni1C05 uni1C001C24 -136;
+    pos uni1C05 uni1C0A1C24 -127;
+    pos uni1C05 uni1C1D1C24 -31;
+    pos uni1C05 uni1C001C25 -139;
+    pos uni1C05 uni1C001C251C24 -145;
+    pos uni1C1E uni1C06 -177;
+    pos uni1C1E uni1C0C -40;
+    pos uni1C1E uni1C1D -102;
+    pos uni1C1E uni1C08 -34;
+    pos uni1C1E uni1C00 -127;
+    pos uni1C1E uni1C0A -31;
+    pos uni1C1E uni1C22 -56;
+    pos uni1C1E uni1C04 -77;
+    pos uni1C1E uni1C19 -90;
+    pos uni1C1E uni1C001C24 -133;
+    pos uni1C1E uni1C0A1C24 -74;
+    pos uni1C1E uni1C0C1C24 -34;
+    pos uni1C1E uni1C151C24 -28;
+    pos uni1C1E uni1C1D1C24 -77;
+    pos uni1C1E uni1C041C24 -53;
+    pos uni1C1E uni1C001C25 -99;
+    pos uni1C1E uni1C1D1C25 -49;
+    pos uni1C1E uni1C001C251C24 -96;
+    pos uni1C1E uni1C1D1C251C24 -80;
+    pos uni1C16 uni1C07 -153;
+    pos uni1C16 uni1C0C -102;
+    pos uni1C16 uni1C0A -61;
+    pos uni1C16 uni1C001C24 -56;
+    pos uni1C16 uni1C0A1C24 -46;
+    pos uni1C16 uni1C0C1C24 -70;
+    pos uni1C09 uni1C07 -197;
+    pos uni1C09 uni1C2B -46;
+    pos uni1C09 uni1C27 -75;
+    pos uni1C09 uni1C0D -24;
+    pos uni1C09 uni1C2A -58;
+    pos uni1C18 uni1C07 -50;
+    pos uni1C18 uni1C16 -48;
+    pos uni1C18 uni1C09 -25;
+    pos uni1C18 uni1C0E -91;
+    pos uni1C18 uni1C0E1C24 -66;
+    pos uni1C18 uni1C161C24 -50;
+    pos uni1C18 uni1C0E1C25 -27;
+    pos uni1C18 uni1C0E1C251C24 -50;
+    pos uni1C0B uni1C07 -93;
+    pos uni1C0B uni1C05 -54;
+    pos uni1C0B uni1C1E -66;
+    pos uni1C0B uni1C27 -72;
+    pos uni1C0B uni1C0E -111;
+    pos uni1C0B uni1C0E1C24 -128;
+    pos uni1C0B uni1C1E1C24 -78;
+    pos uni1C0B uni1C051C25 -69;
+    pos uni1C0B uni1C0E1C25 -99;
+    pos uni1C0B uni1C051C251C24 -57;
+    pos uni1C0B uni1C0E1C251C24 -126;
+    pos uni1C35 uni1C07 -88;
+    pos uni1C35 uni1C05 -63;
+    pos uni1C35 uni1C1E -76;
+    pos uni1C35 uni1C28 -29;
+    pos uni1C35 uni1C10 -42;
+    pos uni1C35 uni1C27 -237;
+    pos uni1C35 uni1C29 -19;
+    pos uni1C0F uni1C07 -116;
+    pos uni1C0F uni1C06 -45;
+    pos uni1C0C uni1C07 -116;
+    pos uni1C0C uni1C06 -66;
+    pos uni1C0C uni1C0E -41;
+    pos uni1C0C uni1C0E1C24 -57;
+    pos uni1C0C uni1C0E1C25 -43;
+    pos uni1C0C uni1C0E1C251C24 -46;
+    pos uni1C03 uni1C07 -50;
+    pos uni1C03 uni1C05 -30;
+    pos uni1C03 uni1C1E -18;
+    pos uni1C03 uni1C2A -82;
+    pos uni1C08 uni1C07 -173;
+    pos uni1C08 uni1C14 -46;
+    pos uni1C08 uni1C12 -55;
+    pos uni1C08 uni1C02 -98;
+    pos uni1C08 uni1C18 -98;
+    pos uni1C08 uni1C21 -71;
+    pos uni1C08 uni1C0F -39;
+    pos uni1C08 uni1C34 -46;
+    pos uni1C08 uni1C13 -80;
+    pos uni1C08 uni1C06 -173;
+    pos uni1C08 uni1C11 -37;
+    pos uni1C08 uni1C03 -112;
+    pos uni1C08 uni1C1D -50;
+    pos uni1C08 uni1C08 -128;
+    pos uni1C08 uni1C00 -190;
+    pos uni1C08 uni1C1C -66;
+    pos uni1C08 uni1C0D -215;
+    pos uni1C08 uni1C20 -173;
+    pos uni1C08 uni1C0A -107;
+    pos uni1C08 uni1C2A 39;
+    pos uni1C08 uni1C1F -91;
+    pos uni1C08 uni1C22 -55;
+    pos uni1C08 uni1C04 -132;
+    pos uni1C08 uni1C19 -155;
+    pos uni1C08 uni1C001C24 -190;
+    pos uni1C08 uni1C021C24 -66;
+    pos uni1C08 uni1C031C24 -89;
+    pos uni1C08 uni1C0A1C24 -103;
+    pos uni1C08 uni1C131C24 -59;
+    pos uni1C08 uni1C1C1C24 -46;
+    pos uni1C08 uni1C1D1C24 -68;
+    pos uni1C08 uni1C1F1C24 -71;
+    pos uni1C08 uni1C041C24 -141;
+    pos uni1C08 uni1C0F1C24 -32;
+    pos uni1C08 uni1C121C24 -57;
+    pos uni1C08 uni1C141C24 -57;
+    pos uni1C08 uni1C001C25 -185;
+    pos uni1C08 uni1C031C25 -89;
+    pos uni1C08 uni1C131C25 -71;
+    pos uni1C08 uni1C1D1C25 -62;
+    pos uni1C08 uni1C001C251C24 -199;
+    pos uni1C08 uni1C031C251C24 -96;
+    pos uni1C08 uni1C131C251C24 -52;
+    pos uni1C08 uni1C1D1C251C24 -48;
+    pos uni1C00 uni1C07 -89;
+    pos uni1C1C uni1C07 -37;
+    pos uni1C15 uni1C07 -74;
+    pos uni1C15 uni1C1B -39;
+    pos uni1C1B uni1C07 -242;
+    pos uni1C1B uni1C14 -60;
+    pos uni1C1B uni1C12 -108;
+    pos uni1C1B uni1C05 60;
+    pos uni1C1B uni1C1E 45;
+    pos uni1C1B uni1C16 39;
+    pos uni1C1B uni1C09 50;
+    pos uni1C1B uni1C02 -137;
+    pos uni1C1B uni1C10 50;
+    pos uni1C1B uni1C18 -155;
+    pos uni1C1B uni1C21 -126;
+    pos uni1C1B uni1C0B 66;
+    pos uni1C1B uni1C0F -55;
+    pos uni1C1B uni1C34 -55;
+    pos uni1C1B uni1C13 -124;
+    pos uni1C1B uni1C06 -237;
+    pos uni1C1B uni1C11 -34;
+    pos uni1C1B uni1C03 -131;
+    pos uni1C1B uni1C1D -100;
+    pos uni1C1B uni1C08 -176;
+    pos uni1C1B uni1C00 -321;
+    pos uni1C1B uni1C1C -79;
+    pos uni1C1B uni1C0D -265;
+    pos uni1C1B uni1C0E 34;
+    pos uni1C1B uni1C17 34;
+    pos uni1C1B uni1C1B 21;
+    pos uni1C1B uni1C20 -229;
+    pos uni1C1B uni1C0A -134;
+    pos uni1C1B uni1C2A 75;
+    pos uni1C1B uni1C1F -152;
+    pos uni1C1B uni1C22 -97;
+    pos uni1C1B uni1C04 -218;
+    pos uni1C1B uni1C1A -58;
+    pos uni1C1B uni1C19 -242;
+    pos uni1C1B uni1C001C24 -313;
+    pos uni1C1B uni1C021C24 -113;
+    pos uni1C1B uni1C031C24 -113;
+    pos uni1C1B uni1C0A1C24 -116;
+    pos uni1C1B uni1C0B1C24 92;
+    pos uni1C1B uni1C0E1C24 53;
+    pos uni1C1B uni1C101C24 63;
+    pos uni1C1B uni1C111C24 -68;
+    pos uni1C1B uni1C131C24 -173;
+    pos uni1C1B uni1C1B1C24 55;
+    pos uni1C1B uni1C1C1C24 -97;
+    pos uni1C1B uni1C1D1C24 -118;
+    pos uni1C1B uni1C1F1C24 -155;
+    pos uni1C1B uni1C011C24 45;
+    pos uni1C1B uni1C041C24 -195;
+    pos uni1C1B uni1C0F1C24 -42;
+    pos uni1C1B uni1C121C24 -108;
+    pos uni1C1B uni1C141C24 -71;
+    pos uni1C1B uni1C161C24 50;
+    pos uni1C1B uni1C1E1C24 60;
+    pos uni1C1B uni1C001C25 -321;
+    pos uni1C1B uni1C031C25 -108;
+    pos uni1C1B uni1C051C25 103;
+    pos uni1C1B uni1C0E1C25 60;
+    pos uni1C1B uni1C111C25 -45;
+    pos uni1C1B uni1C131C25 -147;
+    pos uni1C1B uni1C1D1C25 -100;
+    pos uni1C1B uni1C001C251C24 -339;
+    pos uni1C1B uni1C031C251C24 -105;
+    pos uni1C1B uni1C051C251C24 68;
+    pos uni1C1B uni1C0E1C251C24 63;
+    pos uni1C1B uni1C111C251C24 -58;
+    pos uni1C1B uni1C131C251C24 -147;
+    pos uni1C1B uni1C1D1C251C24 -118;
+    pos uni1C20 uni1C07 -69;
+    pos uni1C20 uni1C05 -27;
+    pos uni1C20 uni1C1E -34;
+    pos uni1C20 uni1C16 -49;
+    pos uni1C20 uni1C27 -91;
+    pos uni1C20 uni1C15 -42;
+    pos uni1C20 uni1C0D -64;
+    pos uni1C20 uni1C0E -69;
+    pos uni1C20 uni1C0E1C24 -89;
+    pos uni1C20 uni1C0E1C251C24 -66;
+    pos uni1C0A uni1C07 -44;
+    pos uni1C0A uni1C00 -62;
+    pos uni1C0A uni1C15 -62;
+    pos uni1C0A uni1C0D -62;
+    pos uni1C0A uni1C0E -52;
+    pos uni1C0A uni1C0A -37;
+    pos uni1C0A uni1C001C24 -39;
+    pos uni1C0A uni1C0A1C24 -30;
+    pos uni1C0A uni1C0E1C24 -49;
+    pos uni1C0A uni1C151C24 -52;
+    pos uni1C0A uni1C1E1C24 -57;
+    pos uni1C0A uni1C001C25 -39;
+    pos uni1C0A uni1C051C25 -39;
+    pos uni1C0A uni1C0E1C25 -57;
+    pos uni1C0A uni1C051C251C24 -49;
+    pos uni1C0A uni1C0E1C251C24 -52;
+    pos uni1C1F uni1C07 -78;
+    pos uni1C1F uni1C05 -33;
+    pos uni1C1F uni1C1E -72;
+    pos uni1C22 uni1C07 -204;
+    pos uni1C22 uni1C14 -96;
+    pos uni1C22 uni1C12 -123;
+    pos uni1C22 uni1C02 -138;
+    pos uni1C22 uni1C10 30;
+    pos uni1C22 uni1C18 -126;
+    pos uni1C22 uni1C21 -81;
+    pos uni1C22 uni1C0F -81;
+    pos uni1C22 uni1C34 -108;
+    pos uni1C22 uni1C26 -54;
+    pos uni1C22 uni1C13 -120;
+    pos uni1C22 uni1C06 -129;
+    pos uni1C22 uni1C0C -60;
+    pos uni1C22 uni1C11 -69;
+    pos uni1C22 uni1C03 -114;
+    pos uni1C22 uni1C1D -126;
+    pos uni1C22 uni1C08 -153;
+    pos uni1C22 uni1C00 -207;
+    pos uni1C22 uni1C1C -123;
+    pos uni1C22 uni1C0D -234;
+    pos uni1C22 uni1C20 -168;
+    pos uni1C22 uni1C0A -171;
+    pos uni1C22 uni1C1F -120;
+    pos uni1C22 uni1C22 -75;
+    pos uni1C22 uni1C04 -54;
+    pos uni1C22 uni1C1A -60;
+    pos uni1C22 uni1C19 -159;
+    pos uni1C04 uni1C2A -66;
+    pos uni1C0E1C24 uni1C07 -100;
+    pos uni1C0E1C24 uni1C001C24 -71;
+    pos uni1C101C24 uni1C07 -89;
+    pos uni1C111C24 uni1C07 -50;
+    pos uni1C131C24 uni1C07 -64;
+    pos uni1C151C24 uni1C07 -93;
+    pos uni1C151C24 uni1C001C24 -86;
+    pos uni1C1B1C24 uni1C07 -68;
+    pos uni1C1C1C24 uni1C07 -57;
+    pos uni1C1D1C24 uni1C07 -61;
+    pos uni1C011C24 uni1C07 -71;
+    pos uni1C011C24 uni1C001C24 -64;
+    pos uni1C161C24 uni1C07 -86;
+    pos uni1C1E1C24 uni1C07 -75;
+    pos uni1C231C24 uni1C07 -61;
+    pos uni1C001C251C24 uni1C07 -68;
+    pos uni1C031C251C24 uni1C07 -57;
+    pos uni1C051C251C24 uni1C07 -57;
+    pos uni1C0E1C251C24 uni1C07 -64;
+    pos uni1C111C251C24 uni1C07 -53;
+    pos uni1C131C251C24 uni1C07 -61;
+    pos uni1C151C251C24 uni1C07 -78;
+    pos uni1C1D1C251C24 uni1C07 -50;
+} kern0;
+} kern;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
