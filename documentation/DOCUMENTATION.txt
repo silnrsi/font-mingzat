@@ -1,0 +1,11 @@
+DOCUMENTATION
+Mingzat v0.100
+========================
+
+
+This file describes the documentation files included with the Mingzat
+font and any derivative works.
+
+Primary documentation for the Mingzat font is on the Mingzat
+website (http://scripts.sil.org/Mingzat).
+
