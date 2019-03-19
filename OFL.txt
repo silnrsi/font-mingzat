@@ -1,8 +1,12 @@
-Copyright (c) <dates>, <Copyright Holder> (<URL|email>),
-with Reserved Font Name <Reserved Font Name>.
-Copyright (c) <dates>, <additional Copyright Holder> (<URL|email>),
-with Reserved Font Name <additional Reserved Font Name>.
-Copyright (c) <dates>, <additional Copyright Holder> (<URL|email>).
+Lepcha glyph design Copyright (c) 2001, GlavyFonts and 
+Copyright (c) 2006 Athinkra, LLC (http://www.athinkra.com)
+with Reserved Font Name "JG Lepcha".
+
+OpenType and Graphite code Copyright (c) 2010-2019, SIL
+International (http://www.sil.org/) with Reserved Font Name "Mingzat".
+
+Latin glyph design Copyright (c) 1994-2013, SIL International
+(http://www.sil.org/), with Reserved Font Names 'SIL' and 'Sophia'.
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
