@@ -16,15 +16,4 @@
       <point x="70" y="771" type="line"/>
     </contour>
   </outline>
-  <lib>
-    <dict>
-      <key>com.adobe.type.autohint</key>
-      <string>b''</string>
-      <key>com.schriftgestaltung.Glyphs.nodeUserData.0.3</key>
-      <dict>
-        <key>name</key>
-        <string>hr00</string>
-      </dict>
-    </dict>
-  </lib>
 </glyph>

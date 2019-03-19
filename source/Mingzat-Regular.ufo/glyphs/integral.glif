@@ -50,15 +50,4 @@
       <point x="440" y="726"/>
     </contour>
   </outline>
-  <lib>
-    <dict>
-      <key>com.adobe.type.autohint</key>
-      <string>b''</string>
-      <key>com.schriftgestaltung.Glyphs.nodeUserData.0.43</key>
-      <dict>
-        <key>name</key>
-        <string>hr00</string>
-      </dict>
-    </dict>
-  </lib>
 </glyph>

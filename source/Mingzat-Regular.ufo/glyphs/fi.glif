@@ -42,25 +42,4 @@
       <point x="330" y="722" type="curve"/>
     </contour>
   </outline>
-  <lib>
-    <dict>
-      <key>com.adobe.type.autohint</key>
-      <string>b''</string>
-      <key>com.schriftgestaltung.Glyphs.nodeUserData.0.3</key>
-      <dict>
-        <key>name</key>
-        <string>hr00</string>
-      </dict>
-      <key>com.schriftgestaltung.Glyphs.nodeUserData.2.2</key>
-      <dict>
-        <key>name</key>
-        <string>hr01</string>
-      </dict>
-      <key>com.schriftgestaltung.Glyphs.nodeUserData.2.22</key>
-      <dict>
-        <key>name</key>
-        <string>hr02</string>
-      </dict>
-    </dict>
-  </lib>
 </glyph>
