@@ -1,0 +1,3 @@
+#!/bin/sh
+
+psfufo2glyphs source/Mingzat.designspace source/Mingzat.glyphs -l source/logs/ufo2g.log
