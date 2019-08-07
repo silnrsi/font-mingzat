@@ -17,7 +17,6 @@
 */
 
 #include "stddef.gdh"
-#include "glyph.gdh"
 
 // environment { PointRadius = 0 } // workaround for hinting bug
 
@@ -37,7 +36,7 @@
 
 Bidi = false;
 
-ScriptTag = (“lepc”, “latn”);
+ScriptTag = ("lepc", "latn");
 
 
 table(glyph) {MUnits = 1000};
@@ -107,9 +106,9 @@ cOOAboveFCS = (g1c29_1c2d, g1c29_1c2e, g1c29_1c2f, g1c29_1c30, g1c29_1c31, g1c29
 
 
 cNuktaRa = (g1c00, g1c03, g1c1d);
-cNuktaRaConj = (g1c00_1c37_1c25, g1c03_1c37_1c25, g1c1d_1c37_1c25);
+//cNuktaRaConj = (g1c00_1c37_1c25, g1c03_1c37_1c25, g1c1d_1c37_1c25); -- obsolete
 cNuktaNoConj = (g1c1b, g1c19);
-cNuktaConj = (g1c1b_1c37, g1c19_1c37);
+//cNuktaConj = (g1c1b_1c37, g1c19_1c37); -- obsolete
 
 cAfterVow = (g1c26, g1c2a, g1c2b, g1c2c);
 cAfterVow2 = (g1c26, g1c2a, g1c2b);
@@ -145,20 +144,20 @@ cTakesYa=C cYa=Y                       > cBasePlusYa:(C Y) {component {c1.ref = 
 cTakesYa=C cNukta=N cYa=Y              > cBasePlusYa:(C Y) {component {c1.ref = @C; c2.ref = @Y}} _ @N / _ ^ _ _ cAboveFCS? cRan?;
 
 // add in Vowels
-// cCons=C cAfterVow=V > @C @V / _ ^ cNukta? _;
-cCons=C cBeforeVow=V > @V @C / _ ^ _ cRan?;
-cCons=C cNukta=N cBeforeVow=V > @V @C @N / _ ^ _ _ cRan?;
-cTakesRaandRaYa=C cRa=R cAfterVow=V    > cBasePlusRa:(C R) {component {c1.ref = @C; c2.ref = @R}} @V _;
-cTakesRaandRaYa=C cRa=R cBeforeVow=V   > @V _ cBasePlusRa$C:(C R) {component {c1.ref = @C; c2.ref = @R}} / _ ^ _ _ cRan?;
+// cCons=C cAfterVow=V          > @C @V / _ ^ cNukta? _;
+cCons=C cBeforeVow=V            > @V @C / _ ^ _ cRan?;
+cCons=C cNukta=N cBeforeVow=V   > @V @C @N / _ ^ _ _ cRan?;
+cTakesRaandRaYa=C cRa=R cAfterVow=V            > cBasePlusRa:(C R) {component {c1.ref = @C; c2.ref = @R}} @V _;
+cTakesRaandRaYa=C cRa=R cBeforeVow=V           > @V _ cBasePlusRa$C:(C R) {component {c1.ref = @C; c2.ref = @R}} / _ ^ _ _ cRan?;
 cTakesRaandRaYa=C cNukta=N cRa=R cAfterVow=V   > cBasePlusRa:(C R) {component {c1.ref = @C; c2.ref = @R}} @N @V _;
 cTakesRaandRaYa=C cNukta=N cRa=R cBeforeVow=V  > @V cBasePlusRa$C:(C R) {component {c1.ref = @C; c2.ref = @R}} @N _ / _ ^ _ _ _ cRan?;
-cTakesRaandRaYa=C cRa=R cYa=Y cAfterVow=V  > cBasePlusRaYa:(C R Y) {component {c1.ref = @C; c2.ref = @R; c3.ref = @Y}} @V _ _;
-cTakesRaandRaYa=C cRa=R cYa=Y cBeforeVow=V > @V cBasePlusRaYa$C:(C R Y) {component {c1.ref = @C; c2.ref = @R; c3.ref = @Y}} _ _/ _ ^ _ _ _ cRan?;
-cTakesRaandRaYa=C cNukta=N cRa=R cYa=Y cAfterVow=V > cBasePlusRaYa:(C R Y) {component {c1.ref = @C; c2.ref = @R; c3.ref = @Y}} @N @V _ _;
+cTakesRaandRaYa=C cRa=R cYa=Y cAfterVow=V      > cBasePlusRaYa:(C R Y) {component {c1.ref = @C; c2.ref = @R; c3.ref = @Y}} @V _ _;
+cTakesRaandRaYa=C cRa=R cYa=Y cBeforeVow=V     > @V cBasePlusRaYa$C:(C R Y) {component {c1.ref = @C; c2.ref = @R; c3.ref = @Y}} _ _/ _ ^ _ _ _ cRan?;
+cTakesRaandRaYa=C cNukta=N cRa=R cYa=Y cAfterVow=V  > cBasePlusRaYa:(C R Y) {component {c1.ref = @C; c2.ref = @R; c3.ref = @Y}} @N @V _ _;
 cTakesRaandRaYa=C cNukta=N cRa=R cYa=Y cBeforeVow=V > @V cBasePlusRaYa$C:(C R Y) {component {c1.ref = @C; c2.ref = @R; c3.ref = @Y}} @N _ _ / _ ^ _ _ _ _ cRan?;
-cTakesYa=C cYa=Y cAfterVow=V                      > cBasePlusYa:(C Y) {component {c1.ref = @C; c2.ref = @Y}} @V _;
-cTakesYa=C cYa=Y cBeforeVow=V                     > @V cBasePlusYa$C:(C Y) {component {c1.ref = @C; c2.ref = @Y}} _ / _ ^ _ _ cRan?;
-cTakesYa=C cNukta=N cYa=Y cAfterVow=V              > cBasePlusYa:(C Y) {component {c1.ref = @C; c2.ref = @Y}} @N @V _;
+cTakesYa=C cYa=Y cAfterVow=V                        > cBasePlusYa:(C Y) {component {c1.ref = @C; c2.ref = @Y}} @V _;
+cTakesYa=C cYa=Y cBeforeVow=V                       > @V cBasePlusYa$C:(C Y) {component {c1.ref = @C; c2.ref = @Y}} _ / _ ^ _ _ cRan?;
+cTakesYa=C cNukta=N cYa=Y cAfterVow=V               > cBasePlusYa:(C Y) {component {c1.ref = @C; c2.ref = @Y}} @N @V _;
 cTakesYa=C cNukta=N cYa=Y cBeforeVow=V              > @V cBasePlusYa$C:(C Y) {component {c1.ref = @C; c2.ref = @Y}} @N _ / _ ^ _ _ _ cRan?;
 
 // add in Ran
@@ -257,14 +256,14 @@ cTakesRaandRaYa=C cNukta=N cRa=R cYa=Y cBeforeVowAbv=V cKang=F cRan=S > @F @V @S
 cTakesYa=C cYa=Y cBeforeVowAbv=V cKang=F cRan=S                       > @F @V @S cBasePlusYa$C:(C Y) {component {c1.ref = @C; c2.ref = @Y}} _;
 cTakesYa=C cNukta=N cYa=Y cBeforeVowAbv=V cKang=F cRan=S              > @F @V @S cBasePlusYa$C:(C Y) {component {c1.ref = @C; c2.ref = @Y}} @N _;
 
-cCons=C g1c27=V cKang=F                                > g1c27_1c35:(F V) {component {c1.ref = @F; c2.ref = @V}} @C / _ ^ _ _ cRan?;
-cCons=C cNukta=N g1c27=V cKang=F                       > g1c27_1c35:(F V) {component {c1.ref = @F; c2.ref = @V}} @C @N / _ ^ _ _ _ cRan?;
-cTakesRaandRaYa=C cRa=R g1c27=V cKang=F                > g1c27_1c35:(F V) {component {c1.ref = @F; c2.ref = @V}} cBasePlusRa$C:(C R) {component {c1.ref = @C; c2.ref = @R}} _ / _ ^ _ _ _ cRan?;
-cTakesRaandRaYa=C cNukta=N cRa=R g1c27=V cKang=F       > g1c27_1c35:(F V) {component {c1.ref = @F; c2.ref = @V}} cBasePlusRa$C:(C R) {component {c1.ref = @C; c2.ref = @R}} @N _ / _ ^ _ _ _ _ cRan?;
-cTakesRaandRaYa=C cRa=R cYa=Y g1c27=V cKang=F          > g1c27_1c35:(F V) {component {c1.ref = @F; c2.ref = @V}} cBasePlusRaYa$C:(C R Y) {component {c1.ref = @C; c2.ref = @R; c3.ref = @Y}} _ _/ _ ^ _ _ _ _ cRan?;
-cTakesRaandRaYa=C cNukta=N cRa=R cYa=Y g1c27=V cKang=F > g1c27_1c35:(F V) {component {c1.ref = @F; c2.ref = @V}} cBasePlusRaYa$C:(C R Y) {component {c1.ref = @C; c2.ref = @R; c3.ref = @Y}} @N _ _ / _ ^ _ _ _ _ _ cRan?;
-cTakesYa=C cYa=Y g1c27=V cKang=F                       > g1c27_1c35:(F V) {component {c1.ref = @F; c2.ref = @V}} cBasePlusYa$C:(C Y) {component {c1.ref = @C; c2.ref = @Y}} _ / _ ^ _ _ _ cRan?;
-cTakesYa=C cNukta=N cYa=Y g1c27=V cKang=F              > g1c27_1c35:(F V) {component {c1.ref = @F; c2.ref = @V}} cBasePlusYa$C:(C Y) {component {c1.ref = @C; c2.ref = @Y}} _ @N / _ ^ _ _ _ _ cRan?;
+cCons=C g1c27=V cKang=F                                > g1c27_1c35:(F V) {component {c1.ref = @F; c2.ref = @V}} _ @C / _ ^ _ _ cRan?;
+cCons=C cNukta=N g1c27=V cKang=F                       > g1c27_1c35:(F V) {component {c1.ref = @F; c2.ref = @V}} _ @C @N / _ ^ _ _ _ cRan?;
+cTakesRaandRaYa=C cRa=R g1c27=V cKang=F                > g1c27_1c35:(F V) {component {c1.ref = @F; c2.ref = @V}} _ cBasePlusRa$C:(C R) {component {c1.ref = @C; c2.ref = @R}} _ / _ ^ _ _ _ cRan?;
+cTakesRaandRaYa=C cNukta=N cRa=R g1c27=V cKang=F       > g1c27_1c35:(F V) {component {c1.ref = @F; c2.ref = @V}} _ cBasePlusRa$C:(C R) {component {c1.ref = @C; c2.ref = @R}} @N _ / _ ^ _ _ _ _ cRan?;
+cTakesRaandRaYa=C cRa=R cYa=Y g1c27=V cKang=F          > g1c27_1c35:(F V) {component {c1.ref = @F; c2.ref = @V}} _ cBasePlusRaYa$C:(C R Y) {component {c1.ref = @C; c2.ref = @R; c3.ref = @Y}} _ _/ _ ^ _ _ _ _ cRan?;
+cTakesRaandRaYa=C cNukta=N cRa=R cYa=Y g1c27=V cKang=F > g1c27_1c35:(F V) {component {c1.ref = @F; c2.ref = @V}} _ cBasePlusRaYa$C:(C R Y) {component {c1.ref = @C; c2.ref = @R; c3.ref = @Y}} @N _ _ / _ ^ _ _ _ _ _ cRan?;
+cTakesYa=C cYa=Y g1c27=V cKang=F                       > g1c27_1c35:(F V) {component {c1.ref = @F; c2.ref = @V}} _ cBasePlusYa$C:(C Y) {component {c1.ref = @C; c2.ref = @Y}} _ / _ ^ _ _ _ cRan?;
+cTakesYa=C cNukta=N cYa=Y g1c27=V cKang=F              > g1c27_1c35:(F V) {component {c1.ref = @F; c2.ref = @V}} _ cBasePlusYa$C:(C Y) {component {c1.ref = @C; c2.ref = @Y}} _ @N / _ ^ _ _ _ _ cRan?;
 
 // add in Ran
 cCons=C cAfterVow=V cAboveFCS=F cRan=S                    > @C @F @S @V;
@@ -297,7 +296,7 @@ cTakesYa=C cNukta=N cYa=Y cBeforeVowAbv=V cAboveFCS=F cRan=S              > @V @
 
 // Nyin-do doesn't go with dependent vowels
 cCons=C cAfterVow2=V cKang=F cRan=S                                 > @F @C @S @V / _ ^ _ _ _;
-cCons=C cNukta=N cAfterVow2=V cKang=F cRan=S                        > @F @C @S @V / _ ^ _ _ _ _;
+cCons=C cNukta=N cAfterVow2=V cKang=F cRan=S                        > @F @C _ @S @V / _ ^ _ _ _ _;
 cTakesRaandRaYa=C cRa=R cAfterVow2=V cKang=F cRan=S                 > @F cBasePlusRa$C:(C R) {component {c1.ref = @C; c2.ref = @R}} @S @V _;
 cTakesRaandRaYa=C cNukta=N cRa=R cAfterVow2=V cKang=F cRan=S        > @F cBasePlusRa$C:(C R) {component {c1.ref = @C; c2.ref = @R}} @N @S @V _;
 cTakesRaandRaYa=C cRa=R cYa=Y cAfterVow2=V cKang=F cRan=S           > @F cBasePlusRaYa$C:(C R Y) {component {c1.ref = @C; c2.ref = @R; c3.ref = @Y}} @S @V _ _;
