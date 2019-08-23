@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 Mingzat-WOFF-metadata.html
-Mingzat Regular v0.100
-This file is part of Mingzat font family (http://scripts.sil.org/Mingzat).
+Mingzat Regular v0.900
+This file is part of Mingzat font family (http://software.sil.org/mingzat).
 Lepcha glyph design Copyright (c) 2001, GlavyFonts and 
 Copyright (c) 2006 Athinkra, LLC (http://www.athinkra.com)
 with Reserved Font Name "JG Lepcha".
 
-OpenType and Graphite code Copyright (c) 2010-2013, SIL
+OpenType and Graphite code Copyright (c) 2010-2019, SIL
 International (http://www.sil.org/) with Reserved Font Name "Mingzat".
 
-Latin glyph design Copyright (c) 1994-2013, SIL International
+Latin glyph design Copyright (c) 1994-2019, SIL International
 (http://www.sil.org/), with Reserved Font Names 'SIL' and 'Sophia'.
 This Font Software is licensed under the SIL Open Font License, Version 1.1. 
 You should have received a copy of the license along with this Font Software. 
@@ -18,13 +18,21 @@ If this is not the case, go to (http://scripts.sil.org/OFL) for all the details
 including a FAQ.
 -->
 <metadata version="1.0">
-    <uniqueid id="org.sil.fonts.mingzat.0.100" />
+    <uniqueid id="org.sil.fonts.mingzat.0.900" />
     <vendor name="SIL International" url="http://scripts.sil.org" />
     <credits>
         <credit
             name="Walt Agee"
             url="http://scripts.sil.org/"
             role="Font designer (for Sophia) />
+        <credit
+            name="Sharon Correll"
+            url="http://scripts.sil.org/"
+            role="Font engineer/>
+        <credit
+            name="Lorna Priest Evans"
+            url="http://scripts.sil.org/"
+            role="Font designer (for a few Lepcha glyphs), Font engineer/>
         <credit
             name="Victor Gaultney"
             url="http://www.sil.org/~gaultney/"
@@ -33,10 +41,6 @@ including a FAQ.
             name="Jason Glavy"
             url="http://www.athinkra.com"
             role="Font designer (for Lepcha) />
-        <credit
-            name="Lorna Priest"
-            url="http://scripts.sil.org/"
-            role="Font designer (for a few Lepcha glyphs), Font engineer/>
     </credits>
     <description>
         <text lang="en">

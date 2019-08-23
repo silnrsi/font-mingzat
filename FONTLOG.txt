@@ -58,6 +58,16 @@ E:  fonts@sil.org
 W: http://scripts.sil.org/
 D: Font designer (for Sophia)
 
+N: Sharon Correl
+E:  fonts@sil.org
+W: http://scripts.sil.org/
+D: Font engineer
+
+N: Lorna Priest Evans
+E:  fonts@sil.org
+W: http://scripts.sil.org/
+D: Font designer (for a few Lepcha glyphs), Font engineer
+
 N: Victor Gaultney
 E:  fonts@sil.org
 W: http://www.sil.org/~gaultney/
@@ -68,15 +78,11 @@ E: jglavy@gmail.com
 W: http://www.athinkra.com 
 D: Font designer (for Lepcha)
 
-N: Lorna Priest
-E:  fonts@sil.org
-W: http://scripts.sil.org/
-D: Font designer (for a few Lepcha glyphs), Font engineer
 
 The Mingzat project is maintained by SIL International.
 
 For more information please visit the Mingzat page on SIL International's
 Computers and Writing systems website:
-http://scripts.sil.org/Mingzat
+http://software.sil.org/mingzat
 
 Or send an email to fonts@sil.org

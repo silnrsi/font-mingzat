@@ -1,5 +1,5 @@
 README 
-Mingzat Release 0.100
+Mingzat Release 0.900
 ========================
 
 Thank you for your interest in the Mingzat font.
@@ -12,7 +12,7 @@ Mingzat is released under the SIL Open Font License.
 	
 See the OFL and OFL-FAQ for details of the SIL Open Font License.
 See the FONTLOG for information on this and previous releases.
-See the website (http://scripts.sil.org/Mingzat) for further documentation. 
+See the website (http://software.sil.org/mingzat) for further documentation. 
 
 
 TIPS
@@ -40,13 +40,10 @@ need some way of entering Unicode text into your document.
 
 Keyboarding:
 This font can be used with any Unicode Lepcha keyboarding program. 
-However, we have included a Keyman keyboard which you will need to
-download separately (LepchaKeymanKbd.kmp). The Keyman keyboard 
-is based on a phonetic representation of the script. The Keyman program 
-is not an SIL product, and it is not free. You must install Keyman before
- you install this keyboard. You can purchase and download Keyman here: 
- http://tavultesoft.com. Please read the documentation (readme.html) which 
- comes with the keyboard to learn the keyboard sequences.
+
+However, Keyman is a crossplatform keyboarding system and one Lepcha 
+keyboard is available:
+https://keyman.com/keyboards/sil_lepcha
 
 Rendering:
 This font is designed to work with Graphite or Opentype advanced font 
@@ -57,22 +54,22 @@ adequate level of support for Graphite or OpenType.
 Lepcha is a complex Indic script which requires reordering. At this time, 
 there is little (or no) support for the Lepcha script in commercial rendering 
 systems. Thus, there are only a few applications which can adequately
-render Lepcha. Please see the Mingzat webpage (http://scripts.sil.org/Mingzat)
+render Lepcha. Please see the Mingzat webpage (http://software.sil.org/mingzat)
 for information on which applications can be used with the Mingzat font.
 
 
 INSTALLATION AND CONFIGURATION
 ==============================
 If you are not sure how to install the fonts, please see:
-http://scripts.sil.org/DecompressUtil for instructions on font installations on
-various operating systems.
+https://software.sil.org/lcgfonts/resources/installing-and-using-fonts/ for 
+instructions on font installations on various operating systems.
 
 
 CONTACT
 ========
 For more information please visit the Mingzat page on SIL International's
 Computers and Writing systems website:
-http://scripts.sil.org/Mingzat
+http://software.sil.org/mingzat
 
 Or send an email to fonts@sil.org
 
