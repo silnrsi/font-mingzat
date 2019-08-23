@@ -7,7 +7,7 @@
   <key>capHeight</key>
   <integer>1100</integer>
   <key>copyright</key>
-  <string>Lepcha glyph design copyright (c) 2001, GlavyFonts and copyright (c) 2006 Athinkra, LLC. OpenType and Graphite code copyright (c) 2010-2019, SIL International (http://www.sil.org/). Latin glyph design copyright (c) 1994-2011, SIL International (http://www.sil.org/).</string>
+  <string>Lepcha glyph design copyright (c) 2001, GlavyFonts and copyright (c) 2006 Athinkra, LLC. OpenType and Graphite code copyright (c) 2010-2019, SIL International (http://www.sil.org/). Latin glyph design copyright (c) 1994-2019, SIL International (http://www.sil.org/).</string>
   <key>descender</key>
   <integer>-670</integer>
   <key>familyName</key>
@@ -50,7 +50,7 @@
   
   OpenType and Graphite code copyright (c) 2010-2019, SIL International (http://www.sil.org/) with Reserved Font Name "Mingzat".
   
-  Latin glyph design copyright (c) 1994-2011, SIL International (http://www.sil.org/), with Reserved Font Names "SIL" and "Sophia".
+  Latin glyph design copyright (c) 1994-2019, SIL International (http://www.sil.org/), with Reserved Font Names "SIL" and "Sophia".
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL
 
@@ -111,11 +111,6 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
   <array>
     <integer>0</integer>
     <integer>29</integer>
-  </array>
-  <key>openTypeOS2FamilyClass</key>
-  <array>
-    <integer>0</integer>
-    <integer>0</integer>
   </array>
   <key>openTypeOS2Panose</key>
   <array>
