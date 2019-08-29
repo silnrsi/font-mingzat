@@ -145,47 +145,43 @@ lookup _dbl_Vtl1C33Ran { sub @consAll  by  uni1C291C33  @ran  @consAll  uni1C291
 lookup _dbl_Vtl1C35Ran { sub @consAll  by  uni1C291C35  @ran  @consAll  uni1C291C35; } _dbl_Vtl1C35Ran ;
 
 
-lookup _del_extra   { sub @consAll  @VtlAll          by  @consAll; } _del_extra ;
-
-lookup _del_extraR  { sub @consAll  @VtlAll  @ran   by  @consAll; } _del_extraR ;
-
-lookup _del_extraWR  { sub @ran  @consAll'  @VtlAll'  by  @consAll; } _del_extraWR ;
-
-#lookup _del_extraM  { sub @consAll  @VtlAll  @M     by  @consAll; } _del_extraM ;
+lookup _del_extra     {
+		sub      @consAll' @VtlAll' @ran' by  @consAll;
+		sub @ran @consAll' @VtlAll'       by  @consAll;
+		sub      @consAll' @VtlAll'       by  @consAll;
+} _del_extra ;
 
 lookup _delete_dup {
-  sub  @M  @VtlAll          by  @M ;
- #sub  @N  @VtlAll  @M      by  @N ;
-  sub  @N  @VtlAll          by  @N ;  # this won't work when the nukta was in a cons cluster, see kludge in Reorder_CryNMV_delV
+	sub  @N  @VtlAll  @ran  by  @N ;
+  sub  @M  @VtlAll        by  @M ;
+ #sub  @N  @VtlAll  @M    by  @N ;
+  sub  @N  @VtlAll        by  @N ;  # this won't work when the nukta was in a cons cluster, see kludge in Reorder_CryNMV_delV
 } _delete_dup ;
 
-lookup _delete_dupR {
-	sub  @N'  @VtlAll'  @ran'  by  @N ;
-} _delete_dupR;
 
 # put longer rules first
 lookup Reorder_CryNVR {
   # C V R -> V R C V -> V R C
-	sub  @consAll' lookup _ins_VtlRan      @Vtl'          @ran'lookup _del_extraR ;
-  sub  @consAll' lookup _ins_Vtl1C2DRan  uni1C291C2D'   @ran'lookup _del_extraR ;
-  sub  @consAll' lookup _ins_Vtl1C2ERan  uni1C291C2E'   @ran'lookup _del_extraR ;
-  sub  @consAll' lookup _ins_Vtl1C2FRan  uni1C291C2F'   @ran'lookup _del_extraR ;
-  sub  @consAll' lookup _ins_Vtl1C30Ran  uni1C291C30'   @ran'lookup _del_extraR ;
-  sub  @consAll' lookup _ins_Vtl1C31Ran  uni1C291C31'   @ran'lookup _del_extraR ;
-  sub  @consAll' lookup _ins_Vtl1C32Ran  uni1C291C32'   @ran'lookup _del_extraR ;
-  sub  @consAll' lookup _ins_Vtl1C33Ran  uni1C291C33'   @ran'lookup _del_extraR ;
-  sub  @consAll' lookup _ins_Vtl1C35Ran  uni1C291C35'   @ran'lookup _del_extraR ;
+	sub  @consAll' lookup _ins_VtlRan      @Vtl'          @ran'lookup _del_extra ;
+  sub  @consAll' lookup _ins_Vtl1C2DRan  uni1C291C2D'   @ran'lookup _del_extra ;
+  sub  @consAll' lookup _ins_Vtl1C2ERan  uni1C291C2E'   @ran'lookup _del_extra ;
+  sub  @consAll' lookup _ins_Vtl1C2FRan  uni1C291C2F'   @ran'lookup _del_extra ;
+  sub  @consAll' lookup _ins_Vtl1C30Ran  uni1C291C30'   @ran'lookup _del_extra ;
+  sub  @consAll' lookup _ins_Vtl1C31Ran  uni1C291C31'   @ran'lookup _del_extra ;
+  sub  @consAll' lookup _ins_Vtl1C32Ran  uni1C291C32'   @ran'lookup _del_extra ;
+  sub  @consAll' lookup _ins_Vtl1C33Ran  uni1C291C33'   @ran'lookup _del_extra ;
+  sub  @consAll' lookup _ins_Vtl1C35Ran  uni1C291C35'   @ran'lookup _del_extra ;
   
   # C N V R -> V R C V N V R -> V R C N V R -> V C N
-  sub  @consAll' lookup _dbl_VtlRan      @N'  @Vtl'        lookup _del_extraWR  @ran' lookup _delete_dupR ;
-  sub  @consAll' lookup _dbl_Vtl1C2DRan  @N'  uni1C291C2D' lookup _del_extraWR  @ran' lookup _delete_dupR ;
-  sub  @consAll' lookup _dbl_Vtl1C2ERan  @N'  uni1C291C2E' lookup _del_extraWR  @ran' lookup _delete_dupR ;
-  sub  @consAll' lookup _dbl_Vtl1C2FRan  @N'  uni1C291C2F' lookup _del_extraWR  @ran' lookup _delete_dupR ;
-  sub  @consAll' lookup _dbl_Vtl1C30Ran  @N'  uni1C291C30' lookup _del_extraWR  @ran' lookup _delete_dupR ;
-  sub  @consAll' lookup _dbl_Vtl1C31Ran  @N'  uni1C291C31' lookup _del_extraWR  @ran' lookup _delete_dupR ;
-  sub  @consAll' lookup _dbl_Vtl1C32Ran  @N'  uni1C291C32' lookup _del_extraWR  @ran' lookup _delete_dupR ;
-  sub  @consAll' lookup _dbl_Vtl1C33Ran  @N'  uni1C291C33' lookup _del_extraWR  @ran' lookup _delete_dupR ;
-  sub  @consAll' lookup _dbl_Vtl1C35Ran  @N'  uni1C291C35' lookup _del_extraWR  @ran' lookup _delete_dupR ;
+  sub  @consAll' lookup _dbl_VtlRan      @N'  @Vtl'        lookup _del_extra  @ran' lookup _delete_dup ;
+  sub  @consAll' lookup _dbl_Vtl1C2DRan  @N'  uni1C291C2D' lookup _del_extra  @ran' lookup _delete_dup ;
+  sub  @consAll' lookup _dbl_Vtl1C2ERan  @N'  uni1C291C2E' lookup _del_extra  @ran' lookup _delete_dup ;
+  sub  @consAll' lookup _dbl_Vtl1C2FRan  @N'  uni1C291C2F' lookup _del_extra  @ran' lookup _delete_dup ;
+  sub  @consAll' lookup _dbl_Vtl1C30Ran  @N'  uni1C291C30' lookup _del_extra  @ran' lookup _delete_dup ;
+  sub  @consAll' lookup _dbl_Vtl1C31Ran  @N'  uni1C291C31' lookup _del_extra  @ran' lookup _delete_dup ;
+  sub  @consAll' lookup _dbl_Vtl1C32Ran  @N'  uni1C291C32' lookup _del_extra  @ran' lookup _delete_dup ;
+  sub  @consAll' lookup _dbl_Vtl1C33Ran  @N'  uni1C291C33' lookup _del_extra  @ran' lookup _delete_dup ;
+  sub  @consAll' lookup _dbl_Vtl1C35Ran  @N'  uni1C291C35' lookup _del_extra  @ran' lookup _delete_dup ;
   
 } Reorder_CryNVR ;
 
@@ -230,46 +226,6 @@ lookup Reorder_CryNV_delV {
 		  { sub @N  $v' @ran' by  @bogusNull ; }
 	sub @N  @VtlAll'  by  @bogusNull ;
 } Reorder_CryNV_delV ;
-
-
-### OLD CODE
-
-# Insertion half of reordering
-
-@leftSide = [ uni1C34  uni1C35  uni1C27  uni1C28  uni1C29 ] ;
-
-#lookup ReorderInsert1C34 {
-#	sub @consAll by uni1C34 @consAll;
-#} ReorderInsert1C34;
-
-#lookup ReorderInsert {
-#	lookupflag IgnoreMarks;
-#	  sub @consAll' lookup ReorderInsert1C34 uni1C34 ;
-#} ReorderInsert;
-
-#lookup ReorderDelete {
-#	lookupflag IgnoreMarks;
-#		sub uni1C34  uni1C00' uni1C34' by uni1C00 ;
-#} ReorderDelete;
-
-
-#@rightSideV = [ uni1C26  uni1C2A  uni1C2B  uni1C2C ] ;
-#@markAbove = [ uni1C36  uni1C2D  uni1C2E  uni1C2F ] ;
-
-#lookup ReorderIns_RsvMark_1C36 {
-#		sub @rightSideV by uni1C36 @rightSideV ;
-#} ReorderIns_RsvMark_1C36;
-
-#lookup ReorderIns_RsvMark {
-#		sub @rightSideV' lookup ReorderIns_RsvMark_1C36 uni1C36 ;
-#		sub @rightSideV' lookup ReorderIns_RsvMark_1C36 @markAbove uni1C36 ;
-#} ReorderIns_RsvMark;
-
-#lookup ReorderDel_RsvMark {
-#  	sub uni1C36 @rightSideV' uni1C36' by @rightSideV ;
-##  	sub uni1C36 @rightSideV' uni1C2F' uni1C36' by @rightSideV uni1C2F ;
-#} ReorderDel_RsvMark;
-
 
 
 #********************************************
