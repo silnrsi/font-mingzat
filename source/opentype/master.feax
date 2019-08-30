@@ -94,7 +94,8 @@ lookup RaYaLigatures {
 
 
 #--- Reorder top-left vowel ---
-# This should be done by the engine but not all do.
+
+# This should be done automatically by the engine but not all do.
 
 @consAll = [ @cons @basePlusYa @basePlusRa @basePlusRaYa ];
 
@@ -228,6 +229,77 @@ lookup Reorder_CryNV_delV {
 } Reorder_CryNV_delV ;
 
 
+#--- Reorder top mark and right-side vowel ---
+
+# This is necessary for the mark to be attached to the preceding consonant.
+
+@Vright = [ uni1C26 uni1C2A uni1C2B uni1C2C ];
+@Mtop = [ uni1C2D uni1C2E uni1C2F uni1C30 uni1C31 uni1C32 uni1C33 uni1C36 ];
+
+lookup _insM1C2D { sub  @Vright  by  uni1C2D  @Vright ; } _insM1C2D ;
+lookup _insM1C2E { sub  @Vright  by  uni1C2E  @Vright ; } _insM1C2E ;
+lookup _insM1C2F { sub  @Vright  by  uni1C2F  @Vright ; } _insM1C2F ;
+lookup _insM1C30 { sub  @Vright  by  uni1C30  @Vright ; } _insM1C30 ;
+lookup _insM1C31 { sub  @Vright  by  uni1C31  @Vright ; } _insM1C31 ;
+lookup _insM1C32 { sub  @Vright  by  uni1C32  @Vright ; } _insM1C32 ;
+lookup _insM1C33 { sub  @Vright  by  uni1C33  @Vright ; } _insM1C33 ;
+lookup _insM1C36 { sub  @Vright  by  uni1C36  @Vright ; } _insM1C36 ;
+
+lookup _insM1C2D_R { sub  @Vright  by  uni1C2D  @ran  @Vright ; } _insM1C2D_R ;
+lookup _insM1C2E_R { sub  @Vright  by  uni1C2E  @ran  @Vright ; } _insM1C2E_R ;
+lookup _insM1C2F_R { sub  @Vright  by  uni1C2F  @ran  @Vright ; } _insM1C2F_R ;
+lookup _insM1C30_R { sub  @Vright  by  uni1C30  @ran  @Vright ; } _insM1C30_R ;
+lookup _insM1C31_R { sub  @Vright  by  uni1C31  @ran  @Vright ; } _insM1C31_R ;
+lookup _insM1C32_R { sub  @Vright  by  uni1C32  @ran  @Vright ; } _insM1C32_R ;
+lookup _insM1C33_R { sub  @Vright  by  uni1C33  @ran  @Vright ; } _insM1C33_R ;
+
+lookup _delMark {
+	sub  @Vright @Mtop @ran by  @Vright ;
+	sub  @Vright @Mtop      by  @Vright ; 
+} _delMark ;
+
+lookup Reorder_VrtMt {
+	# C V M R  ->  C M R V M R  ->  C M R
+	sub @consAll      @Vright' lookup _insM1C2D_R  uni1C2D'  @ran' lookup _delMark ;
+	sub @consAll      @Vright' lookup _insM1C2E_R  uni1C2E'  @ran' lookup _delMark;
+	sub @consAll      @Vright' lookup _insM1C2F_R  uni1C2F'  @ran' lookup _delMark ;
+	sub @consAll      @Vright' lookup _insM1C30_R  uni1C30'  @ran' lookup _delMark ;
+	sub @consAll      @Vright' lookup _insM1C31_R  uni1C31'  @ran' lookup _delMark ;
+	sub @consAll      @Vright' lookup _insM1C32_R  uni1C32'  @ran' lookup _delMark ;
+	sub @consAll      @Vright' lookup _insM1C33_R  uni1C33'  @ran' lookup _delMark ;
+	
+	# C N V M R  ->  C N M R V M R  ->  C N M R
+	sub @consAll  @N  @Vright' lookup _insM1C2D_R  uni1C2D'  @ran' lookup _delMark ;
+	sub @consAll  @N  @Vright' lookup _insM1C2E_R  uni1C2E'  @ran' lookup _delMark;
+	sub @consAll  @N  @Vright' lookup _insM1C2F_R  uni1C2F'  @ran' lookup _delMark ;
+	sub @consAll  @N  @Vright' lookup _insM1C30_R  uni1C30'  @ran' lookup _delMark ;
+	sub @consAll  @N  @Vright' lookup _insM1C31_R  uni1C31'  @ran' lookup _delMark ;
+	sub @consAll  @N  @Vright' lookup _insM1C32_R  uni1C32'  @ran' lookup _delMark ;
+	sub @consAll  @N  @Vright' lookup _insM1C33_R  uni1C33'  @ran' lookup _delMark ;
+
+	# C V M  ->  C M V M  ->  C M V
+	sub @consAll      @Vright' lookup _insM1C2D  uni1C2D' lookup _delMark ;
+	sub @consAll      @Vright' lookup _insM1C2E  uni1C2E' lookup _delMark ;
+	sub @consAll      @Vright' lookup _insM1C2F  uni1C2F' lookup _delMark ;
+	sub @consAll      @Vright' lookup _insM1C30  uni1C30' lookup _delMark ;
+	sub @consAll      @Vright' lookup _insM1C31  uni1C31' lookup _delMark ;
+	sub @consAll      @Vright' lookup _insM1C32  uni1C32' lookup _delMark ;
+	sub @consAll      @Vright' lookup _insM1C33  uni1C33' lookup _delMark ;
+	sub @consAll      @Vright' lookup _insM1C36  uni1C36' lookup _delMark ;
+	
+	# C N V M  ->  C N M V M  ->  C N M V
+	sub @consAll  @N  @Vright' lookup _insM1C2D  uni1C2D' lookup _delMark ;
+	sub @consAll  @N  @Vright' lookup _insM1C2E  uni1C2E' lookup _delMark ;
+	sub @consAll  @N  @Vright' lookup _insM1C2F  uni1C2F' lookup _delMark ;
+	sub @consAll  @N  @Vright' lookup _insM1C30  uni1C30' lookup _delMark ;
+	sub @consAll  @N  @Vright' lookup _insM1C31  uni1C31' lookup _delMark ;
+	sub @consAll  @N  @Vright' lookup _insM1C32  uni1C32' lookup _delMark ;
+	sub @consAll  @N  @Vright' lookup _insM1C33  uni1C33' lookup _delMark ;
+	sub @consAll  @N  @Vright' lookup _insM1C36  uni1C36' lookup _delMark ;
+	
+} Reorder_VrtMt ;
+
+
 #********************************************
 # Positioning lookups
 #
@@ -247,9 +319,9 @@ lookup AttachMarks2 {
 } AttachMarks2 ;
 
 
-#********************
-# GSUB features     *
-#********************
+#************************************************************
+# GSUB features                                             *
+#************************************************************
 
 feature ccmp {  # Glyph Composition/Decomposition
     lookup FontCheck ;
@@ -271,16 +343,18 @@ feature clig {  # Contextual Ligatures
 		lookup Reorder_CryNV ;
 		#lookup Reorder_CryNV_delVR ;
 		lookup Reorder_CryNV_delV ;
+		
+		lookup Reorder_VrtMt ;
 
 } clig ;
 
 
-#********************
-# GPOS features     *
-#********************
+#************************************************************
+# GPOS features                                             *
+#************************************************************
 
 feature mark {
-	lookup AttachMarks;
-	lookup AttachMarks2;
+	lookup AttachMarks ;
+	lookup AttachMarks2 ;
 } mark ;
 
