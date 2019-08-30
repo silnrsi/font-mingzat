@@ -87,9 +87,9 @@ lookup VtlMarkLig {
     
 lookup RaYaLigatures {
 	lookupflag IgnoreMarks;
-  	sub @takesYa uni1C24 by @basePlusYa ;
-  	sub @takesRaAndRaYa uni1C25 by @basePlusRa ;
-  	sub @takesRaAndRaYa uni1C25 uni1C24 by @basePlusRaYa ;
+  	sub @takesYa        uni1C24          by  @basePlusYa ;
+  	sub @takesRaAndRaYa uni1C25          by  @basePlusRa ;
+  	sub @takesRaAndRaYa uni1C25 uni1C24  by  @basePlusRaYa ;
 } RaYaLigatures;
 
 
@@ -97,7 +97,7 @@ lookup RaYaLigatures {
 
 # This should be done automatically by the engine but not all do.
 
-@consAll = [ @cons @basePlusYa @basePlusRa @basePlusRaYa ];
+@consAll = [ @cons  @basePlusYa  @basePlusRa  @basePlusRaYa ];
 
 @N = [ uni1C37 ] ;
 @M = [ uni1C2D  uni1C2E  uni1C2F] ;
@@ -233,8 +233,8 @@ lookup Reorder_CryNV_delV {
 
 # This is necessary for the mark to be attached to the preceding consonant.
 
-@Vright = [ uni1C26 uni1C2A uni1C2B uni1C2C ];
-@Mtop = [ uni1C2D uni1C2E uni1C2F uni1C30 uni1C31 uni1C32 uni1C33 uni1C36 ];
+@Vright = [ uni1C26  uni1C2A  uni1C2B ];
+@Mtop = [ uni1C2D  uni1C2E  uni1C2F  uni1C30  uni1C31  uni1C32  uni1C33  uni1C36 ];
 
 lookup _insM1C2D { sub  @Vright  by  uni1C2D  @Vright ; } _insM1C2D ;
 lookup _insM1C2E { sub  @Vright  by  uni1C2E  @Vright ; } _insM1C2E ;
@@ -258,44 +258,54 @@ lookup _delMark {
 	sub  @Vright @Mtop      by  @Vright ; 
 } _delMark ;
 
+# I'm not sure that it's really necessary to include the consonant and nukta in the context
+# of these rules, but it feels safer.
+
+@consOrN = [ @consAll  @N ];
+
 lookup Reorder_VrtMt {
-	# C V M R  ->  C M R V M R  ->  C M R
-	sub @consAll      @Vright' lookup _insM1C2D_R  uni1C2D'  @ran' lookup _delMark ;
-	sub @consAll      @Vright' lookup _insM1C2E_R  uni1C2E'  @ran' lookup _delMark;
-	sub @consAll      @Vright' lookup _insM1C2F_R  uni1C2F'  @ran' lookup _delMark ;
-	sub @consAll      @Vright' lookup _insM1C30_R  uni1C30'  @ran' lookup _delMark ;
-	sub @consAll      @Vright' lookup _insM1C31_R  uni1C31'  @ran' lookup _delMark ;
-	sub @consAll      @Vright' lookup _insM1C32_R  uni1C32'  @ran' lookup _delMark ;
-	sub @consAll      @Vright' lookup _insM1C33_R  uni1C33'  @ran' lookup _delMark ;
+  # We should be able to use the following statement and remove the rules with the
+  # nuktas, but that seemed to break the entire lookup. Instead I just merged the
+  # consonants and nukta into one class.
+	#lookupflag UseMarkFilteringSet @N ;
 	
-	# C N V M R  ->  C N M R V M R  ->  C N M R
-	sub @consAll  @N  @Vright' lookup _insM1C2D_R  uni1C2D'  @ran' lookup _delMark ;
-	sub @consAll  @N  @Vright' lookup _insM1C2E_R  uni1C2E'  @ran' lookup _delMark;
-	sub @consAll  @N  @Vright' lookup _insM1C2F_R  uni1C2F'  @ran' lookup _delMark ;
-	sub @consAll  @N  @Vright' lookup _insM1C30_R  uni1C30'  @ran' lookup _delMark ;
-	sub @consAll  @N  @Vright' lookup _insM1C31_R  uni1C31'  @ran' lookup _delMark ;
-	sub @consAll  @N  @Vright' lookup _insM1C32_R  uni1C32'  @ran' lookup _delMark ;
-	sub @consAll  @N  @Vright' lookup _insM1C33_R  uni1C33'  @ran' lookup _delMark ;
+	# C V M R  ->  C M R V M R  ->  C M R V
+	sub @consOrN      @Vright' lookup _insM1C2D_R  uni1C2D'  @ran' lookup _delMark ;
+	sub @consOrN      @Vright' lookup _insM1C2E_R  uni1C2E'  @ran' lookup _delMark;
+	sub @consOrN      @Vright' lookup _insM1C2F_R  uni1C2F'  @ran' lookup _delMark ;
+	sub @consOrN      @Vright' lookup _insM1C30_R  uni1C30'  @ran' lookup _delMark ;
+	sub @consOrN      @Vright' lookup _insM1C31_R  uni1C31'  @ran' lookup _delMark ;
+	sub @consOrN      @Vright' lookup _insM1C32_R  uni1C32'  @ran' lookup _delMark ;
+	sub @consOrN      @Vright' lookup _insM1C33_R  uni1C33'  @ran' lookup _delMark ;
+	
+	# C N V M R  ->  C N M R V M R  ->  C N M R V
+#	sub @consAll  @N  @Vright' lookup _insM1C2D_R  uni1C2D'  @ran' lookup _delMark ;
+#	sub @consAll  @N  @Vright' lookup _insM1C2E_R  uni1C2E'  @ran' lookup _delMark;
+#	sub @consAll  @N  @Vright' lookup _insM1C2F_R  uni1C2F'  @ran' lookup _delMark ;
+#	sub @consAll  @N  @Vright' lookup _insM1C30_R  uni1C30'  @ran' lookup _delMark ;
+#	sub @consAll  @N  @Vright' lookup _insM1C31_R  uni1C31'  @ran' lookup _delMark ;
+#	sub @consAll  @N  @Vright' lookup _insM1C32_R  uni1C32'  @ran' lookup _delMark ;
+#	sub @consAll  @N  @Vright' lookup _insM1C33_R  uni1C33'  @ran' lookup _delMark ;
 
 	# C V M  ->  C M V M  ->  C M V
-	sub @consAll      @Vright' lookup _insM1C2D  uni1C2D' lookup _delMark ;
-	sub @consAll      @Vright' lookup _insM1C2E  uni1C2E' lookup _delMark ;
-	sub @consAll      @Vright' lookup _insM1C2F  uni1C2F' lookup _delMark ;
-	sub @consAll      @Vright' lookup _insM1C30  uni1C30' lookup _delMark ;
-	sub @consAll      @Vright' lookup _insM1C31  uni1C31' lookup _delMark ;
-	sub @consAll      @Vright' lookup _insM1C32  uni1C32' lookup _delMark ;
-	sub @consAll      @Vright' lookup _insM1C33  uni1C33' lookup _delMark ;
-	sub @consAll      @Vright' lookup _insM1C36  uni1C36' lookup _delMark ;
+	sub @consOrN      @Vright' lookup _insM1C2D  uni1C2D' lookup _delMark ;
+	sub @consOrN      @Vright' lookup _insM1C2E  uni1C2E' lookup _delMark ;
+	sub @consOrN      @Vright' lookup _insM1C2F  uni1C2F' lookup _delMark ;
+	sub @consOrN      @Vright' lookup _insM1C30  uni1C30' lookup _delMark ;
+	sub @consOrN      @Vright' lookup _insM1C31  uni1C31' lookup _delMark ;
+	sub @consOrN      @Vright' lookup _insM1C32  uni1C32' lookup _delMark ;
+	sub @consOrN      @Vright' lookup _insM1C33  uni1C33' lookup _delMark ;
+	sub @consOrN      @Vright' lookup _insM1C36  @ran'    lookup _delMark ;
 	
 	# C N V M  ->  C N M V M  ->  C N M V
-	sub @consAll  @N  @Vright' lookup _insM1C2D  uni1C2D' lookup _delMark ;
-	sub @consAll  @N  @Vright' lookup _insM1C2E  uni1C2E' lookup _delMark ;
-	sub @consAll  @N  @Vright' lookup _insM1C2F  uni1C2F' lookup _delMark ;
-	sub @consAll  @N  @Vright' lookup _insM1C30  uni1C30' lookup _delMark ;
-	sub @consAll  @N  @Vright' lookup _insM1C31  uni1C31' lookup _delMark ;
-	sub @consAll  @N  @Vright' lookup _insM1C32  uni1C32' lookup _delMark ;
-	sub @consAll  @N  @Vright' lookup _insM1C33  uni1C33' lookup _delMark ;
-	sub @consAll  @N  @Vright' lookup _insM1C36  uni1C36' lookup _delMark ;
+#	sub @consAll  @N  @Vright' lookup _insM1C2D  uni1C2D' lookup _delMark ;
+#	sub @consAll  @N  @Vright' lookup _insM1C2E  uni1C2E' lookup _delMark ;
+#	sub @consAll  @N  @Vright' lookup _insM1C2F  uni1C2F' lookup _delMark ;
+#	sub @consAll  @N  @Vright' lookup _insM1C30  uni1C30' lookup _delMark ;
+#	sub @consAll  @N  @Vright' lookup _insM1C31  uni1C31' lookup _delMark ;
+#	sub @consAll  @N  @Vright' lookup _insM1C32  uni1C32' lookup _delMark ;
+#	sub @consAll  @N  @Vright' lookup _insM1C33  uni1C33' lookup _delMark ;
+#	sub @consAll  @N  @Vright' lookup _insM1C36  @ran'    lookup _delMark ;
 	
 } Reorder_VrtMt ;
 
@@ -309,14 +319,30 @@ lookup Reorder_VrtMt {
 lookup AttachMarks {
 	lookupflag 0;
 		pos base @U mark @_U ;
-		pos base @L mark @_L ;
+		#pos base @L mark @_L ;
 } AttachMarks ;
+
+lookup AttachKludge {
+	lookupflag 0;
+		pos mark uni1C37 <anchor 0 -200> mark @_L;
+} AttachKludge ;
+
 
 lookup AttachMarks2 {
 	lookupflag 0;
 		pos mark @U_MarkBase mark @_U ;
-		pos mark @L_MarkBase mark @_L ;
+		pos mark @L_MarkBase mark @_L ;    # attach 1C2C to nukta
 } AttachMarks2 ;
+
+
+#--- Kludge because nuktas following ligatures can't be attached to (I don't know why) ---
+
+@raYaLigs = [ @basePlusRa  @basePlusYa  @basePlusRaYa ] ;
+
+lookup ShiftNuqta1C2C {
+	lookupflag 0;
+		pos  @raYaLigs  @N  uni1C2C' <0 -400 0 0> ;
+} ShiftNuqta1C2C ;
 
 
 #************************************************************
@@ -327,17 +353,11 @@ feature ccmp {  # Glyph Composition/Decomposition
     lookup FontCheck ;
 
 		lookup VtlMarkLig ;  # do before built-in OT reordering
-    
-    ####lookup ReorderInsert ;
-    ####lookup ReorderIns_RsvMark ;
 } ccmp ;
 
 
-feature clig {  # Contextual Ligatures
+feature clig {  # Contextual Ligatures 
 		lookup RaYaLigatures ;
-		
-		####lookup ReorderDelete ;
-		####lookup ReorderDel_RsvMark ;
 		
 		lookup Reorder_CryNVR ;
 		lookup Reorder_CryNV ;
@@ -345,7 +365,6 @@ feature clig {  # Contextual Ligatures
 		lookup Reorder_CryNV_delV ;
 		
 		lookup Reorder_VrtMt ;
-
 } clig ;
 
 
@@ -355,6 +374,11 @@ feature clig {  # Contextual Ligatures
 
 feature mark {
 	lookup AttachMarks ;
+	#lookup AttachKludge ;
 	lookup AttachMarks2 ;
 } mark ;
+
+feature dist {
+	lookup ShiftNuqta1C2C ;
+} dist ;
 
