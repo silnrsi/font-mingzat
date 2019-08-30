@@ -310,6 +310,20 @@ lookup Reorder_VrtMt {
 } Reorder_VrtMt ;
 
 
+#--- Delete bogus null glyph that was used as a kludge ---
+
+# They only occur at the end of syllables, after cons ligatures + nuktas + top-left vowel.
+
+##@any = [ space  @consAll  @Vright  uni1C34  @VtlAll ] ; - not used
+
+@raYaLigs = [ @basePlusRa  @basePlusYa  @basePlusRaYa ] ;
+
+lookup DeleteBogusNull {
+	lookupflag IgnoreMarks ;
+		sub  @raYaLigs  @bogusNull  by  @raYaLigs ;
+} DeleteBogusNull ;
+
+
 #********************************************
 # Positioning lookups
 #
@@ -319,7 +333,7 @@ lookup Reorder_VrtMt {
 lookup AttachMarks {
 	lookupflag 0;
 		pos base @U mark @_U ;
-		#pos base @L mark @_L ;
+		pos base @L mark @_L ;
 } AttachMarks ;
 
 lookup AttachKludge {
@@ -337,11 +351,9 @@ lookup AttachMarks2 {
 
 #--- Kludge because nuktas following ligatures can't be attached to (I don't know why) ---
 
-@raYaLigs = [ @basePlusRa  @basePlusYa  @basePlusRaYa ] ;
-
 lookup ShiftNuqta1C2C {
 	lookupflag 0;
-		pos  @raYaLigs  @N  uni1C2C' <0 -400 0 0> ;
+		pos  @raYaLigs  @N  uni1C2C' <0 -380 0 0> ;
 } ShiftNuqta1C2C ;
 
 
@@ -365,6 +377,8 @@ feature clig {  # Contextual Ligatures
 		lookup Reorder_CryNV_delV ;
 		
 		lookup Reorder_VrtMt ;
+		
+		lookup DeleteBogusNull ;
 } clig ;
 
 
