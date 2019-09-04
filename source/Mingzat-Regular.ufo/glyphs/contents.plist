@@ -118,6 +118,42 @@
   <string>U_grave.glif</string>
   <key>V</key>
   <string>V_.glif</string>
+  <key>uniFE00</key>
+  <string>uniFE00.glif</string>
+  <key>uniFE01</key>
+  <string>uniFE01.glif</string>
+  <key>uniFE02</key>
+  <string>uniFE02.glif</string>
+  <key>uniFE03</key>
+  <string>uniFE03.glif</string>
+  <key>uniFE04</key>
+  <string>uniFE04.glif</string>
+  <key>uniFE05</key>
+  <string>uniFE05.glif</string>
+  <key>uniFE06</key>
+  <string>uniFE06.glif</string>
+  <key>uniFE07</key>
+  <string>uniFE07.glif</string>
+  <key>uniFE08</key>
+  <string>uniFE08.glif</string>
+  <key>uniFE09</key>
+  <string>uniFE09.glif</string>
+  <key>uniFE0A</key>
+  <string>uniFE0A.glif</string>
+  <key>uniFE0B</key>
+  <string>uniFE0B.glif</string>
+  <key>uniFE0C</key>
+  <string>uniFE0C.glif</string>
+  <key>uniFE0D</key>
+  <string>uniFE0D.glif</string>
+  <key>uniFE0E</key>
+  <string>uniFE0E.glif</string>
+  <key>uniFE0F</key>
+  <string>uniFE0F.glif</string>
+  <key>uniFFFC</key>
+  <string>uniFFFC.glif</string>
+  <key>uniFFFD</key>
+  <string>uniFFFD.glif</string>
   <key>W</key>
   <string>W_.glif</string>
   <key>X</key>
@@ -270,6 +306,8 @@
   <string>greater.glif</string>
   <key>greaterequal</key>
   <string>greaterequal.glif</string>
+  <key>blank</key>
+  <string>blank.glif</string>
   <key>guillemotleft</key>
   <string>guillemotleft.glif</string>
   <key>guillemotright</key>

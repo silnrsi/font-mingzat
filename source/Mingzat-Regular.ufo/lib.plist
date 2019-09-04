@@ -420,10 +420,29 @@
     <string>notequal</string>
     <string>lessequal</string>
     <string>greaterequal</string>
+    <string>blank</string>
     <string>lozenge</string>
     <string>uni25CC</string>
     <string>fi</string>
     <string>fl</string>
+    <string>uniFE00</string>
+    <string>uniFE01</string>
+    <string>uniFE02</string>
+    <string>uniFE03</string>
+    <string>uniFE04</string>
+    <string>uniFE05</string>
+    <string>uniFE06</string>
+    <string>uniFE07</string>
+    <string>uniFE08</string>
+    <string>uniFE09</string>
+    <string>uniFE0A</string>
+    <string>uniFE0B</string>
+    <string>uniFE0C</string>
+    <string>uniFE0D</string>
+    <string>uniFE0E</string>
+    <string>uniFE0F</string>
+    <string>uniFFFC</string>
+    <string>uniFFFD</string>
   </array>
   <key>public.postscriptNames</key>
   <dict>
