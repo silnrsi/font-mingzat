@@ -28,12 +28,7 @@
   </testgroup>
 	-->
 	
-  <testgroup label="Ligatures">
-		<test label='bugs'><string>\u1c00\u1c37\u1c2d\u1c27</string></test>
-		<test label='bugs'><string></string></test>
-		<test label='bugs'><string></string></test>
-  	
-  	
+  <testgroup label="Ligatures">  	
 		<test label='ra-ya  1C00 1C25 1C24'><string>\u1C00\u1C25 \u1C00\u1C37\u1C25 \u1C00\u1C25\u1C24 \u1C00\u1C37\u1C25\u1C24 \u1C00\u1C24 \u1C00\u1C37\u1C24</string></test>
 		<test label='V-right 1C03 1C26'><string>\u1C03\u1C26 \u1C03\u1C37\u1C26 \u1C03\u1C25\u1C26 \u1C03\u1C37\u1C25\u1C26 \u1C03\u1C25\u1C24\u1C26 \u1C03\u1C37\u1C25\u1C24\u1C26 \u1C03\u1C24\u1C26 \u1C03\u1C37\u1C24\u1C26</string></test>
 		<test label='V-left 1C05 1C27'><string>\u1C05\u1C27 \u1C05\u1C37\u1C27 \u1C05\u1C25\u1C27 \u1C05\u1C37\u1C25\u1C27 \u1C05\u1C25\u1C24\u1C27 \u1C05\u1C37\u1C25\u1C24\u1C27 \u1C05\u1C24\u1C27 \u1C05\u1C37\u1C24\u1C27</string></test>

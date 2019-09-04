@@ -38,7 +38,7 @@ lookup FontCheck {
 # Substitution lookups
 #
 
-#@Vtl = [ uni1C2B ];  # for debugging 1C29 reordering using hb-shape, since 1C29 works correctly there but not in Firefox
+##@Vtl = [ uni1C2B ];  # for debugging 1C29 reordering using hb-shape, since 1C29 works correctly there but not in Firefox
 @Vtl = [ uni1C29 ] ;
 
 # Move final mark onto Vtl ligature
@@ -350,7 +350,12 @@ lookup AttachMarks2 {
 } AttachMarks2 ;
 
 
-#--- Kludge because nuktas following ligatures can't be attached to (I don't know why) ---
+#--- Kludge to handle nukta + lower diacritic ---
+
+# Normally the 1C2C diacritic would attach to the lower nukta.  That doesn't work
+# presumably because of the reordering that was needed to create the base ligature
+# (pulling the nukta out from between the base and the ra/ya).
+# So we just shift the diacritic down instead of attaching it.
 
 lookup ShiftNuqta1C2C {
 
