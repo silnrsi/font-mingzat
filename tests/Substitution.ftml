@@ -1,12 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet type='text/xsl' href='ftml.xsl'?>
+<?xml-stylesheet href="../tools/ftml.xsl" type="text/xsl"?>
 <ftml version='1.0'>
 	<head>
   	<fontscale>300</fontscale>
-  	<fontsrc>url(../results/Mingzat-Regular.ttf)</fontsrc>
-  	<fontsrc>local("Mingzat")</fontsrc>
-  	<fontsrc>url(../Extras/Mondulkiri-R.ttf)</fontsrc>
-  	<fontsrc>local("Khmer Mondulkiri")</fontsrc>
+  	<fontsrc>url(reference/Mingzat-Regular.ttf)</fontsrc>
+  	<fontsrc>local("MingzatG")</fontsrc>
   	<styles>
   		<style feats=" 'smcp' 1" name="fset_smcp" />
   		<style feats=" 'cv17' 1" name="fset_cv17_1" />
