@@ -150,6 +150,8 @@
   <string>uniFE0E.glif</string>
   <key>uniFE0F</key>
   <string>uniFE0F.glif</string>
+  <key>uniFEFF</key>
+  <string>uniFEFF.glif</string>
   <key>uniFFFC</key>
   <string>uniFFFC.glif</string>
   <key>uniFFFD</key>
@@ -222,6 +224,8 @@
   <string>c.glif</string>
   <key>caron</key>
   <string>caron.glif</string>
+  <key>uni02D0</key>
+  <string>uni02D0.glif</string>
   <key>ccedilla</key>
   <string>ccedilla.glif</string>
   <key>cedilla</key>
@@ -274,6 +278,8 @@
   <string>emdash.glif</string>
   <key>endash</key>
   <string>endash.glif</string>
+  <key>uni2015</key>
+  <string>uni2015.glif</string>
   <key>equal</key>
   <string>equal.glif</string>
   <key>eth</key>
@@ -296,6 +302,8 @@
   <string>four.glif</string>
   <key>fraction</key>
   <string>fraction.glif</string>
+  <key>uni2060</key>
+  <string>uni2060.glif</string>
   <key>g</key>
   <string>g.glif</string>
   <key>germandbls</key>
@@ -444,6 +452,8 @@
   <string>quoteleft.glif</string>
   <key>quoteright</key>
   <string>quoteright.glif</string>
+  <key>quotesinglbase</key>
+  <string>quotesinglbase.glif</string>
   <key>quotesingle</key>
   <string>quotesingle.glif</string>
   <key>r</key>
@@ -486,6 +496,8 @@
   <string>threesuperior.glif</string>
   <key>tilde</key>
   <string>tilde.glif</string>
+  <key>uni034F</key>
+  <string>uni034F.glif</string>
   <key>trademark</key>
   <string>trademark.glif</string>
   <key>two</key>
@@ -796,5 +808,61 @@
   <string>zcaron.glif</string>
   <key>zero</key>
   <string>zero.glif</string>
+  <key>uni2000</key>
+  <string>uni2000.glif</string>
+  <key>uni2001</key>
+  <string>uni2001.glif</string>
+  <key>uni2002</key>
+  <string>uni2002.glif</string>
+  <key>uni2003</key>
+  <string>uni2003.glif</string>
+  <key>uni2004</key>
+  <string>uni2004.glif</string>
+  <key>uni2005</key>
+  <string>uni2005.glif</string>
+  <key>uni2006</key>
+  <string>uni2006.glif</string>
+  <key>uni2007</key>
+  <string>uni2007.glif</string>
+  <key>uni2008</key>
+  <string>uni2008.glif</string>
+  <key>uni2009</key>
+  <string>uni2009.glif</string>
+  <key>uni200A</key>
+  <string>uni200A.glif</string>
+  <key>uni200B</key>
+  <string>uni200B.glif</string>
+  <key>uni200C</key>
+  <string>uni200C.glif</string>
+  <key>uni200D</key>
+  <string>uni200D.glif</string>
+  <key>uni200E</key>
+  <string>uni200E.glif</string>
+  <key>uni200F</key>
+  <string>uni200F.glif</string>
+  <key>uni2010</key>
+  <string>uni2010.glif</string>
+  <key>uni2011</key>
+  <string>uni2011.glif</string>
+  <key>figuredash</key>
+  <string>figuredash.glif</string>
+  <key>uni2027</key>
+  <string>uni2027.glif</string>
+  <key>uni2028</key>
+  <string>uni2028.glif</string>
+  <key>uni2029</key>
+  <string>uni2029.glif</string>
+  <key>uni202A</key>
+  <string>uni202A.glif</string>
+  <key>uni202B</key>
+  <string>uni202B.glif</string>
+  <key>uni202C</key>
+  <string>uni202C.glif</string>
+  <key>uni202D</key>
+  <string>uni202D.glif</string>
+  <key>uni202E</key>
+  <string>uni202E.glif</string>
+  <key>uni202F</key>
+  <string>uni202F.glif</string>
 </dict>
 </plist>

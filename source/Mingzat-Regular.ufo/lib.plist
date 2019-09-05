@@ -251,13 +251,14 @@
     <string>florin</string>
     <string>circumflex</string>
     <string>caron</string>
+    <string>uni02D0</string>
     <string>breve</string>
     <string>dotaccent</string>
     <string>ring</string>
     <string>ogonek</string>
     <string>tilde</string>
+    <string>uni034F</string>
     <string>hungarumlaut</string>
-    <string>Omega</string>
     <string>pi</string>
     <string>uni1C00</string>
     <string>uni1C001C24</string>
@@ -391,10 +392,31 @@
     <string>uni1C4D</string>
     <string>uni1C4E</string>
     <string>uni1C4F</string>
+    <string>uni2000</string>
+    <string>uni2001</string>
+    <string>uni2002</string>
+    <string>uni2003</string>
+    <string>uni2004</string>
+    <string>uni2005</string>
+    <string>uni2006</string>
+    <string>uni2007</string>
+    <string>uni2008</string>
+    <string>uni2009</string>
+    <string>uni200A</string>
+    <string>uni200B</string>
+    <string>uni200C</string>
+    <string>uni200D</string>
+    <string>uni200E</string>
+    <string>uni200F</string>
+    <string>uni2010</string>
+    <string>uni2011</string>
+    <string>figuredash</string>
     <string>endash</string>
     <string>emdash</string>
+    <string>uni2015</string>
     <string>quoteleft</string>
     <string>quoteright</string>
+    <string>quotesinglbase</string>
     <string>quotedblleft</string>
     <string>quotedblright</string>
     <string>quotedblbase</string>
@@ -402,12 +424,23 @@
     <string>daggerdbl</string>
     <string>bullet</string>
     <string>ellipsis</string>
+    <string>uni2027</string>
+    <string>uni2028</string>
+    <string>uni2029</string>
+    <string>uni202A</string>
+    <string>uni202B</string>
+    <string>uni202C</string>
+    <string>uni202D</string>
+    <string>uni202E</string>
+    <string>uni202F</string>
     <string>perthousand</string>
     <string>guilsinglleft</string>
     <string>guilsinglright</string>
     <string>fraction</string>
+    <string>uni2060</string>
     <string>Euro</string>
     <string>trademark</string>
+    <string>Omega</string>
     <string>partialdiff</string>
     <string>Delta</string>
     <string>product</string>
@@ -441,6 +474,7 @@
     <string>uniFE0D</string>
     <string>uniFE0E</string>
     <string>uniFE0F</string>
+    <string>uniFEFF</string>
     <string>uniFFFC</string>
     <string>uniFFFD</string>
   </array>
