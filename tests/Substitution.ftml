@@ -3,8 +3,9 @@
 <ftml version='1.0'>
 	<head>
   	<fontscale>300</fontscale>
+  	<fontsrc>local("Mingzat")</fontsrc>
   	<fontsrc>url(reference/Mingzat-Regular.ttf)</fontsrc>
-  	<fontsrc>local("MingzatG")</fontsrc>
+  	<fontsrc>url(reference/MingzatOT-Regular.ttf)</fontsrc>
   	<styles>
   		<style feats=" 'smcp' 1" name="fset_smcp" />
   		<style feats=" 'cv17' 1" name="fset_cv17_1" />

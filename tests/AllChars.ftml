@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../tools/ftml.xsl" type="text/xsl"?>
+<ftml version='1.0'>
+	<head>
+  	<fontscale>300</fontscale>
+  	<fontsrc>local("Mingzat")</fontsrc>
+  	<fontsrc>url(reference/Mingzat-Regular.ttf)</fontsrc>
+  	<fontsrc>url(reference/MingzatOT-Regular.ttf)</fontsrc>
+  	<styles>
+  		<style feats=" 'smcp' 1" name="fset_smcp" />
+  		<style feats=" 'cv17' 1" name="fset_cv17_1" />
+  	</styles>
+  	<title>AllChars</title>
+  </head>
+
+  <testgroup label="Rendering Check">
+    <test label="check">
+      <string>RenderingUnknown</string>
+    </test>
+  </testgroup>
+
+  <testgroup label="Encoded characters">
+    <test label="U+0020">
+      <comment>space</comment>
+      <string>| | \u000020 \u000021 \u000022 \u000023 \u000024 \u000025 \u000026 \u000027 \u000028 \u000029 \u00002A \u00002B \u00002C \u00002D \u00002E \u00002F</string>
+    </test>
+    <test label="U+0030">
+      <comment>digits</comment>
+      <string>\u000030 \u000031 \u000032 \u000033 \u000034 \u000035 \u000036 \u000037 \u000038 \u000039 </string> 
+    </test>
+    <test label="U+003A">
+      <comment>punct</comment>
+      <string>\u00003A \u00003B \u00003C \u00003D \u00003E \u00003F \u000040 </string> 
+    </test>
+    <test label="U+0041">
+      <comment>A</comment>
+      <string>\u000041 \u000042 \u000043 \u000044 \u000045 \u000046 \u000047 \u000048 \u000049 \u00004A \u00004B \u00004C \u00004D \u00004E \u00004F \u000050 \u000051 \u000052 \u000053 \u000054 \u000055 \u000056 \u000057 \u000058 \u000059 \u00005A  </string> 
+    </test>
+    <test label="U+005B">
+      <comment>punct</comment>
+      <string>\u00005B \u00005C \u00005D \u00005E \u00005F \u000060 </string> 
+    </test>
+    <test label="U+0061">
+      <comment>a</comment>
+      <string>\u000061 \u000062 \u000063 \u000064 \u000065 \u000066 \u000067 \u000068 \u000069 \u00006A \u00006B \u00006C \u00006D \u00006E \u00006F \u000070 \u000071 \u000072 \u000073 \u000074 \u000075 \u000076 \u000077 \u000078 \u000079 \u00007A</string> 
+    </test>
+    <test label="U+007B">
+      <comment></comment>
+      <string>\u00007B \u00007C \u00007D \u00007E</string> 
+    </test>
+    <test label="U+00A0">
+      <comment></comment>
+      <string>|\u0000A0| \u0000A1 \u0000A2 \u0000A3 \u0000A4 \u0000A5 \u0000A6 \u0000A7 \u0000A8 \u0000A9 \u0000AA \u0000AB \u0000AC \u0000AD \u0000AE \u0000AF \u0000B0 \u0000B1 \u0000B2 \u0000B3 \u0000B4 \u0000B5 \u0000B6 \u0000B7 \u0000B8 \u0000B9 \u0000BA \u0000BB \u0000BC \u0000BD \u0000BE \u0000BF </string> 
+    </test>
+    <test label="U+00C0">
+      <comment></comment>
+      <string>\u0000C0 \u0000C1 \u0000C2 \u0000C3 \u0000C4 \u0000C5 \u0000C6 \u0000C7 \u0000C8 \u0000C9 \u0000CA \u0000CB \u0000CC \u0000CD \u0000CE \u0000CF \u0000D0 \u0000D1 \u0000D2 \u0000D3 \u0000D4 \u0000D5 \u0000D6 </string> 
+    </test>
+    <test label="U+00D7">
+      <comment></comment>
+      <string>\u0000D7</string> 
+    </test>
+    <test label="U+00D8">
+      <comment></comment>
+      <string>\u0000D8 \u0000D9 \u0000DA \u0000DB \u0000DC \u0000DD \u0000DE \u0000DF \u0000E0 \u0000E1 \u0000E2 \u0000E3 \u0000E4 \u0000E5 \u0000E6 \u0000E7 \u0000E8 \u0000E9 \u0000EA \u0000EB \u0000EC \u0000ED \u0000EE \u0000EF \u0000F0 \u0000F1 \u0000F2 \u0000F3 \u0000F4 \u0000F5 \u0000F6 </string> 
+    </test>
+    <test label="U+00F7">
+      <comment></comment>
+      <string>\u0000F7</string> 
+    </test>
+    <test label="U+00F8">
+      <comment></comment>
+      <string>\u0000F8 \u0000F9 \u0000FA \u0000FB \u0000FC \u0000FD \u0000FE \u0000FF </string> 
+    </test>
+    <test label="U+034F">
+      <comment>graphemejoinercomb</comment>
+      <string>\u001C00\u00034F</string>
+    </test>
+    <test label="U+0131">
+      <comment></comment>
+      <string>\u000131 </string> 
+    </test>
+    <test label="U+0152">
+      <comment></comment>
+      <string>\u000152 \u000153 </string> 
+    </test>
+    <test label="U+0160">
+      <comment></comment>
+      <string>\u000160 \u000161 </string> 
+    </test>
+    <test label="U+0178">
+      <comment></comment>
+      <string>\u000178 </string> 
+    </test>
+    <test label="U+017D">
+      <comment></comment>
+      <string>\u00017D \u00017E</string> 
+    </test>
+    <test label="U+0192">
+      <comment></comment>
+      <string>\u000192</string> 
+    </test>
+    <test label="U+02C6">
+      <comment></comment>
+      <string>\u0002C6 \u0002C7</string> 
+    </test>
+    <test label="U+02D0">
+      <comment></comment>
+      <string>\u0002D0</string> 
+    </test>
+    <test label="U+02D8">
+      <comment></comment>
+      <string>\u0002D8 \u0002D9 \u0002DA \u0002DB \u0002DC \u0002DD</string> 
+    </test>
+    <test label="U+03C0">
+      <comment></comment>
+      <string>\u0003C0</string> 
+    </test>
+    <test label="U+1C00">
+      <comment>Consonants</comment>
+      <string>\u001C00 \u001C01 \u001C02 \u001C03 \u001C04 \u001C05 \u001C06 \u001C07 \u001C08 \u001C09 \u001C0A \u001C0B \u001C0C \u001C0D \u001C0E \u001C0F \u001C10 \u001C11 \u001C12 \u001C13 \u001C14 \u001C15 \u001C16 \u001C17 \u001C18 \u001C19 \u001C1A \u001C1B \u001C1C \u001C1D \u001C1E \u001C1F \u001C20 \u001C21 \u001C22 \u001C23</string> 
+    </test>
+    <test label="U+1C24">
+      <comment>Subjoined consonants</comment>
+      <string>\u001C24 \u001C25 </string> 
+    </test>
+    <test label="U+1C26">
+      <comment>Dependent vowels</comment>
+      <string>\u001C26 \u001C27 \u001C28 \u001C29 \u001C2A \u001C2B \u001C2C </string> 
+    </test>
+    <test label="U+1C2D">
+      <comment>Consonant signs</comment>
+      <string>\u001C2D \u001C2E \u001C2F \u001C30 \u001C31 \u001C32 \u001C33 \u001C34 \u001C35 </string> 
+    </test>
+    <test label="U+1C36">
+      <comment>Various signs</comment>
+      <string>\u001C36 \u001C37 </string> 
+    </test>
+    <test label="U+1C3B">
+      <comment>Punctuation</comment>
+      <string>\u001C3B \u001C3C \u001C3D \u001C3E \u001C3F</string> 
+    </test>
+    <test label="U+1C40">
+      <comment>Digits</comment>
+      <string>\u001C40 \u001C41 \u001C42 \u001C43 \u001C44 \u001C45 \u001C46 \u001C47 \u001C48 \u001C49</string> 
+    </test>
+    <test label="U+1C4D">
+      <comment>Additional letters</comment>
+      <string>\u001C4D \u001C4E \u001C4F </string> 
+    </test>
+    <test label="U+2000">
+      <comment></comment>
+      <string>|\u002000|\u002001|\u002002|\u002003|\u002004|\u002005|\u002006|\u002007|\u002008|\u002009|\u00200A|\u00200B|</string> 
+    </test>
+    <test label="U+200C">
+      <comment></comment>
+      <string>\u00200C \u00200D \u00200E \u00200F </string> 
+    </test>
+    <test label="U+2010">
+      <comment></comment>
+      <string>\u002010 \u002011 \u002012 \u002013 \u002014 \u002015</string> 
+    </test>
+    <test label="U+2018">
+      <comment></comment>
+      <string>\u002018 \u002019 \u00201A</string> 
+    </test>
+    <test label="U+201C">
+      <comment></comment>
+      <string>\u00201C \u00201D \u00201E</string> 
+    </test>
+    <test label="U+2020">
+      <comment></comment>
+      <string>\u002020 \u002021 \u002022</string> 
+    </test>
+    <test label="U+2026">
+      <comment></comment>
+      <string>\u002026 \u002027</string> 
+    </test>
+    <test label="U+2028">
+      <comment>Format characters</comment>
+      <string>\u002028 \u002029 \u00202A \u00202B \u00202C \u00202D \u00202E \u00202F</string> 
+    </test>
+    <test label="U+2030">
+      <comment></comment>
+      <string>\u002030 </string> 
+    </test>
+    <test label="U+2039">
+      <comment></comment>
+      <string>\u002039 \u00203A</string> 
+    </test>
+    <test label="U+2044">
+      <comment></comment>
+      <string>\u002044 </string> 
+    </test>
+    <test label="U+2060">
+      <comment>word joiner</comment>
+      <string>\u002060</string> 
+    </test>
+    <test label="U+20AC">
+      <comment></comment>
+      <string>\u0020AC</string> 
+    </test>
+    <test label="U+2122">
+      <comment></comment>
+      <string>\u002122</string> 
+    </test>
+    <test label="U+2126">
+      <comment></comment>
+      <string>\u002126</string> 
+    </test>
+    <test label="U+2202">
+      <comment></comment>
+      <string>\u002202</string> 
+    </test>
+    <test label="U+2206">
+      <comment></comment>
+      <string>\u002206</string> 
+    </test>
+    <test label="U+220F">
+      <comment></comment>
+      <string>\u00220F</string> 
+    </test>
+    <test label="U+2211">
+      <comment></comment>
+      <string>\u002211</string> 
+    </test>
+    <test label="U+2219">
+      <comment></comment>
+      <string>\u002219 \u00221A</string> 
+    </test>
+    <test label="U+221E">
+      <comment></comment>
+      <string>\u00221E</string> 
+    </test>
+    <test label="U+222B">
+      <comment></comment>
+      <string>\u00222B</string> 
+    </test>
+    <test label="U+2248">
+      <comment></comment>
+      <string>\u002248</string> 
+    </test>
+    <test label="U+2260">
+      <comment></comment>
+      <string>\u002260</string> 
+    </test>
+    <test label="U+2264">
+      <comment></comment>
+      <string>\u002264 \u002265</string> 
+    </test>
+    <test label="U+2423">
+      <comment></comment>
+      <string>\u002423  </string> 
+    </test>
+    <test label="U+25CA">
+      <comment></comment>
+      <string>\u0025CA</string> 
+    </test>
+    <test label="U+25CC">
+      <comment></comment>
+      <string>\u0025CC</string> 
+    </test>
+    <test label="U+FB01">
+      <comment></comment>
+      <string>\u00FB01 \u00FB02 </string> 
+    </test>
+    <test label="U+FE00">
+      <comment>Variation selectors</comment>
+      <string>\u00FE00 \u00FE01 \u00FE02 \u00FE03 \u00FE04 \u00FE05 \u00FE06 \u00FE07 \u00FE08 \u00FE09 \u00FE0A \u00FE0B \u00FE0C \u00FE0D \u00FE0E \u00FE0F</string> 
+    </test>
+    <test label="U+FEFF">
+      <comment>ZWNSP</comment>
+      <string>\u00FEFF</string> 
+    </test>
+    <test label="U+FFFC">
+      <comment>object replacement characters</comment>
+      <string>\u00FFFC \u00FFFD </string> 
+    </test>
+    <test label="U+FFFF">
+      <comment></comment>
+      <string>\u00FFFF </string> 
+    </test>
+   </testgroup>
+</ftml>
