@@ -209,7 +209,7 @@ lookup Reorder_CryNV {
   sub  @ConsAll' lookup _dbl_Vtl1C35  @N' lookup _del_extra  uni1C291C35' lookup _delete_dup ;
   
 	# I don't think we ever need this because the mark never goes before the vowel.
-  # sub @ConsAll' lookup dbl_Vtl  @N' lookup del_extra  @M' @Vtl' lookup delete_dup ;
+  #sub @ConsAll' lookup dbl_Vtl  @N' lookup del_extra  @M' @Vtl' lookup delete_dup ;
 
 } Reorder_CryNV ;
 
@@ -327,6 +327,17 @@ lookup DeleteBogusNull {
 } DeleteBogusNull ;
 
 
+#--- Vowel-sign-I + Kang ligature ---
+
+lookup SignIKang {
+	lookupflag IgnoreMarks;
+		sub uni1C35  uni1C27  by   uni1C271C35 ;  # note that they have been reordered
+
+} SignIKang ;
+
+
+
+
 #********************************************
 # Positioning lookups
 #
@@ -389,6 +400,8 @@ feature clig {  # Contextual Ligatures
 		lookup Reorder_VrtMt ;
 		
 		lookup DeleteBogusNull ;
+
+		lookup SignIKang ;
 		
 } clig ;
 
