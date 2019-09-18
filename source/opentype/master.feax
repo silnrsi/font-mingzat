@@ -103,8 +103,6 @@ lookup RaYaLigatures {
 @LKludge = [ uni1C27 ] ;
 
 
-#--- Reorder Kang - KLUDGE needed for InDesign ---
-
 # Delete the original vowel (and ran) that has now been moved to the left.
 lookup _del_extra {
 		sub      @ConsAll' @Left'    @Ran' by  @ConsAll;   # delete left-side vowel/cons sign and ran
@@ -115,12 +113,22 @@ lookup _del_extra {
 
 
 
+#--- Reorder Kang ---
+# KLUDGE needed for InDesign which doesn't do reordering.
+
 lookup _ins_Kang { sub @ConsAll  by  uni1C35  @ConsAll; } _ins_Kang ;
 
 lookup Reorder_CryNVK {
 
+	# Note that the ra/ya ligatures have not been formed yet. I implemented that way partly
+	# for the purposes of debugging, so I could watch this lookup happen before the
+	# automatic reordering.
+
 	# C V K -> K C V K -> K C V
-	sub  @ConsAll' lookup _ins_Kang  @Vall'  uni1C35'  lookup _del_extra ;
+	sub  @Cons' lookup _ins_Kang                      @Vall'  uni1C35'  lookup _del_extra ;
+	sub  @Cons' lookup _ins_Kang  uni1C24'            @Vall'  uni1C35'  lookup _del_extra ;
+	sub  @Cons' lookup _ins_Kang  uni1C25'            @Vall'  uni1C35'  lookup _del_extra ;
+	sub  @Cons' lookup _ins_Kang  uni1C25'  uni1C24'  @Vall'  uni1C35'  lookup _del_extra ;
 
 } Reorder_CryNVK ;
 
@@ -319,7 +327,7 @@ lookup _delMark {
 # I'm not sure that it's really necessary to include the consonant and nukta in the context
 # of these rules, but it feels safer.
 
-@ConsOrN = [ @ConsAll  @N ];
+####@ConsOrN = [ @ConsAll  @N ];
 
 lookup Reorder_VrtMt {
   # We should be able to use the following statement and remove the rules with the
@@ -328,42 +336,42 @@ lookup Reorder_VrtMt {
 	#lookupflag UseMarkFilteringSet @N ;
 	
 	# C V M R  ->  C M R V M R  ->  C M R V
-	sub @ConsOrN      @Vright' lookup _insM1C2D_R  uni1C2D'  @Ran' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C2E_R  uni1C2E'  @Ran' lookup _delMark;
-	sub @ConsOrN      @Vright' lookup _insM1C2F_R  uni1C2F'  @Ran' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C30_R  uni1C30'  @Ran' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C31_R  uni1C31'  @Ran' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C32_R  uni1C32'  @Ran' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C33_R  uni1C33'  @Ran' lookup _delMark ;
+	sub @ConsAll      @Vright' lookup _insM1C2D_R  uni1C2D'  @Ran' lookup _delMark ;
+	sub @ConsAll      @Vright' lookup _insM1C2E_R  uni1C2E'  @Ran' lookup _delMark;
+	sub @ConsAll      @Vright' lookup _insM1C2F_R  uni1C2F'  @Ran' lookup _delMark ;
+	sub @ConsAll      @Vright' lookup _insM1C30_R  uni1C30'  @Ran' lookup _delMark ;
+	sub @ConsAll      @Vright' lookup _insM1C31_R  uni1C31'  @Ran' lookup _delMark ;
+	sub @ConsAll      @Vright' lookup _insM1C32_R  uni1C32'  @Ran' lookup _delMark ;
+	sub @ConsAll      @Vright' lookup _insM1C33_R  uni1C33'  @Ran' lookup _delMark ;
 	
 	# C N V M R  ->  C N M R V M R  ->  C N M R V
-#	sub @ConsAll  @N  @Vright' lookup _insM1C2D_R  uni1C2D'  @Ran' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C2E_R  uni1C2E'  @Ran' lookup _delMark;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C2F_R  uni1C2F'  @Ran' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C30_R  uni1C30'  @Ran' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C31_R  uni1C31'  @Ran' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C32_R  uni1C32'  @Ran' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C33_R  uni1C33'  @Ran' lookup _delMark ;
+	sub @ConsAll  @N  @Vright' lookup _insM1C2D_R  uni1C2D'  @Ran' lookup _delMark ;
+	sub @ConsAll  @N  @Vright' lookup _insM1C2E_R  uni1C2E'  @Ran' lookup _delMark;
+	sub @ConsAll  @N  @Vright' lookup _insM1C2F_R  uni1C2F'  @Ran' lookup _delMark ;
+	sub @ConsAll  @N  @Vright' lookup _insM1C30_R  uni1C30'  @Ran' lookup _delMark ;
+	sub @ConsAll  @N  @Vright' lookup _insM1C31_R  uni1C31'  @Ran' lookup _delMark ;
+	sub @ConsAll  @N  @Vright' lookup _insM1C32_R  uni1C32'  @Ran' lookup _delMark ;
+	sub @ConsAll  @N  @Vright' lookup _insM1C33_R  uni1C33'  @Ran' lookup _delMark ;
 
 	# C V M  ->  C M V M  ->  C M V
-	sub @ConsOrN      @Vright' lookup _insM1C2D  uni1C2D' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C2E  uni1C2E' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C2F  uni1C2F' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C30  uni1C30' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C31  uni1C31' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C32  uni1C32' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C33  uni1C33' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C36  @Ran'    lookup _delMark ;
+	sub @ConsAll      @Vright' lookup _insM1C2D  uni1C2D' lookup _delMark ;
+	sub @ConsAll      @Vright' lookup _insM1C2E  uni1C2E' lookup _delMark ;
+	sub @ConsAll      @Vright' lookup _insM1C2F  uni1C2F' lookup _delMark ;
+	sub @ConsAll      @Vright' lookup _insM1C30  uni1C30' lookup _delMark ;
+	sub @ConsAll      @Vright' lookup _insM1C31  uni1C31' lookup _delMark ;
+	sub @ConsAll      @Vright' lookup _insM1C32  uni1C32' lookup _delMark ;
+	sub @ConsAll      @Vright' lookup _insM1C33  uni1C33' lookup _delMark ;
+	sub @ConsAll      @Vright' lookup _insM1C36  @Ran'    lookup _delMark ;
 	
 	# C N V M  ->  C N M V M  ->  C N M V
-#	sub @ConsAll  @N  @Vright' lookup _insM1C2D  uni1C2D' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C2E  uni1C2E' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C2F  uni1C2F' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C30  uni1C30' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C31  uni1C31' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C32  uni1C32' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C33  uni1C33' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C36  @Ran'    lookup _delMark ;
+	sub @ConsAll  @N  @Vright' lookup _insM1C2D  uni1C2D' lookup _delMark ;
+	sub @ConsAll  @N  @Vright' lookup _insM1C2E  uni1C2E' lookup _delMark ;
+	sub @ConsAll  @N  @Vright' lookup _insM1C2F  uni1C2F' lookup _delMark ;
+	sub @ConsAll  @N  @Vright' lookup _insM1C30  uni1C30' lookup _delMark ;
+	sub @ConsAll  @N  @Vright' lookup _insM1C31  uni1C31' lookup _delMark ;
+	sub @ConsAll  @N  @Vright' lookup _insM1C32  uni1C32' lookup _delMark ;
+	sub @ConsAll  @N  @Vright' lookup _insM1C33  uni1C33' lookup _delMark ;
+	sub @ConsAll  @N  @Vright' lookup _insM1C36  @Ran'    lookup _delMark ;
 	
 } Reorder_VrtMt ;
 
@@ -455,10 +463,11 @@ feature ccmp {  # Glyph Composition/Decomposition
 
 		lookup VtlMarkLig ;  # do before built-in OT reordering
 		
-		lookup Reorder_CryNVK ;  # InDesign kludge
+		lookup Reorder_CryNVK ;  # InDesign kludge; should this be moved down to the following feature?
 		
 } ccmp ;
 
+#--- OpenType reordering occurs here ---
 
 feature clig {  # Contextual Ligatures 
 
