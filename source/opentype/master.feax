@@ -97,6 +97,8 @@ lookup RaYaLigatures {
 
 @Vright = [ uni1C26  uni1C2A  uni1C2B ];
 
+@Vall = [ @Vright  @VtlAll  uni1C27 uni1C28 ];
+
 @LKludge = [ uni1C2B ];  # for debugging reordering using hb-shape, for reordered glyphs that work correctly there but not in other places
 ##@LKludge = [ uni1C27 ] ;
 
@@ -105,10 +107,10 @@ lookup RaYaLigatures {
 
 # Delete the original vowel (and ran) that has now been moved to the left.
 lookup _del_extra {
-		sub      @ConsAll' @Left' @Ran' by  @ConsAll;
-		sub @Ran @ConsAll' @Left'       by  @ConsAll;
-		sub      @ConsAll' @Left'       by  @ConsAll;
-		sub           @Vright' uni1C35' by  @Vright;
+		sub      @ConsAll' @Left'    @Ran' by  @ConsAll;   # delete left-side vowel/cons sign and ran
+		sub @Ran @ConsAll' @Left'          by  @ConsAll;   # delete left-side vowel/cons sign and ran
+		sub      @ConsAll' @Left'          by  @ConsAll;   # delete left-side vowel
+		sub                @Vall' uni1C35' by  @Vall;      # delete kang
 } _del_extra ;
 
 
@@ -118,7 +120,7 @@ lookup _ins_Kang { sub @ConsAll  by  uni1C35  @ConsAll; } _ins_Kang ;
 lookup Reorder_CryNVK {
 
 	# C V K -> K C V K -> K C V
-	sub  @ConsAll' lookup _ins_Kang  @Vright'  uni1C35'  lookup _del_extra ;
+	sub  @ConsAll' lookup _ins_Kang  @Vall'  uni1C35'  lookup _del_extra ;
 
 } Reorder_CryNVK ;
 
