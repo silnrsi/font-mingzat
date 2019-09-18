@@ -99,8 +99,8 @@ lookup RaYaLigatures {
 
 @Vall = [ @Vright  @VtlAll  uni1C27 uni1C28 ];
 
-@LKludge = [ uni1C2B ];  # for debugging reordering using hb-shape, for reordered glyphs that work correctly there but not in other places
-##@LKludge = [ uni1C27 ] ;
+#@LKludge = [ uni1C2B ];  # for debugging reordering using hb-shape, for reordered glyphs that work correctly there but not in other places
+@LKludge = [ uni1C27 ] ;
 
 
 #--- Reorder Kang - KLUDGE needed for InDesign ---
