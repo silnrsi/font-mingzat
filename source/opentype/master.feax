@@ -86,6 +86,15 @@ lookup RaYaLigatures {
 } RaYaLigatures;
 
 
+#--- KLUDGE - InDesign experiment
+
+@KludgeNuktas = [ uni1C3D uni1C3E ];
+lookup KludgeNukta {
+	sub uni1C19  uni1C37  by  uni1C3D ;
+	sub uni1C1B  uni1C37  by  uni1C3E ;
+} KludgeNukta;
+
+
 @ConsAll = [ @Cons  @BasePlusYa  @BasePlusRa  @BasePlusRaYa ];
 
 @N = [ uni1C37 ] ;
@@ -93,11 +102,13 @@ lookup RaYaLigatures {
 
 @VtlAll = [ uni1C29  uni1C291C2D uni1C291C2E uni1C291C2F uni1C291C30 uni1C291C31 uni1C291C32 uni1C291C33 uni1C291C35 ] ;  # top-left vowel & mark ligatures
 
-@Left = [ @VtlAll  uni1C27  uni1C28  uni1C34  uni1C35 ] ;
+@Vright = [ uni1C26  uni1C2A  uni1C2B ] ;
+@Vleft =  [ uni1C27  uni1C28 ] ;
+@Vbottom = [uni1C2C ] ;
 
-@Vright = [ uni1C26  uni1C2A  uni1C2B ];
+@Left = [ @VtlAll  @Vleft  uni1C34  uni1C35 ] ;
 
-@Vall = [ @Vright  @VtlAll  uni1C27 uni1C28 ];
+@Vall = [ @Vright  @VtlAll  @Vleft  @Vbottom ];
 
 #@LKludge = [ uni1C2B ];  # for debugging reordering using hb-shape, for reordered glyphs that work correctly there but not in other places
 @LKludge = [ uni1C27 ] ;
@@ -120,7 +131,7 @@ lookup _ins_Kang { sub @ConsAll  by  uni1C35  @ConsAll; } _ins_Kang ;
 
 lookup Reorder_CryNVK {
 
-	# Note that the ra/ya ligatures have not been formed yet. I implemented that way partly
+	# Note that the ra/ya ligatures have not been formed yet. I implemented this that way partly
 	# for the purposes of debugging, so I could watch this lookup happen before the
 	# automatic reordering.
 
@@ -407,17 +418,17 @@ lookup SignIKang {
 # Positioning lookups
 #
 
-markClass uni1C37 <anchor -409 -180> @_N;
+#markClass uni1C37 <anchor -409 -180> @_N;
 
-lookup InDesignKludges {
-	pos base uni1C19  <anchor 636 -160> mark @_N  <anchor 570 750> mark @_U ;
-	pos base uni1C1B  <anchor 564 -214> mark @_N  <anchor 564 650> mark @_U ;
+#lookup InDesignKludges {
+#	pos base uni1C19  <anchor 636 -160> mark @_N  <anchor 570 750> mark @_U ;
+#	pos base uni1C1B  <anchor 564 -214> mark @_N  <anchor 564 650> mark @_U ;
 	
-	pos base uni1C001C25  <anchor 704 -220> mark @_N  <anchor 810 680> mark @_U ;
-	pos base uni1C031C25  <anchor 583 -240> mark @_N  <anchor 568 680> mark @_U ;
-	pos base uni1C1D1C25  <anchor 530 -240> mark @_N  <anchor 512 680> mark @_U ;
+#	pos base uni1C001C25  <anchor 704 -220> mark @_N  <anchor 810 680> mark @_U ;
+#	pos base uni1C031C25  <anchor 583 -240> mark @_N  <anchor 568 680> mark @_U ;
+#	pos base uni1C1D1C25  <anchor 530 -240> mark @_N  <anchor 512 680> mark @_U ;
 	
-} InDesignKludges ;
+#} InDesignKludges ;
 
 
 lookup AttachMarks {
@@ -426,10 +437,6 @@ lookup AttachMarks {
 		pos base @L mark @_L ;
 } AttachMarks ;
 
-lookup AttachNMarks {
-	lookupflag IgnoreMarks;  # ignore intervening nukta
-		pos base @U mark @_U ;
-} AttachNMarks ;
 
 lookup AttachMarks2 {
 	lookupflag 0;
@@ -451,6 +458,13 @@ lookup ShiftNuqta1C2C {
 		pos  @RaYaLigs  @N  uni1C2C' <0 -380 0 0> ;
 		
 } ShiftNuqta1C2C ;
+
+
+#--- KLUDGE - InDesign experiment
+
+lookup KludgeAttachMarksN {
+  pos base @KludgeNuktas <anchor 490 -200> mark @_U ;
+} KludgeAttachMarksN;
 
 
 #************************************************************
@@ -495,11 +509,12 @@ feature clig {  # Contextual Ligatures
 
 feature mark {
 
-	lookup InDesignKludges ;
+#######	lookup InDesignKludges ;
 
 	lookup AttachMarks ;
-	lookup AttachNMarks ;
 	lookup AttachMarks2 ;
+	
+	lookup KludgeAttachMarksN ;
 	
 } mark ;
 
