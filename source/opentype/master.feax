@@ -95,9 +95,9 @@ lookup NuktaLigs {
 
 	sub uni1C19  uni1C37           by  uni1C191C37 ;
 	sub uni1C1B  uni1C37           by  uni1C1B1C37 ;
-	sub uni1C00  uni1C37  uni1C25  by  uni1C001C251C37 ;
-	sub uni1C03  uni1C37  uni1C25  by  uni1C031C251C37 ;
-	sub uni1C1D  uni1C37  uni1C25  by  uni1C1D1C251C37 ;
+	sub uni1C00  uni1C37  uni1C25  by  uni1C001C371C25 ;
+	sub uni1C03  uni1C37  uni1C25  by  uni1C031C371C25 ;
+	sub uni1C1D  uni1C37  uni1C25  by  uni1C1D1C371C25 ;
 	
 } NuktaLigs;
 
