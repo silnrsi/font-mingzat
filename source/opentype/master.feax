@@ -61,7 +61,7 @@ lookup VtlMarkLig {
 		uni1C00      uni1C01      uni1C02      uni1C03      uni1C04      uni1C05      uni1C0A      uni1C0B
     uni1C0C      uni1C0E      uni1C0F      uni1C10      uni1C11      uni1C12      uni1C13      uni1C14  
     uni1C15      uni1C16      uni1C1B      uni1C1C      uni1C1D      uni1C1E      uni1C1F      uni1C21      uni1C23 ] ;
-@BasePlusYa = [
+@ConsYa = [
 		uni1C001C24  uni1C011C24  uni1C021C24  uni1C031C24  uni1C041C24  uni1C051C24  uni1C0A1C24  uni1C0B1C24
     uni1C0C1C24  uni1C0E1C24  uni1C0F1C24  uni1C101C24  uni1C111C24  uni1C121C24  uni1C131C24  uni1C141C24
     uni1C151C24  uni1C161C24  uni1C1B1C24  uni1C1C1C24  uni1C1D1C24  uni1C1E1C24  uni1C1F1C24  uni1C211C24  uni1C231C24 ] ;
@@ -69,19 +69,19 @@ lookup VtlMarkLig {
 @TakesRaAndRaYa = [ 
     uni1C00          uni1C03          uni1C05          uni1C0E          uni1C11
     uni1C13          uni1C15          uni1C1D ] ;
-@BasePlusRa =     [
+@ConsRa =     [
     uni1C001C25      uni1C031C25      uni1C051C25      uni1C0E1C25      uni1C111C25
     uni1C131C25      uni1C151C25      uni1C1D1C25 ] ;
-@BasePlusRaYa =  [
+@ConsRaYa =  [
     uni1C001C251C24  uni1C031C251C24  uni1C051C251C24  uni1C0E1C251C24  uni1C111C251C24
     uni1C131C251C24  uni1C151C251C24  uni1C1D1C251C24 ] ;
     
 lookup RaYaLigatures {
 
 	lookupflag IgnoreMarks;
-  	sub @TakesYa         uni1C24           by  @BasePlusYa ;
-  	sub @TakesRaAndRaYa  uni1C25           by  @BasePlusRa ;
-  	sub @TakesRaAndRaYa  uni1C25  uni1C24  by  @BasePlusRaYa ;
+  	sub @TakesYa         uni1C24           by  @ConsYa ;
+  	sub @TakesRaAndRaYa  uni1C25           by  @ConsRa ;
+  	sub @TakesRaAndRaYa  uni1C25  uni1C24  by  @ConsRaYa ;
   	
 } RaYaLigatures;
 
@@ -90,6 +90,9 @@ lookup RaYaLigatures {
 
 # This is a kludge for InDesign which does not handle the nuqtas correctly
 # (cons signs following forms with nuktas are not attached).
+# Here we only handle nuktas that happen in real life.
+
+@ConsNukta = [ uni1C191C37  uni1C1B1C37  uni1C001C371C25  uni1C031C371C25  uni1C1D1C371C25 ] ;
 
 lookup NuktaLigs {
 
@@ -102,12 +105,13 @@ lookup NuktaLigs {
 } NuktaLigs;
 
 
-@ConsAll = [ @Cons  @BasePlusYa  @BasePlusRa  @BasePlusRaYa ];
+@ConsAll = [ @Cons  @ConsYa  @ConsRa  @ConsRaYa  @ConsNukta ] ;
 
 @N = [ uni1C37 ] ;
 @Ran   = [ uni1C36 ] ;
 
-@VtlAll = [ uni1C29  uni1C291C2D uni1C291C2E uni1C291C2F uni1C291C30 uni1C291C31 uni1C291C32 uni1C291C33 uni1C291C35 ] ;  # top-left vowel & mark ligatures
+# top-left vowel with cons-sign marks:
+@VtlAll = [ uni1C29  uni1C291C2D uni1C291C2E uni1C291C2F uni1C291C30 uni1C291C31 uni1C291C32 uni1C291C33 uni1C291C35 ] ;
 
 @Vright = [ uni1C26  uni1C2A  uni1C2B ] ;
 @Vleft =  [ uni1C27  uni1C28 ] ;
@@ -120,31 +124,25 @@ lookup NuktaLigs {
 
 # Delete the original vowel (and ran) that has now been moved to the left.
 lookup _del_extra {
-		sub      @ConsAll' @LeftWRan' @Ran' by  @ConsAll;   # delete left-side vowel and ran
-		sub @Ran @ConsAll' @Left'           by  @ConsAll;   # delete left-side vowel/cons sign and ran
-		sub      @ConsAll' @Left'           by  @ConsAll;   # delete left-side vowel
-		sub                @Vall'  uni1C35' by  @Vall;      # delete kang
+		sub      @ConsAll' @LeftWRan'  @Ran' by  @ConsAll;   # delete left-side vowel and ran
+		sub @Ran @ConsAll' @Left'            by  @ConsAll;   # delete left-side vowel/cons sign and ran
+		sub      @ConsAll' @Left'            by  @ConsAll;   # delete left-side vowel
+		sub                @Vall'   uni1C35' by  @Vall;      # delete kang
 } _del_extra ;
 
 
 #--- Reorder Kang ---
+
 # KLUDGE needed for InDesign which doesn't do reordering.
 
 lookup _ins_Kang { sub @ConsAll  by  uni1C35  @ConsAll; } _ins_Kang ;
 
-lookup Reorder_CryNVK {
-
-	# Note that the ra/ya ligatures have not been formed yet. I implemented this that way partly
-	# for the purposes of debugging, so I could watch this lookup happen before the
-	# automatic reordering.
+lookup Reorder_CryNV_K {
 
 	# C V K -> K C V K -> K C V
-	sub  @Cons' lookup _ins_Kang                      @Vall'  uni1C35'  lookup _del_extra ;
-	sub  @Cons' lookup _ins_Kang  uni1C24'            @Vall'  uni1C35'  lookup _del_extra ;
-	sub  @Cons' lookup _ins_Kang  uni1C25'            @Vall'  uni1C35'  lookup _del_extra ;
-	sub  @Cons' lookup _ins_Kang  uni1C25'  uni1C24'  @Vall'  uni1C35'  lookup _del_extra ;
+	sub  @ConsAll' lookup _ins_Kang   @Vall'  uni1C35'  lookup _del_extra ;
 
-} Reorder_CryNVK ;
+} Reorder_CryNV_K ;
 
 
 #--- Reorder top-left vowel ---
@@ -214,7 +212,7 @@ lookup _delete_dup {
 
 
 # put longer rules first - those including the Ran
-lookup Reorder_CryNVR {
+lookup Reorder_CryN_VR {
 
   # C V R -> V R C V -> V R C
 	sub  @ConsAll' lookup _ins_VtlRan      uni1C29'       @Ran' lookup _del_extra ;
@@ -238,9 +236,9 @@ lookup Reorder_CryNVR {
   sub  @ConsAll' lookup _dbl_Vtl1C33Ran  @N'  uni1C291C33' lookup _del_extra  @Ran' lookup _delete_dup ;
   sub  @ConsAll' lookup _dbl_Vtl1C35Ran  @N'  uni1C291C35' lookup _del_extra  @Ran' lookup _delete_dup ;
  
-} Reorder_CryNVR ;
+} Reorder_CryN_VR ;
 
-lookup Reorder_CryNV {
+lookup Reorder_CryN_V {
 
   # C V -> V C V -> V C
 	sub  @ConsAll' lookup _ins_Vtl      uni1C29'     lookup _del_extra ;
@@ -275,12 +273,12 @@ lookup Reorder_CryNV {
 	# I don't think we ever need this because the mark never goes before the vowel.
   #sub @ConsAll' lookup dbl_Vtl  @N' lookup del_extra  @M' uni1C29' lookup delete_dup ;
 
-} Reorder_CryNV ;
+} Reorder_CryN_V ;
 
 @M = [ uni1C2D  uni1C2E  uni1C2F  uni1C30  uni1C31  uni1C32  uni1C33 ] ;
 @BogusNull = [ uni2219 ] ;
 
-lookup Reorder_CryNV_delV {
+lookup Reorder_CryN_V_delV {
 
 	sub @Left'  @M'  by  @M ;
 	
@@ -291,7 +289,7 @@ lookup Reorder_CryNV_delV {
 		  { sub @N  $v' @Ran' by  @BogusNull ; }
 	sub  @N  @Left'  by  @BogusNull ;
 	
-} Reorder_CryNV_delV ;
+} Reorder_CryN_V_delV ;
 
 
 #--- Reorder top mark and right-side vowel ---
@@ -327,7 +325,7 @@ lookup _delMark {
 
 @ConsOrN = [ @ConsAll  @N ];
 
-lookup Reorder_VrtMt {
+lookup Reorder_Vrt_Mt {
   # We should be able to use the following statement and remove the rules with the
   # nuktas, but that seemed to break the entire lookup. Instead I just merged the
   # consonants and nukta into one class.
@@ -371,14 +369,14 @@ lookup Reorder_VrtMt {
 #	sub @ConsAll  @N  @Vright' lookup _insM1C33  uni1C33' lookup _delMark ;
 #	sub @ConsAll  @N  @Vright' lookup _insM1C36  @Ran'    lookup _delMark ;
 	
-} Reorder_VrtMt ;
+} Reorder_Vrt_Mt ;
 
 
 #--- Delete bogus null glyph that was used as a kludge ---
 
 # They only occur at the end of syllables, after cons ligatures + nuktas + top-left vowel.
 
-@RaYaLigs = [ @BasePlusRa  @BasePlusYa  @BasePlusRaYa ] ;
+@RaYaLigs = [ @ConsRa  @ConsYa  @ConsRaYa ] ;
 
 lookup DeleteBogusNull {
 
@@ -434,13 +432,6 @@ lookup ShiftNuqta1C2C {
 } ShiftNuqta1C2C ;
 
 
-#--- KLUDGE - InDesign experiment
-
-#lookup KludgeAttachMarksN {
-#  pos base @KludgeNuktas <anchor 490 -200> mark @_U ;
-#} KludgeAttachMarksN;
-
-
 #************************************************************
 # GSUB features                                             *
 #************************************************************
@@ -451,23 +442,23 @@ feature ccmp {  # Glyph Composition/Decomposition
 
 		lookup VtlMarkLig ;  # do before built-in OT reordering
 		
-		lookup Reorder_CryNVK ;  # InDesign kludge; should this be moved down to the following feature?
-
-##############		
+		# The following lookups should probably be in clig. We put them here
+		# to make them happen BEFORE Harfbuzz reordering. This makes the behavior
+		# consistent among various flavors of Harfbuzz and InDesign which
+		# don't all perform reordering correctly (if at all).
 
 		lookup RaYaLigatures ;
 		
 		lookup NuktaLigs ;
 		
-		# Reordering that is not handled in InDesign:
-		####lookup InDesignReordering;
+		lookup Reorder_CryNV_K ;  # InDesign only
 		
-		lookup Reorder_CryNVR ;
-		lookup Reorder_CryNV ;
-		lookup Reorder_CryNV_delV ;
+		lookup Reorder_CryN_VR ;
+		lookup Reorder_CryN_V ;
+		lookup Reorder_CryN_V_delV ;
 		
-		lookup Reorder_VrtMt ;
-
+		lookup Reorder_Vrt_Mt ;
+		
 } ccmp ;
 
 #--- OpenType reordering occurs here, if there is any left to do ---
@@ -477,7 +468,7 @@ feature clig {  # Contextual Ligatures
 		lookup DeleteBogusNull ;
 
 		lookup SignIKang ;
-		
+
 } clig ;
 
 
@@ -489,8 +480,6 @@ feature mark {
 
 	lookup AttachMarks ;
 	lookup AttachMarks2 ;
-	
-	#lookup KludgeAttachMarksN ;
 	
 } mark ;
 
