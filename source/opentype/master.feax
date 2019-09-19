@@ -86,13 +86,20 @@ lookup RaYaLigatures {
 } RaYaLigatures;
 
 
-#--- KLUDGE - InDesign experiment
+#--- Create ligatures for forms with nuktas --
 
-@KludgeNuktas = [ uni1C3D uni1C3E ];
-lookup KludgeNuktaLig {
-	sub uni1C19  uni1C37  by  uni1C3D ;
-	sub uni1C1B  uni1C37  by  uni1C3E ;
-} KludgeNuktaLig;
+# This is a kludge for InDesign which does not handle the nuqtas correctly
+# (cons signs following forms with nuktas are not attached).
+
+lookup NuktaLigs {
+
+	sub uni1C19  uni1C37           by  uni1C191C37 ;
+	sub uni1C1B  uni1C37           by  uni1C1B1C37 ;
+	sub uni1C00  uni1C37  uni1C25  by  uni1C001C251C37 ;
+	sub uni1C03  uni1C37  uni1C25  by  uni1C031C251C37 ;
+	sub uni1C1D  uni1C37  uni1C25  by  uni1C1D1C251C37 ;
+	
+} NuktaLigs;
 
 
 @ConsAll = [ @Cons  @BasePlusYa  @BasePlusRa  @BasePlusRaYa ];
@@ -111,10 +118,6 @@ lookup KludgeNuktaLig {
 
 @Vall = [ @Vright  @VtlAll  @Vleft  @Vbottom ];
 
-####@LKludge = [ uni1C2B ];  # for debugging reordering using hb-shape, for reordered glyphs that work correctly there but not in other places
-#@LKludge = [ uni1C27 ] ;
-
-
 # Delete the original vowel (and ran) that has now been moved to the left.
 lookup _del_extra {
 		sub      @ConsAll' @LeftWRan' @Ran' by  @ConsAll;   # delete left-side vowel and ran
@@ -122,7 +125,6 @@ lookup _del_extra {
 		sub      @ConsAll' @Left'           by  @ConsAll;   # delete left-side vowel
 		sub                @Vall'  uni1C35' by  @Vall;      # delete kang
 } _del_extra ;
-
 
 
 #--- Reorder Kang ---
@@ -296,7 +298,6 @@ lookup Reorder_CryNV_delV {
 
 # This is necessary for the mark to be attached to the preceding consonant.
 
-####@Vright = [ uni1C26  uni1C2A  uni1C2B ];
 @Mtop = [ uni1C2D  uni1C2E  uni1C2F  uni1C30  uni1C31  uni1C32  uni1C33  uni1C36 ];
 
 lookup _insM1C2D { sub  @Vright  by  uni1C2D  @Vright ; } _insM1C2D ;
@@ -324,7 +325,7 @@ lookup _delMark {
 # I'm not sure that it's really necessary to include the consonant and nukta in the context
 # of these rules, but it feels safer.
 
-####@ConsOrN = [ @ConsAll  @N ];
+@ConsOrN = [ @ConsAll  @N ];
 
 lookup Reorder_VrtMt {
   # We should be able to use the following statement and remove the rules with the
@@ -333,42 +334,42 @@ lookup Reorder_VrtMt {
 	#lookupflag UseMarkFilteringSet @N ;
 	
 	# C V M R  ->  C M R V M R  ->  C M R V
-	sub @ConsAll      @Vright' lookup _insM1C2D_R  uni1C2D'  @Ran' lookup _delMark ;
-	sub @ConsAll      @Vright' lookup _insM1C2E_R  uni1C2E'  @Ran' lookup _delMark;
-	sub @ConsAll      @Vright' lookup _insM1C2F_R  uni1C2F'  @Ran' lookup _delMark ;
-	sub @ConsAll      @Vright' lookup _insM1C30_R  uni1C30'  @Ran' lookup _delMark ;
-	sub @ConsAll      @Vright' lookup _insM1C31_R  uni1C31'  @Ran' lookup _delMark ;
-	sub @ConsAll      @Vright' lookup _insM1C32_R  uni1C32'  @Ran' lookup _delMark ;
-	sub @ConsAll      @Vright' lookup _insM1C33_R  uni1C33'  @Ran' lookup _delMark ;
+	sub @ConsOrN      @Vright' lookup _insM1C2D_R  uni1C2D'  @Ran' lookup _delMark ;
+	sub @ConsOrN      @Vright' lookup _insM1C2E_R  uni1C2E'  @Ran' lookup _delMark;
+	sub @ConsOrN      @Vright' lookup _insM1C2F_R  uni1C2F'  @Ran' lookup _delMark ;
+	sub @ConsOrN      @Vright' lookup _insM1C30_R  uni1C30'  @Ran' lookup _delMark ;
+	sub @ConsOrN      @Vright' lookup _insM1C31_R  uni1C31'  @Ran' lookup _delMark ;
+	sub @ConsOrN      @Vright' lookup _insM1C32_R  uni1C32'  @Ran' lookup _delMark ;
+	sub @ConsOrN      @Vright' lookup _insM1C33_R  uni1C33'  @Ran' lookup _delMark ;
 	
 	# C N V M R  ->  C N M R V M R  ->  C N M R V
-	sub @ConsAll  @N  @Vright' lookup _insM1C2D_R  uni1C2D'  @Ran' lookup _delMark ;
-	sub @ConsAll  @N  @Vright' lookup _insM1C2E_R  uni1C2E'  @Ran' lookup _delMark;
-	sub @ConsAll  @N  @Vright' lookup _insM1C2F_R  uni1C2F'  @Ran' lookup _delMark ;
-	sub @ConsAll  @N  @Vright' lookup _insM1C30_R  uni1C30'  @Ran' lookup _delMark ;
-	sub @ConsAll  @N  @Vright' lookup _insM1C31_R  uni1C31'  @Ran' lookup _delMark ;
-	sub @ConsAll  @N  @Vright' lookup _insM1C32_R  uni1C32'  @Ran' lookup _delMark ;
-	sub @ConsAll  @N  @Vright' lookup _insM1C33_R  uni1C33'  @Ran' lookup _delMark ;
+#	sub @ConsAll  @N  @Vright' lookup _insM1C2D_R  uni1C2D'  @Ran' lookup _delMark ;
+#	sub @ConsAll  @N  @Vright' lookup _insM1C2E_R  uni1C2E'  @Ran' lookup _delMark;
+#	sub @ConsAll  @N  @Vright' lookup _insM1C2F_R  uni1C2F'  @Ran' lookup _delMark ;
+#	sub @ConsAll  @N  @Vright' lookup _insM1C30_R  uni1C30'  @Ran' lookup _delMark ;
+#	sub @ConsAll  @N  @Vright' lookup _insM1C31_R  uni1C31'  @Ran' lookup _delMark ;
+#	sub @ConsAll  @N  @Vright' lookup _insM1C32_R  uni1C32'  @Ran' lookup _delMark ;
+#	sub @ConsAll  @N  @Vright' lookup _insM1C33_R  uni1C33'  @Ran' lookup _delMark ;
 
 	# C V M  ->  C M V M  ->  C M V
-	sub @ConsAll      @Vright' lookup _insM1C2D  uni1C2D' lookup _delMark ;
-	sub @ConsAll      @Vright' lookup _insM1C2E  uni1C2E' lookup _delMark ;
-	sub @ConsAll      @Vright' lookup _insM1C2F  uni1C2F' lookup _delMark ;
-	sub @ConsAll      @Vright' lookup _insM1C30  uni1C30' lookup _delMark ;
-	sub @ConsAll      @Vright' lookup _insM1C31  uni1C31' lookup _delMark ;
-	sub @ConsAll      @Vright' lookup _insM1C32  uni1C32' lookup _delMark ;
-	sub @ConsAll      @Vright' lookup _insM1C33  uni1C33' lookup _delMark ;
-	sub @ConsAll      @Vright' lookup _insM1C36  @Ran'    lookup _delMark ;
+	sub @ConsOrN      @Vright' lookup _insM1C2D  uni1C2D' lookup _delMark ;
+	sub @ConsOrN      @Vright' lookup _insM1C2E  uni1C2E' lookup _delMark ;
+	sub @ConsOrN      @Vright' lookup _insM1C2F  uni1C2F' lookup _delMark ;
+	sub @ConsOrN      @Vright' lookup _insM1C30  uni1C30' lookup _delMark ;
+	sub @ConsOrN      @Vright' lookup _insM1C31  uni1C31' lookup _delMark ;
+	sub @ConsOrN      @Vright' lookup _insM1C32  uni1C32' lookup _delMark ;
+	sub @ConsOrN      @Vright' lookup _insM1C33  uni1C33' lookup _delMark ;
+	sub @ConsOrN      @Vright' lookup _insM1C36  @Ran'    lookup _delMark ;
 	
 	# C N V M  ->  C N M V M  ->  C N M V
-	sub @ConsAll  @N  @Vright' lookup _insM1C2D  uni1C2D' lookup _delMark ;
-	sub @ConsAll  @N  @Vright' lookup _insM1C2E  uni1C2E' lookup _delMark ;
-	sub @ConsAll  @N  @Vright' lookup _insM1C2F  uni1C2F' lookup _delMark ;
-	sub @ConsAll  @N  @Vright' lookup _insM1C30  uni1C30' lookup _delMark ;
-	sub @ConsAll  @N  @Vright' lookup _insM1C31  uni1C31' lookup _delMark ;
-	sub @ConsAll  @N  @Vright' lookup _insM1C32  uni1C32' lookup _delMark ;
-	sub @ConsAll  @N  @Vright' lookup _insM1C33  uni1C33' lookup _delMark ;
-	sub @ConsAll  @N  @Vright' lookup _insM1C36  @Ran'    lookup _delMark ;
+#	sub @ConsAll  @N  @Vright' lookup _insM1C2D  uni1C2D' lookup _delMark ;
+#	sub @ConsAll  @N  @Vright' lookup _insM1C2E  uni1C2E' lookup _delMark ;
+#	sub @ConsAll  @N  @Vright' lookup _insM1C2F  uni1C2F' lookup _delMark ;
+#	sub @ConsAll  @N  @Vright' lookup _insM1C30  uni1C30' lookup _delMark ;
+#	sub @ConsAll  @N  @Vright' lookup _insM1C31  uni1C31' lookup _delMark ;
+#	sub @ConsAll  @N  @Vright' lookup _insM1C32  uni1C32' lookup _delMark ;
+#	sub @ConsAll  @N  @Vright' lookup _insM1C33  uni1C33' lookup _delMark ;
+#	sub @ConsAll  @N  @Vright' lookup _insM1C36  @Ran'    lookup _delMark ;
 	
 } Reorder_VrtMt ;
 
@@ -376,8 +377,6 @@ lookup Reorder_VrtMt {
 #--- Delete bogus null glyph that was used as a kludge ---
 
 # They only occur at the end of syllables, after cons ligatures + nuktas + top-left vowel.
-
-##@AnyGlyph = [ space  @ConsAll  @Vright  uni1C34  @Left ] ; - not used
 
 @RaYaLigs = [ @BasePlusRa  @BasePlusYa  @BasePlusRaYa ] ;
 
@@ -405,17 +404,6 @@ lookup SignIKang {
 #
 
 #markClass uni1C37 <anchor -409 -180> @_N;
-
-#lookup InDesignKludges {
-#	pos base uni1C19  <anchor 636 -160> mark @_N  <anchor 570 750> mark @_U ;
-#	pos base uni1C1B  <anchor 564 -214> mark @_N  <anchor 564 650> mark @_U ;
-	
-#	pos base uni1C001C25  <anchor 704 -220> mark @_N  <anchor 810 680> mark @_U ;
-#	pos base uni1C031C25  <anchor 583 -240> mark @_N  <anchor 568 680> mark @_U ;
-#	pos base uni1C1D1C25  <anchor 530 -240> mark @_N  <anchor 512 680> mark @_U ;
-	
-#} InDesignKludges ;
-
 
 lookup AttachMarks {
 	lookupflag 0;
@@ -448,9 +436,9 @@ lookup ShiftNuqta1C2C {
 
 #--- KLUDGE - InDesign experiment
 
-lookup KludgeAttachMarksN {
-  pos base @KludgeNuktas <anchor 490 -200> mark @_U ;
-} KludgeAttachMarksN;
+#lookup KludgeAttachMarksN {
+#  pos base @KludgeNuktas <anchor 490 -200> mark @_U ;
+#} KludgeAttachMarksN;
 
 
 #************************************************************
@@ -469,7 +457,7 @@ feature ccmp {  # Glyph Composition/Decomposition
 
 		lookup RaYaLigatures ;
 		
-		lookup KludgeNuktaLig ; # InDesign experiment - replace certain consonants+nukta with separate glyph
+		lookup NuktaLigs ;
 		
 		# Reordering that is not handled in InDesign:
 		####lookup InDesignReordering;
@@ -499,12 +487,10 @@ feature clig {  # Contextual Ligatures
 
 feature mark {
 
-#######	lookup InDesignKludges ;
-
 	lookup AttachMarks ;
 	lookup AttachMarks2 ;
 	
-	lookup KludgeAttachMarksN ;
+	#lookup KludgeAttachMarksN ;
 	
 } mark ;
 
