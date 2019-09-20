@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni1C191C37" format="1">
   <advance width="834"/>
+  <anchor x="635" y="-426" name="L"/>
+  <anchor x="570" y="750" name="U"/>
   <outline>
     <component base="uni1C19"/>
-    <component base="uni1C37" xOffset="1045" yOffset="20"/>
+    <component base="uni1C37" xOffset="1045" yOffset="125"/>
   </outline>
 </glyph>
