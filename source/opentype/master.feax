@@ -88,7 +88,7 @@ lookup RaYaLigatures {
 
 #--- Create ligatures for forms with nuktas --
 
-# This is a kludge for InDesign which does not handle the nuqtas correctly
+# This is a kludge for InDesign which does not handle the nuktas correctly
 # (cons signs following forms with nuktas are not attached).
 # Here we only handle nuktas that happen in real life.
 
@@ -178,6 +178,19 @@ lookup Reorder_CryNV_K {
 	sub  @ConsAll' lookup _ins_Kang   @N' lookup _del_extra_K  @Vright'                      @K' lookup _del_extra ;
 
 } Reorder_CryNV_K ;
+
+
+lookup Reorder_CryN_delVK {
+
+	# After reordering Vleft + Kang, delete them from the left so we don't end up
+	# reordering the V again when we do the main part of the reordering.
+	do  for v = @Vleft;
+	    { sub  @N        $v'  @K'  by  @BogusNull ;
+	      sub  @ConsAll  $v'  @K'  by  @BogusNull ;
+	    }
+	
+} Reorder_CryN_delVK ;
+
 
 
 #--- Reorder top-left vowel ---
@@ -324,21 +337,18 @@ lookup Reorder_Cry_V {
 @M = [ uni1C2D  uni1C2E  uni1C2F  uni1C30  uni1C31  uni1C32  uni1C33 ] ;
 
 
-#lookup Reorder_CryN_delVK {
-	
-#} Reorder_CryN_delVK ;
-
 lookup Reorder_CryN_V_delV {
 
 	sub @Left'  @M'  by  @M ;
 	
-	# When the nuqta was in the middle of what is now a ligature, we can't do N+V -> N to delete the left-side V/sign.
+	# When the nukta was in the middle of what is now a ligature, we can't do N+V -> N to delete the left-side V/sign.
 	# So instead we replace just the vowel/sign with a bogus null glyph.
 	# IT IS RISKY TO INCLUDE BOGUS GLYPHS, so be sure to take this out again at the end of the process.
 	do  for v = @Left;
 		  { sub @N  $v' @Ran'    by  @BogusNull ; }
-		  
-	sub  @N  @Vleft' @K'  by  @BogusNull ;
+	
+	do  for v = @Vleft;
+	    { sub  @N  $v' @K'  by  @BogusNull ; }
 	
 	sub  @Vright  @K'  by  @BogusNull ;
 	
@@ -434,11 +444,14 @@ lookup Reorder_Vrt_Mt {
 @RaYaLigs = [ @ConsRa  @ConsYa  @ConsRaYa ] ;
 
 lookup DeleteBogusNull {
-
 	lookupflag IgnoreMarks ;
-		sub  @RaYaLigs  @BogusNull  by  @RaYaLigs ;
-		
+		sub  @ConsAll  @BogusNull  by  @ConsAll ;
 } DeleteBogusNull ;
+
+lookup DeleteBogusNull2 {
+	lookupflag 0;
+		sub  @N  @BogusNull  by  @N;
+} DeleteBogusNull2 ;
 
 
 #--- Vowel-sign-I + Kang ligature ---
@@ -448,8 +461,6 @@ lookup SignIKang {
 		sub uni1C35  uni1C27  by   uni1C271C35 ;  # note that they have been reordered
 
 } SignIKang ;
-
-
 
 
 #********************************************
@@ -479,12 +490,12 @@ lookup AttachMarks2 {
 # (pulling the nukta out from between the base and the ra/ya).
 # So we just shift the diacritic down instead of attaching it.
 
-lookup ShiftNuqta1C2C {
+lookup ShiftNukta1C2C {
 
 	lookupflag 0;
 		pos  @RaYaLigs  @N  uni1C2C' <0 -380 0 0> ;
 		
-} ShiftNuqta1C2C ;
+} ShiftNukta1C2C ;
 
 
 #************************************************************
@@ -508,6 +519,7 @@ feature ccmp {  # Glyph Composition/Decomposition
 		
 		lookup Reorder_CryN_VK ;
 		lookup Reorder_CryNV_K ;
+		lookup Reorder_CryN_delVK ;
 		
 		lookup Reorder_CryN_VR ;
 		lookup Reorder_Cry_VR ;
@@ -519,10 +531,11 @@ feature ccmp {  # Glyph Composition/Decomposition
 		lookup Reorder_Vrt_Mt ;
 		
 		lookup DeleteBogusNull ;  # harfbuzz actually orders the bogus null glyph!!
+		lookup DeleteBogusNull2 ;
 
 } ccmp ;
 
-#--- OpenType reordering occurs here, if there is any left to do ---
+#--- OpenType reordering occurs here, if there is any left to do (and if we are using Lepc, which we're not). ---
 
 feature clig {  # Contextual Ligatures 
 
@@ -545,7 +558,7 @@ feature mark {
 
 feature dist {
 
-	lookup ShiftNuqta1C2C ;
+	lookup ShiftNukta1C2C ;
 	
 } dist ;
 
