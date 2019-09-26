@@ -38,6 +38,27 @@ lookup FontCheck {
 # Substitution lookups
 #
 
+
+#--- Create ligatures for forms with nuktas --
+
+# This is a kludge for InDesign which does not handle the nuktas correctly
+# (cons signs following forms with nuktas are not attached).
+# Here we only handle nuktas that happen in real life.
+
+@ConsNukta = [ uni1C191C37  uni1C1B1C37  uni1C001C371C25  uni1C031C371C25  uni1C1D1C371C25 ] ;
+
+lookup NuktaLigs {
+
+	sub uni1C19  uni1C37           by  uni1C191C37 ;
+	sub uni1C1B  uni1C37           by  uni1C1B1C37 ;
+	sub uni1C00  uni1C37  uni1C25  by  uni1C001C371C25 ;
+	sub uni1C03  uni1C37  uni1C25  by  uni1C031C371C25 ;
+	sub uni1C1D  uni1C37  uni1C25  by  uni1C1D1C371C25 ;
+	
+} NuktaLigs;
+
+
+
 # Move final mark onto Vtl ligature
 # This should be done before built-in OT reordering.
 
@@ -86,24 +107,6 @@ lookup RaYaLigatures {
 } RaYaLigatures;
 
 
-#--- Create ligatures for forms with nuktas --
-
-# This is a kludge for InDesign which does not handle the nuktas correctly
-# (cons signs following forms with nuktas are not attached).
-# Here we only handle nuktas that happen in real life.
-
-@ConsNukta = [ uni1C191C37  uni1C1B1C37  uni1C001C371C25  uni1C031C371C25  uni1C1D1C371C25 ] ;
-
-lookup NuktaLigs {
-
-	sub uni1C19  uni1C37           by  uni1C191C37 ;
-	sub uni1C1B  uni1C37           by  uni1C1B1C37 ;
-	sub uni1C00  uni1C37  uni1C25  by  uni1C001C371C25 ;
-	sub uni1C03  uni1C37  uni1C25  by  uni1C031C371C25 ;
-	sub uni1C1D  uni1C37  uni1C25  by  uni1C1D1C371C25 ;
-	
-} NuktaLigs;
-
 
 @ConsAll = [ @Cons  @ConsYa  @ConsRa  @ConsRaYa  @ConsNukta ] ;
 
@@ -117,6 +120,8 @@ lookup NuktaLigs {
 @Vright = [ uni1C26  uni1C2A  uni1C2B ] ;
 @Vleft =  [ uni1C27  uni1C28 ] ;
 @Vbottom = [uni1C2C ] ;
+@Vrb = [ @Vright  @Vbottom ] ;
+
 
 @Left = [ @VtlAll  @Vleft  uni1C34  uni1C35 ] ;
 @LeftWRan = [ @VtlAll ] ;  # left vowels that also require moving the Ran (NOT left consonants)
@@ -130,7 +135,7 @@ lookup _del_extra {
 		sub      @ConsAll' @LeftWRan'  @Ran' by  @ConsAll;   # delete left-side vowel and ran
 		sub @Ran @ConsAll' @Left'            by  @ConsAll;   # delete left-side vowel/cons sign and ran
 		sub      @ConsAll' @Left'            by  @ConsAll;   # delete left-side vowel
-		sub                @Vright'    @K'   by  @Vall;      # delete kang
+		sub                @Vrb'       @K'   by  @Vrb;       # delete kang
 		sub                @ConsAll'   @K'   by  @ConsAll;
 } _del_extra ;
 
@@ -143,9 +148,9 @@ lookup _ins_V1C27K { sub @ConsAll  by  @K  uni1C27  @ConsAll;   } _ins_V1C27K ;
 lookup _ins_V1C28K { sub @ConsAll  by  @K  uni1C28  @ConsAll;   } _ins_V1C28K ;
 
 lookup  _del_VleftK {
-#	sub  @ConsAll  @Vleft  @K  by  @ConsAll;
-#	sub  @N        @Vleft  @K  by  @N;
-	sub  @N  @Vleft'  @K'  by @BogusNull;  # - doesn't work; see kludge in Reorder_CryN_V_delV
+#	sub  @ConsAll  @Vleft   @K  by  @ConsAll;
+#	sub  @N        @Vleft   @K  by  @N;
+	sub  @N        @Vleft'  @K' by @BogusNull;  # - doesn't work; see kludge in Reorder_CryN_V_delV
 } _del_VleftK ;
 
 lookup _dbl_V1C27K { sub @ConsAll  by  @K uni1C27  @ConsAll @K;  } _dbl_V1C27K;
@@ -154,7 +159,8 @@ lookup _dbl_V1C28K { sub @ConsAll  by  @K uni1C28  @ConsAll @K;  } _dbl_V1C28K;
 lookup Reorder_CryN_VK {
 
 	# C V K -> K V C V K -> 
-	sub  @ConsAll' lookup _ins_V1C27K  @Vleft'  uni1C35' lookup _del_VleftK ;
+	sub  @ConsAll' lookup _ins_V1C27K  uni1C27'  uni1C35' lookup _del_VleftK ;
+	sub  @ConsAll' lookup _ins_V1C28K  uni1C28'  uni1C35' lookup _del_VleftK ;
 	
 	# C N V K ->  K V C K N V K -> K V C N V K -> K V C N
 	sub  @ConsAll' lookup _dbl_V1C27K  @N'  uni1C27' lookup _del_extra  @K' lookup _del_VleftK;
@@ -167,6 +173,7 @@ lookup Reorder_CryN_VK {
 
 # KLUDGE needed for InDesign which doesn't do reordering.
 
+
 lookup _ins_Kang { sub @ConsAll  by  @K  @ConsAll  @K; } _ins_Kang ;
 
 lookup _del_extra_K { sub @ConsAll  @K  by  @ConsAll; } _del_extra_K;
@@ -174,8 +181,8 @@ lookup _del_extra_K { sub @ConsAll  @K  by  @ConsAll; } _del_extra_K;
 lookup Reorder_CryNV_K {
 
 	# C V K -> K C V K -> K C V 
-	sub  @ConsAll' lookup _ins_Kang                            @Vright' lookup _del_extra_K  @K' lookup _del_extra ;
-	sub  @ConsAll' lookup _ins_Kang   @N' lookup _del_extra_K  @Vright'                      @K' lookup _del_extra ;
+	sub  @ConsAll' lookup _ins_Kang                            @Vrb' lookup _del_extra_K  @K' lookup _del_extra ;
+	sub  @ConsAll' lookup _ins_Kang   @N' lookup _del_extra_K  @Vrb'                      @K' lookup _del_extra ;
 
 } Reorder_CryNV_K ;
 
@@ -513,9 +520,9 @@ feature ccmp {  # Glyph Composition/Decomposition
 		# consistent among various flavors of Harfbuzz and InDesign which
 		# don't all perform reordering correctly (if at all).
 
-		lookup RaYaLigatures ;
-		
 		lookup NuktaLigs ;
+		
+		lookup RaYaLigatures ;
 		
 		lookup Reorder_CryN_VK ;
 		lookup Reorder_CryNV_K ;
