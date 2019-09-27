@@ -215,143 +215,90 @@ lookup Reorder_CryN_delVK {
 
 
 
-#--- Reorder top-left vowel ---
+#--- Reorder ---
 
 # This should be done automatically by the engines but not all do.
-# In fact, for InDesign we have to do all the reordering.
+# For Harfbuzz we need to reorder the top-left vowel (1C29), but for InDesign we have to do all the reordering.
 
-# C  -> V C
-lookup _ins_Vtl     { sub @ConsAll  by  uni1C29      @ConsAll; } _ins_Vtl ;
-lookup _ins_Vtl1C2D { sub @ConsAll  by  uni1C291C2D  @ConsAll; } _ins_Vtl1C2D ;
-lookup _ins_Vtl1C2E { sub @ConsAll  by  uni1C291C2E  @ConsAll; } _ins_Vtl1C2E ;
-lookup _ins_Vtl1C2F { sub @ConsAll  by  uni1C291C2F  @ConsAll; } _ins_Vtl1C2F ;
-lookup _ins_Vtl1C30 { sub @ConsAll  by  uni1C291C30  @ConsAll; } _ins_Vtl1C30 ;
-lookup _ins_Vtl1C31 { sub @ConsAll  by  uni1C291C31  @ConsAll; } _ins_Vtl1C31 ;
-lookup _ins_Vtl1C32 { sub @ConsAll  by  uni1C291C32  @ConsAll; } _ins_Vtl1C32 ;
-lookup _ins_Vtl1C33 { sub @ConsAll  by  uni1C291C33  @ConsAll; } _ins_Vtl1C33 ;
-lookup _ins_Vtl1C35 { sub @ConsAll  by  uni1C291C35  @ConsAll; } _ins_Vtl1C35 ;
-lookup _ins_V1C27   { sub @ConsAll  by  uni1C27      @ConsAll; } _ins_V1C27 ;
-lookup _ins_V1C28   { sub @ConsAll  by  uni1C28      @ConsAll; } _ins_V1C28 ;
-lookup _ins_Cs1C34  { sub @ConsAll  by  uni1C34      @ConsAll; } _ins_Cs1C34 ;  # cons sign
-lookup _ins_Cs1C35  { sub @ConsAll  by  uni1C35      @ConsAll; } _ins_Cs1C35 ;  # cons sign
+# auxilary lookups used in chains
 
-# C  -> V C V
-lookup _dbl_Vtl     { sub @ConsAll  by  uni1C29      @ConsAll  uni1C29;        } _dbl_Vtl ;
-lookup _dbl_Vtl1C2D { sub @ConsAll  by  uni1C291C2D  @ConsAll  uni1C291C2D; } _dbl_Vtl1C2D ;
-lookup _dbl_Vtl1C2E { sub @ConsAll  by  uni1C291C2E  @ConsAll  uni1C291C2E; } _dbl_Vtl1C2E ;
-lookup _dbl_Vtl1C2F { sub @ConsAll  by  uni1C291C2F  @ConsAll  uni1C291C2F; } _dbl_Vtl1C2F ;
-lookup _dbl_Vtl1C30 { sub @ConsAll  by  uni1C291C30  @ConsAll  uni1C291C30; } _dbl_Vtl1C30 ;
-lookup _dbl_Vtl1C31 { sub @ConsAll  by  uni1C291C31  @ConsAll  uni1C291C31; } _dbl_Vtl1C31 ;
-lookup _dbl_Vtl1C32 { sub @ConsAll  by  uni1C291C32  @ConsAll  uni1C291C32; } _dbl_Vtl1C32 ;
-lookup _dbl_Vtl1C33 { sub @ConsAll  by  uni1C291C33  @ConsAll  uni1C291C33; } _dbl_Vtl1C33 ;
-lookup _dbl_Vtl1C35 { sub @ConsAll  by  uni1C291C35  @ConsAll  uni1C291C35; } _dbl_Vtl1C35 ;
-lookup _dbl_V1C27   { sub @ConsAll  by  uni1C27      @ConsAll  uni1C27;     } _dbl_V1C27 ;
-lookup _dbl_V1C28   { sub @ConsAll  by  uni1C28      @ConsAll  uni1C28;     } _dbl_V1C28 ;
-lookup _dbl_Cs1C34  { sub @ConsAll  by  uni1C34      @ConsAll  uni1C34;     } _dbl_Cs1C34 ;  # cons sign
-lookup _dbl_Cs1C35  { sub @ConsAll  by  uni1C35      @ConsAll  uni1C35;     } _dbl_Cs1C35 ;  # cons sign
+do  for g = [ @VtlAll  @Vleft  uni1C34  uni1C35 ];  # + cons signs
+		let nameI = "_ins_" + g;
+		let nameD = "_dbl_" + g;
+		{
+		# lookup _ins_uni1C29 { sub @ConsAll by uni1C29 @ConsAll; } _ini_uni1C29 ;
+			lookup $nameI       { sub @ConsAll by $g      @ConsAll; } $nameI ;                  # C -> V C; also cons signs
+			
+		# lookup _del_uni1C29 { sub @ConsAll by uni1C29 @ConsAll; uni1C29 } _dbl_uni1C29 ;
+			lookup $nameD       { sub @ConsAll by $g      @ConsAll  $g;     } $nameD ;          # C -> V C V
+		}
 
-# C  ->  V R C
-lookup _ins_VtlRan     { sub @ConsAll  by  uni1C29      @Ran  @ConsAll; } _ins_VtlRan ;
-lookup _ins_Vtl1C2DRan { sub @ConsAll  by  uni1C291C2D  @Ran  @ConsAll; } _ins_Vtl1C2DRan ;
-lookup _ins_Vtl1C2ERan { sub @ConsAll  by  uni1C291C2E  @Ran  @ConsAll; } _ins_Vtl1C2ERan ;
-lookup _ins_Vtl1C2FRan { sub @ConsAll  by  uni1C291C2F  @Ran  @ConsAll; } _ins_Vtl1C2FRan ;
-lookup _ins_Vtl1C30Ran { sub @ConsAll  by  uni1C291C30  @Ran  @ConsAll; } _ins_Vtl1C30Ran ;
-lookup _ins_Vtl1C31Ran { sub @ConsAll  by  uni1C291C31  @Ran  @ConsAll; } _ins_Vtl1C31Ran ;
-lookup _ins_Vtl1C32Ran { sub @ConsAll  by  uni1C291C32  @Ran  @ConsAll; } _ins_Vtl1C32Ran ;
-lookup _ins_Vtl1C33Ran { sub @ConsAll  by  uni1C291C33  @Ran  @ConsAll; } _ins_Vtl1C33Ran ;
-lookup _ins_Vtl1C35Ran { sub @ConsAll  by  uni1C291C35  @Ran  @ConsAll; } _ins_Vtl1C35Ran ;
-lookup _ins_V1C27Ran   { sub @ConsAll  by  uni1C27      @Ran  @ConsAll; } _ins_V1C27Ran ;
-lookup _ins_V1C28Ran   { sub @ConsAll  by  uni1C28      @Ran  @ConsAll; } _ins_V1C28Ran ;
 
-# C  ->  V R C V
-lookup _dbl_VtlRan     { sub @ConsAll  by  uni1C29      @Ran  @ConsAll  uni1C29;        } _dbl_VtlRan ;
-lookup _dbl_Vtl1C2DRan { sub @ConsAll  by  uni1C291C2D  @Ran  @ConsAll  uni1C291C2D; } _dbl_Vtl1C2DRan ;
-lookup _dbl_Vtl1C2ERan { sub @ConsAll  by  uni1C291C2E  @Ran  @ConsAll  uni1C291C2E; } _dbl_Vtl1C2ERan ;
-lookup _dbl_Vtl1C2FRan { sub @ConsAll  by  uni1C291C2F  @Ran  @ConsAll  uni1C291C2F; } _dbl_Vtl1C2FRan ;
-lookup _dbl_Vtl1C30Ran { sub @ConsAll  by  uni1C291C30  @Ran  @ConsAll  uni1C291C30; } _dbl_Vtl1C30Ran ;
-lookup _dbl_Vtl1C31Ran { sub @ConsAll  by  uni1C291C31  @Ran  @ConsAll  uni1C291C31; } _dbl_Vtl1C31Ran ;
-lookup _dbl_Vtl1C32Ran { sub @ConsAll  by  uni1C291C32  @Ran  @ConsAll  uni1C291C32; } _dbl_Vtl1C32Ran ;
-lookup _dbl_Vtl1C33Ran { sub @ConsAll  by  uni1C291C33  @Ran  @ConsAll  uni1C291C33; } _dbl_Vtl1C33Ran ;
-lookup _dbl_Vtl1C35Ran { sub @ConsAll  by  uni1C291C35  @Ran  @ConsAll  uni1C291C35; } _dbl_Vtl1C35Ran ;
-lookup _dbl_V1C27Ran   { sub @ConsAll  by  uni1C27      @Ran  @ConsAll  uni1C27;     } _dbl_V1C27Ran ;
-lookup _dbl_V1C28Ran   { sub @ConsAll  by  uni1C28      @Ran  @ConsAll  uni1C28;     } _dbl_V1C28Ran ;
+do  for g = [ @VtlAll  @Vleft ];
+		let nameI = "_ins_" + g + "Ran";
+		let nameD = "_dbl_" + g + "Ran";
+		{
+		# lookup _ins_uni1C29Ran { sub @ConsAll by uni1C29 @Ran @ConsAll; } _ins_uni1C29Ran ;
+			lookup $nameI          { sub @ConsAll by $g      @Ran @ConsAll; } $nameI ;                     # C -> V R C;
+			
+		# lookup _dbl_uni1C29Ran { sub @ConsAll by uni1C29 @Ran @ConsAll uni1C29; } $_dbl_uni1C29Ran ;
+			lookup $nameD          { sub @ConsAll by $g      @Ran @ConsAll $g;      } $nameD ;             # C -> V R C V
+		}
 
 lookup _delete_dup {
 	sub  @N  @LeftWRan  @Ran  by  @N ;
   sub  @N  @Left            by  @N ;  # this won't work when the nukta was in a cons cluster, see kludge in Reorder_CryN_V_delV
 } _delete_dup ;
 
+# main lookups
 
 # put longer rules first - those including the Ran
 lookup Reorder_CryN_VR {
-  
-  # C N V R -> V R C V N V R -> V R C N V R -> V C N
-  sub  @ConsAll' lookup _dbl_VtlRan      @N'  uni1C29'     lookup _del_extra  @Ran' lookup _delete_dup ;
-  sub  @ConsAll' lookup _dbl_Vtl1C2DRan  @N'  uni1C291C2D' lookup _del_extra  @Ran' lookup _delete_dup ;
-  sub  @ConsAll' lookup _dbl_Vtl1C2ERan  @N'  uni1C291C2E' lookup _del_extra  @Ran' lookup _delete_dup ;
-  sub  @ConsAll' lookup _dbl_Vtl1C2FRan  @N'  uni1C291C2F' lookup _del_extra  @Ran' lookup _delete_dup ;
-  sub  @ConsAll' lookup _dbl_Vtl1C30Ran  @N'  uni1C291C30' lookup _del_extra  @Ran' lookup _delete_dup ;
-  sub  @ConsAll' lookup _dbl_Vtl1C31Ran  @N'  uni1C291C31' lookup _del_extra  @Ran' lookup _delete_dup ;
-  sub  @ConsAll' lookup _dbl_Vtl1C32Ran  @N'  uni1C291C32' lookup _del_extra  @Ran' lookup _delete_dup ;
-  sub  @ConsAll' lookup _dbl_Vtl1C33Ran  @N'  uni1C291C33' lookup _del_extra  @Ran' lookup _delete_dup ;
-  sub  @ConsAll' lookup _dbl_Vtl1C35Ran  @N'  uni1C291C35' lookup _del_extra  @Ran' lookup _delete_dup ;
+
+	do  for g = [ @VtlAll  @Vleft ];
+			let nameD = "_dbl_" + g + "Ran";
+			{
+				# C N V R -> V R C V N V R -> V R C N V R -> V C N
+			# sub  @ConsAll' lookup _dbl_uni1C29Ran  @N'  uni1C29' lookup _del_extra  @Ran' lookup _delete_dup ;
+				sub  @ConsAll' lookup $nameD           @N'  $g'      lookup _del_extra  @Ran' lookup _delete_dup ;
+			}
  
 } Reorder_CryN_VR ;
 
 lookup Reorder_Cry_VR {
 
-  # C V R -> V R C V -> V R C
-	sub  @ConsAll' lookup _ins_VtlRan      uni1C29'       @Ran' lookup _del_extra ;
-  sub  @ConsAll' lookup _ins_Vtl1C2DRan  uni1C291C2D'   @Ran' lookup _del_extra ;
-  sub  @ConsAll' lookup _ins_Vtl1C2ERan  uni1C291C2E'   @Ran' lookup _del_extra ;
-  sub  @ConsAll' lookup _ins_Vtl1C2FRan  uni1C291C2F'   @Ran' lookup _del_extra ;
-  sub  @ConsAll' lookup _ins_Vtl1C30Ran  uni1C291C30'   @Ran' lookup _del_extra ;
-  sub  @ConsAll' lookup _ins_Vtl1C31Ran  uni1C291C31'   @Ran' lookup _del_extra ;
-  sub  @ConsAll' lookup _ins_Vtl1C32Ran  uni1C291C32'   @Ran' lookup _del_extra ;
-  sub  @ConsAll' lookup _ins_Vtl1C33Ran  uni1C291C33'   @Ran' lookup _del_extra ;
-  sub  @ConsAll' lookup _ins_Vtl1C35Ran  uni1C291C35'   @Ran' lookup _del_extra ;
+	do	for g = [ @VtlAll  @Vleft ];
+			let nameI = "_ins_" + g + "Ran";
+			{
+				# C V R -> V R C V -> V R C
+			#	sub  @ConsAll' lookup _ins_uni1C29Ran  uni1C29'  @Ran' lookup _del_extra ;
+				sub  @ConsAll' lookup $nameI           $g'       @Ran' lookup _del_extra ;
+			
+			}
   
 } Reorder_Cry_VR ;
 
-lookup _kludge {
-	sub uni1C27  by  uni1C27  uni2219;
-} _kludge; 
+lookup Reorder_CryN_V {  # also handles cons signs
 
-lookup Reorder_CryN_V {
-    
-  # C N V -> V C V N V -> V C N V -> V C N
-  sub  @ConsAll' lookup _dbl_Vtl      @N' lookup _del_extra  uni1C29'     lookup _delete_dup ;
-  sub  @ConsAll' lookup _dbl_Vtl1C2D  @N' lookup _del_extra  uni1C291C2D' lookup _delete_dup ;
-  sub  @ConsAll' lookup _dbl_Vtl1C2E  @N' lookup _del_extra  uni1C291C2E' lookup _delete_dup ;
-  sub  @ConsAll' lookup _dbl_Vtl1C2F  @N' lookup _del_extra  uni1C291C2F' lookup _delete_dup ;
-  sub  @ConsAll' lookup _dbl_Vtl1C30  @N' lookup _del_extra  uni1C291C30' lookup _delete_dup ;
-  sub  @ConsAll' lookup _dbl_Vtl1C31  @N' lookup _del_extra  uni1C291C31' lookup _delete_dup ;
-  sub  @ConsAll' lookup _dbl_Vtl1C32  @N' lookup _del_extra  uni1C291C32' lookup _delete_dup ;
-  sub  @ConsAll' lookup _dbl_Vtl1C33  @N' lookup _del_extra  uni1C291C33' lookup _delete_dup ;
-  sub  @ConsAll' lookup _dbl_Vtl1C35  @N' lookup _del_extra  uni1C291C35' lookup _delete_dup ;
-  sub  @ConsAll' lookup _dbl_V1C27    @N' lookup _del_extra  uni1C27'     lookup _delete_dup ;
-  sub  @ConsAll' lookup _dbl_V1C28    @N' lookup _del_extra  uni1C28'     lookup _delete_dup ;
-  sub  @ConsAll' lookup _dbl_Cs1C34   @N' lookup _del_extra  uni1C34'     lookup _delete_dup ;  # cons sign
-  sub  @ConsAll' lookup _dbl_Cs1C35   @N' lookup _del_extra  uni1C35'     lookup _delete_dup ;  # cons sign
-  
+	do  for g = [ @VtlAll  @Vleft  uni1C34  uni1C35 ];
+			let nameD = "_dbl_" + g;
+			{
+				# C N V -> V C V N V -> V C N V -> V C N
+			#	sub  @ConsAll' lookup _dbl_uni1C29  @N' lookup _del_extra  uni1C29' lookup _delete_dup ;
+				sub  @ConsAll' lookup $nameD        @N' lookup _del_extra  $g'      lookup _delete_dup ;
+			}
+
 } Reorder_CryN_V ;
 
-lookup Reorder_Cry_V {
+lookup Reorder_Cry_V {  # also handles cons signs
 
-  # C V -> V C V -> V C
-	sub  @ConsAll' lookup _ins_Vtl      uni1C29'     lookup _del_extra ;
-  sub  @ConsAll' lookup _ins_Vtl1C2D  uni1C291C2D' lookup _del_extra ;
-  sub  @ConsAll' lookup _ins_Vtl1C2E  uni1C291C2E' lookup _del_extra ;
-  sub  @ConsAll' lookup _ins_Vtl1C2F  uni1C291C2F' lookup _del_extra ;
-  sub  @ConsAll' lookup _ins_Vtl1C30  uni1C291C30' lookup _del_extra ;
-  sub  @ConsAll' lookup _ins_Vtl1C31  uni1C291C31' lookup _del_extra ;
-  sub  @ConsAll' lookup _ins_Vtl1C32  uni1C291C32' lookup _del_extra ;
-  sub  @ConsAll' lookup _ins_Vtl1C33  uni1C291C33' lookup _del_extra ;
-  sub  @ConsAll' lookup _ins_Vtl1C35  uni1C291C35' lookup _del_extra ;
-  sub  @ConsAll' lookup _ins_V1C27    uni1C27'     lookup _del_extra ;
-  sub  @ConsAll' lookup _ins_V1C28    uni1C28'     lookup _del_extra ;
-  sub  @ConsAll' lookup _ins_Cs1C34   uni1C34'     lookup _del_extra ;  # cons sign
-  sub  @ConsAll' lookup _ins_Cs1C35   uni1C35'     lookup _del_extra ;  # cons sign
+	do  for g = [ @VtlAll  @Vleft  uni1C34  uni1C35 ];
+			let nameI = "_ins_" + g;
+			{
+				# C V -> V C V -> V C
+			#	sub  @ConsAll' lookup _ins_uni1C29  uni1C29' lookup _del_extra ;
+				sub  @ConsAll' lookup $nameI        $g'      lookup _del_extra ;
+			}
   
 } Reorder_Cry_V ;
 
@@ -382,24 +329,21 @@ lookup Reorder_CryN_V_delV {
 
 # This is necessary for the mark to be attached to the preceding consonant.
 
-@Mtop = [ uni1C2D  uni1C2E  uni1C2F  uni1C30  uni1C31  uni1C32  uni1C33  uni1C36 ];
+do	for m = @M;
+		let name = "_insM_" + m;
+		let nameR = "_insM_" + m + "_R";
+		{
+		# lookup _insM_uni1C2D { sub  @Vright  by  uni1C2D  @Vright; } _insM_uni1C2D ;
+			lookup $name         { sub  @Vright  by  $m       @Vright; }  $name ;
+			
+		# lookup _insM_uni1C2D_R { sub  @Vright  by  uni1C2D  @Ran  @Vright; } _insM_uni1C2D_R ;
+			lookup $nameR          { sub  @Vright  by  $m       @Ran  @Vright; } $nameR ;
+		}
 
-lookup _insM1C2D { sub  @Vright  by  uni1C2D  @Vright ; } _insM1C2D ;
-lookup _insM1C2E { sub  @Vright  by  uni1C2E  @Vright ; } _insM1C2E ;
-lookup _insM1C2F { sub  @Vright  by  uni1C2F  @Vright ; } _insM1C2F ;
-lookup _insM1C30 { sub  @Vright  by  uni1C30  @Vright ; } _insM1C30 ;
-lookup _insM1C31 { sub  @Vright  by  uni1C31  @Vright ; } _insM1C31 ;
-lookup _insM1C32 { sub  @Vright  by  uni1C32  @Vright ; } _insM1C32 ;
-lookup _insM1C33 { sub  @Vright  by  uni1C33  @Vright ; } _insM1C33 ;
-lookup _insM1C36 { sub  @Vright  by  uni1C36  @Vright ; } _insM1C36 ;
+lookup _insM_Ran { sub  @Vright  by  @Ran  @Vright; } _insM_Ran ;  # Ran alone
 
-lookup _insM1C2D_R { sub  @Vright  by  uni1C2D  @Ran  @Vright ; } _insM1C2D_R ;
-lookup _insM1C2E_R { sub  @Vright  by  uni1C2E  @Ran  @Vright ; } _insM1C2E_R ;
-lookup _insM1C2F_R { sub  @Vright  by  uni1C2F  @Ran  @Vright ; } _insM1C2F_R ;
-lookup _insM1C30_R { sub  @Vright  by  uni1C30  @Ran  @Vright ; } _insM1C30_R ;
-lookup _insM1C31_R { sub  @Vright  by  uni1C31  @Ran  @Vright ; } _insM1C31_R ;
-lookup _insM1C32_R { sub  @Vright  by  uni1C32  @Ran  @Vright ; } _insM1C32_R ;
-lookup _insM1C33_R { sub  @Vright  by  uni1C33  @Ran  @Vright ; } _insM1C33_R ;
+
+@Mtop = [ @M  uni1C36 ];
 
 lookup _delMark {
 	sub  @Vright  @Mtop  @Ran  by  @Vright ;
@@ -417,43 +361,20 @@ lookup Reorder_Vrt_Mt {
   # consonants and nukta into one class.
 	#lookupflag UseMarkFilteringSet @N ;
 	
-	# C V M R  ->  C M R V M R  ->  C M R V
-	sub @ConsOrN      @Vright' lookup _insM1C2D_R  uni1C2D'  @Ran' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C2E_R  uni1C2E'  @Ran' lookup _delMark;
-	sub @ConsOrN      @Vright' lookup _insM1C2F_R  uni1C2F'  @Ran' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C30_R  uni1C30'  @Ran' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C31_R  uni1C31'  @Ran' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C32_R  uni1C32'  @Ran' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C33_R  uni1C33'  @Ran' lookup _delMark ;
-	
-	# C N V M R  ->  C N M R V M R  ->  C N M R V
-#	sub @ConsAll  @N  @Vright' lookup _insM1C2D_R  uni1C2D'  @Ran' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C2E_R  uni1C2E'  @Ran' lookup _delMark;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C2F_R  uni1C2F'  @Ran' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C30_R  uni1C30'  @Ran' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C31_R  uni1C31'  @Ran' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C32_R  uni1C32'  @Ran' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C33_R  uni1C33'  @Ran' lookup _delMark ;
-
-	# C V M  ->  C M V M  ->  C M V
-	sub @ConsOrN      @Vright' lookup _insM1C2D  uni1C2D' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C2E  uni1C2E' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C2F  uni1C2F' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C30  uni1C30' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C31  uni1C31' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C32  uni1C32' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C33  uni1C33' lookup _delMark ;
-	sub @ConsOrN      @Vright' lookup _insM1C36  @Ran'    lookup _delMark ;
-	
-	# C N V M  ->  C N M V M  ->  C N M V
-#	sub @ConsAll  @N  @Vright' lookup _insM1C2D  uni1C2D' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C2E  uni1C2E' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C2F  uni1C2F' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C30  uni1C30' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C31  uni1C31' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C32  uni1C32' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C33  uni1C33' lookup _delMark ;
-#	sub @ConsAll  @N  @Vright' lookup _insM1C36  @Ran'    lookup _delMark ;
+	do	for m = @M;
+			let name = "_insM_" + m;
+			let nameR = "_insM_" + m + "_R";
+			{
+				# C V M R  ->  C M R V M R  ->  C M R V
+			#	sub @ConsOrN  @Vright' lookup _insM_uni1C2D_R  uni1C2D'  @Ran' lookup _delMark ;
+				sub @ConsOrN  @Vright' lookup $nameR           $m'       @Ran' lookup _delMark ;
+				
+				# C V M  ->  C M V M  ->  C M V
+			#	sub @ConsOrN  @Vright' lookup _insM_uni1C2D  uni1C2D' lookup _delMark ;
+				sub @ConsOrN  @Vright' lookup $name          $m'      lookup _delMark ;
+			}
+			
+	sub @ConsOrN  @Vright' lookup _insM_Ran  @Ran' lookup _delMark ;
 	
 } Reorder_Vrt_Mt ;
 
