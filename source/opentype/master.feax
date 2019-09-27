@@ -258,7 +258,7 @@ lookup _delete_dup {
 # put longer rules first - those including the Ran
 lookup Reorder_CryN_VR {
 
-	do  for g = [ @VtlAll  @Vleft ];
+	do  for g = [ @VtlAll ];
 			let nameD = "_dbl_" + g + "Ran";
 			{
 				# C N V R -> V R C V N V R -> V R C N V R -> V C N
@@ -270,7 +270,7 @@ lookup Reorder_CryN_VR {
 
 lookup Reorder_Cry_VR {
 
-	do	for g = [ @VtlAll  @Vleft ];
+	do	for g = [ @VtlAll ];
 			let nameI = "_ins_" + g + "Ran";
 			{
 				# C V R -> V R C V -> V R C
