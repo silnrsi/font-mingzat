@@ -145,7 +145,7 @@ lookup RaYaLigatures {
 
 @BogusNull = [ uniE000 ] ;
 
-# Delete the original vowel (and ran) that has now been moved to the left.
+# Delete the original vowel (and ran or kang) that has now been moved to the left.
 lookup _del_extra {
 		sub      @ConsAll' @LeftWRan'  @Ran' by  @ConsAll;   # delete left-side vowel and ran
 		sub @Ran @ConsAll' @Left'            by  @ConsAll;   # delete left-side vowel/cons sign and ran
@@ -159,17 +159,21 @@ lookup _del_extra {
 
 # KLUDGE needed for InDesign which doesn't do reordering.
 
-lookup _ins_V1C27K { sub @ConsAll  by  @K  uni1C27  @ConsAll;   } _ins_V1C27K ;
-lookup _ins_V1C28K { sub @ConsAll  by  @K  uni1C28  @ConsAll;   } _ins_V1C28K ;
+# Alternate kang glyph which will not be reordered a second time:
+@Kleft = [ uni1C35left ];
+
+
+lookup _ins_V1C27K { sub @ConsAll  by  @Kleft  uni1C27  @ConsAll;   } _ins_V1C27K ;
+lookup _ins_V1C28K { sub @ConsAll  by  @Kleft  uni1C28  @ConsAll;   } _ins_V1C28K ;
 
 lookup  _del_VleftK {
-#	sub  @ConsAll  @Vleft   @K  by  @ConsAll;
-#	sub  @N        @Vleft   @K  by  @N;
-	sub  @N        @Vleft'  @K' by @BogusNull;  # - doesn't work; see kludge in Reorder_CryN_V_delV
+	sub  @ConsAll'  @Vleft'  @K'  by  @ConsAll;
+#	sub  @N'        @Vleft'  @K'  by  @N;
+	sub  @N         @Vleft'  @K'  by  @BogusNull;  # - doesn't work; see kludge in Reorder_CryN_V_delV
 } _del_VleftK ;
 
-lookup _dbl_V1C27K { sub @ConsAll  by  @K uni1C27  @ConsAll @K;  } _dbl_V1C27K;
-lookup _dbl_V1C28K { sub @ConsAll  by  @K uni1C28  @ConsAll @K;  } _dbl_V1C28K;
+lookup _dbl_V1C27K { sub @ConsAll  by  @Kleft  uni1C27  @ConsAll @K;  } _dbl_V1C27K;
+lookup _dbl_V1C28K { sub @ConsAll  by  @Kleft  uni1C28  @ConsAll @K;  } _dbl_V1C28K;
 
 lookup Reorder_CryN_VK {
 
@@ -188,8 +192,7 @@ lookup Reorder_CryN_VK {
 
 # KLUDGE needed for InDesign which doesn't do reordering.
 
-
-lookup _ins_Kang { sub @ConsAll  by  @K  @ConsAll  @K; } _ins_Kang ;
+lookup _ins_Kang { sub @ConsAll  by  @Kleft  @ConsAll  @K; } _ins_Kang ;
 
 lookup _del_extra_K { sub @ConsAll  @K  by  @ConsAll; } _del_extra_K;
 
@@ -400,7 +403,7 @@ lookup DeleteBogusNull2 {
 
 lookup SignIKang {
 	lookupflag IgnoreMarks;
-		sub uni1C35  uni1C27  by   uni1C271C35 ;  # note that they have been reordered
+		sub  @Kleft  uni1C27  by   uni1C271C35 ;  # note that they have been reordered
 
 } SignIKang ;
 
