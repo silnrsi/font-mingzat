@@ -3,6 +3,8 @@
 #
 
 languagesystem DFLT dflt;
+# Because we need to do all the reordering by hand for InDesign, there is no benefit to
+# using the Lepcha language system.
 #languagesystem lepc dflt;
 
 
@@ -45,18 +47,31 @@ lookup FontCheck {
 # (cons signs following forms with nuktas are not attached).
 # Here we only handle nuktas that happen in real life.
 
-@ConsNukta = [ uni1C191C37  uni1C1B1C37  uni1C001C371C25  uni1C031C371C25  uni1C1D1C371C25 ] ;
+@ConsNukta = [ uni1C101C37  uni1C191C37  uni1C1B1C37  uni1C211C37  
+		uni1C001C371C25  uni1C001C371C24  uni1C001C371C251C24
+		uni1C031C371C25  uni1C031C371C24  ##uni1C031C371C251C24 -- not needed, supposedly
+		uni1C131C371C25
+		uni1C1D1C371C25  uni1C1D1C371C24  uni1C1D1C371C251C24] ;
 
 lookup NuktaLigs {
 
-	sub uni1C19  uni1C37           by  uni1C191C37 ;
-	sub uni1C1B  uni1C37           by  uni1C1B1C37 ;
-	sub uni1C00  uni1C37  uni1C25  by  uni1C001C371C25 ;
-	sub uni1C03  uni1C37  uni1C25  by  uni1C031C371C25 ;
-	sub uni1C1D  uni1C37  uni1C25  by  uni1C1D1C371C25 ;
+	sub uni1C10  uni1C37  by  uni1C101C37 ;
+	sub uni1C19  uni1C37  by  uni1C191C37 ;
+	sub uni1C1B  uni1C37  by  uni1C1B1C37 ;
+	sub uni1C21  uni1C37  by  uni1C211C37 ;
+	
+	sub uni1C00  uni1C37  uni1C25           by  uni1C001C371C25 ;
+	sub uni1C00  uni1C37  uni1C24           by  uni1C001C371C24 ;
+	sub uni1C00  uni1C37  uni1C25  uni1C24  by  uni1C001C371C251C24 ;
+	sub uni1C03  uni1C37  uni1C25           by  uni1C031C371C25 ;
+  sub uni1C03  uni1C37  uni1C24           by  uni1C031C371C24 ;
+#	sub uni1C03  uni1C37  uni1C25  uni1C24  by  uni1C031C371C251C24 ;  -- not needed, supposedly
+	sub uni1C13  uni1C37  uni1C25           by  uni1C131C371C25 ;
+	sub uni1C1D  uni1C37  uni1C25           by  uni1C1D1C371C25 ;
+	sub uni1C1D  uni1C37  uni1C24           by  uni1C1D1C371C24 ;
+	sub uni1C1D  uni1C37  uni1C25  uni1C24  by  uni1C1D1C371C251C24 ;
 	
 } NuktaLigs;
-
 
 
 # Move final mark onto Vtl ligature
@@ -114,7 +129,7 @@ lookup RaYaLigatures {
 @K = [ uni1C35 ] ;
 @Ran   = [ uni1C36 ] ;
 
-# top-left vowel with cons-sign marks:
+# top-left vowel (1C29) with cons-sign marks:
 @VtlAll = [ uni1C29  uni1C291C2D uni1C291C2E uni1C291C2F uni1C291C30 uni1C291C31 uni1C291C32 uni1C291C33 uni1C291C35 ] ;
 
 @Vright = [ uni1C26  uni1C2A  uni1C2B ] ;
@@ -202,7 +217,7 @@ lookup Reorder_CryN_delVK {
 
 #--- Reorder top-left vowel ---
 
-# This should be done automatically by the engine but not all do.
+# This should be done automatically by the engines but not all do.
 # In fact, for InDesign we have to do all the reordering.
 
 # C  -> V C
@@ -342,7 +357,6 @@ lookup Reorder_Cry_V {
 
 
 @M = [ uni1C2D  uni1C2E  uni1C2F  uni1C30  uni1C31  uni1C32  uni1C33 ] ;
-
 
 lookup Reorder_CryN_V_delV {
 
