@@ -143,7 +143,7 @@ lookup RaYaLigatures {
 
 @Vall = [ @Vright  @VtlAll  @Vleft  @Vbottom ];
 
-@BogusNull = [ uni2219 ] ;
+@BogusNull = [ uniE000 ] ;
 
 # Delete the original vowel (and ran) that has now been moved to the left.
 lookup _del_extra {
