@@ -49,7 +49,7 @@ lookup FontCheck {
 
 @ConsNukta = [ uni1C101C37  uni1C191C37  uni1C1B1C37  uni1C211C37  
 		uni1C001C371C25  uni1C001C371C24  uni1C001C371C251C24
-		uni1C031C371C25  uni1C031C371C24  ##uni1C031C371C251C24 -- not needed, supposedly
+		uni1C031C371C25  uni1C031C371C24  uni1C031C371C251C24
 		uni1C131C371C25
 		uni1C1D1C371C25  uni1C1D1C371C24  uni1C1D1C371C251C24] ;
 
@@ -65,7 +65,7 @@ lookup NuktaLigs {
 	sub uni1C00  uni1C37  uni1C25  uni1C24  by  uni1C001C371C251C24 ;
 	sub uni1C03  uni1C37  uni1C25           by  uni1C031C371C25 ;
   sub uni1C03  uni1C37  uni1C24           by  uni1C031C371C24 ;
-#	sub uni1C03  uni1C37  uni1C25  uni1C24  by  uni1C031C371C251C24 ;  -- not needed, supposedly
+	sub uni1C03  uni1C37  uni1C25  uni1C24  by  uni1C031C371C251C24 ;
 	sub uni1C13  uni1C37  uni1C25           by  uni1C131C371C25 ;
 	sub uni1C1D  uni1C37  uni1C25           by  uni1C1D1C371C25 ;
 	sub uni1C1D  uni1C37  uni1C24           by  uni1C1D1C371C24 ;
