@@ -894,11 +894,29 @@
   <string>uni1C_1D_1C_371C_251C_24.glif</string>
   <key>uniE000</key>
   <string>uniE_000.glif</string>
-  <key>uni1C35left</key>
-  <string>uni1C_35left.glif</string>
   <key>uni1C27left</key>
   <string>uni1C_27left.glif</string>
   <key>uni1C28left</key>
   <string>uni1C_28left.glif</string>
+  <key>uni1C29left</key>
+  <string>uni1C_29left.glif</string>
+  <key>uni1C291C2Dleft</key>
+  <string>uni1C_291C_2D_left.glif</string>
+  <key>uni1C291C2Eleft</key>
+  <string>uni1C_291C_2E_left.glif</string>
+  <key>uni1C291C2Fleft</key>
+  <string>uni1C_291C_2F_left.glif</string>
+  <key>uni1C291C30left</key>
+  <string>uni1C_291C_30left.glif</string>  
+  <key>uni1C291C31left</key>
+  <string>uni1C_291C_31left.glif</string>
+  <key>uni1C291C32left</key>
+  <string>uni1C_291C_32left.glif</string>
+  <key>uni1C291C33left</key>
+  <string>uni1C_291C_33left.glif</string>
+  <key>uni1C291C35left</key>
+  <string>uni1C_291C_35left.glif</string> 
+  <key>uni1C35left</key>
+  <string>uni1C_35left.glif</string>
 </dict>
 </plist>

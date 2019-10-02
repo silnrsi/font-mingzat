@@ -38,10 +38,21 @@ lookup FontCheck {
 # Substitution lookups
 #
 
-lookup MarkLeftSide {
-   # Mark left-side vowels as having been reordered:
-   sub [ uni1C27  uni1C28 ]  by  [ uni1C27left  uni1C28left ] ;
-} MarkLeftSide ; 
+@OrigRight = [ uni1C27  uni1C28  uni1C29
+    uni1C291C2D  uni1C291C2E  uni1C291C2F  uni1C291C30
+    uni1C291C31  uni1C291C32  uni1C291C33  uni1C291C35 
+    uni1C35 ] ;
+    
+@MovedLeft = [ uni1C27left  uni1C28left  uni1C29left
+    uni1C291C2Dleft  uni1C291C2Eleft  uni1C291C2Fleft  uni1C291C30left
+    uni1C291C31left  uni1C291C32left  uni1C291C33left  uni1C291C35left
+    uni1C35left ] ;
+
+lookup MarkMovedLeft {
+   # Mark left-side vowels as having been reordered; this happens immediately after the 
+   # automatic reordering. This keeps them from being reordered again in the custom rules.
+   sub  @OrigRight  by  @MovedLeft ;
+} MarkMovedLeft ; 
 
 
 #--- Create ligatures for forms with nuktas --
@@ -533,7 +544,7 @@ feature clig {  # Contextual Ligatures
     language dflt;
     
       # Mark left-side vowels as having been reordered, to avoid another reorder:
-      lookup MarkLeftSide ;
+      lookup MarkMovedLeft ;
     
       lookup RaYaLigatures ;
       
