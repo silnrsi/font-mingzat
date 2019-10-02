@@ -3,9 +3,7 @@
 #
 
 languagesystem DFLT dflt;
-# Because we need to do all the reordering by hand for InDesign, there is no benefit to
-# using the Lepcha language system.
-#languagesystem lepc dflt;
+languagesystem lepc dflt;
 
 
 #********************************************
@@ -39,6 +37,11 @@ lookup FontCheck {
 #********************************************
 # Substitution lookups
 #
+
+lookup MarkLeftSide {
+   # Mark left-side vowels as having been reordered:
+   sub [ uni1C27  uni1C28 ]  by  [ uni1C27left  uni1C28left ] ;
+} MarkLeftSide ; 
 
 
 #--- Create ligatures for forms with nuktas --
@@ -172,8 +175,8 @@ lookup  _del_VleftK {
 	sub  @N         @Vleft'  @K'  by  @BogusNull;  # - doesn't work; see kludge in Reorder_CryN_V_delV
 } _del_VleftK ;
 
-lookup _dbl_V1C27K { sub @ConsAll  by  @Kleft  uni1C27  @ConsAll @K;  } _dbl_V1C27K;
-lookup _dbl_V1C28K { sub @ConsAll  by  @Kleft  uni1C28  @ConsAll @K;  } _dbl_V1C28K;
+lookup _dbl_V1C27K { sub @ConsAll  by  @Kleft  uni1C27  @ConsAll @K;  } _dbl_V1C27K ;
+lookup _dbl_V1C28K { sub @ConsAll  by  @Kleft  uni1C28  @ConsAll @K;  } _dbl_V1C28K ;
 
 lookup Reorder_CryN_VK {
 
@@ -182,8 +185,8 @@ lookup Reorder_CryN_VK {
 	sub  @ConsAll' lookup _ins_V1C28K  uni1C28'  uni1C35' lookup _del_VleftK ;
 	
 	# C N V K ->  K V C K N V K -> K V C N V K -> K V C N
-	sub  @ConsAll' lookup _dbl_V1C27K  @N'  uni1C27' lookup _del_extra  @K' lookup _del_VleftK;
-	sub  @ConsAll' lookup _dbl_V1C28K  @N'  uni1C28' lookup _del_extra  @K' lookup _del_VleftK;
+	sub  @ConsAll' lookup _dbl_V1C27K  @N'  uni1C27' lookup _del_extra  @K' lookup _del_VleftK ;
+	sub  @ConsAll' lookup _dbl_V1C28K  @N'  uni1C28' lookup _del_extra  @K' lookup _del_VleftK ;
 	
 } Reorder_CryN_VK ;
 
@@ -281,9 +284,9 @@ lookup Reorder_Cry_VR {
   
 } Reorder_Cry_VR ;
 
-lookup Reorder_CryN_V {  # also handles cons signs
+lookup Reorder_CryN_V {
 
-	do  for g = [ @VtlAll  @Vleft  uni1C34  uni1C35 ];
+	do  for g = [ @VtlAll ];
 			let nameD = "_dbl_" + g;
 			{
 				# C N V -> V C V N V -> V C N V -> V C N
@@ -293,7 +296,21 @@ lookup Reorder_CryN_V {  # also handles cons signs
 
 } Reorder_CryN_V ;
 
-lookup Reorder_Cry_V {  # also handles cons signs
+# InDesign only:
+lookup Reorder_CryN_VallC {  # also handles cons signs
+
+	do  for g = [ @Vleft  uni1C34  uni1C35 ];
+			let nameD = "_dbl_" + g;
+			{
+				# C N V -> V C V N V -> V C N V -> V C N
+			#	sub  @ConsAll' lookup _dbl_uni1C29  @N' lookup _del_extra  uni1C29' lookup _delete_dup ;
+				sub  @ConsAll' lookup $nameD        @N' lookup _del_extra  $g'      lookup _delete_dup ;
+			}
+
+} Reorder_CryN_VallC ;
+
+
+lookup Reorder_Cry_V {
 
 	do  for g = [ @VtlAll  @Vleft  uni1C34  uni1C35 ];
 			let nameI = "_ins_" + g;
@@ -304,6 +321,19 @@ lookup Reorder_Cry_V {  # also handles cons signs
 			}
   
 } Reorder_Cry_V ;
+
+# InDesign only:
+lookup Reorder_Cry_VallC {  # also handles cons signs
+
+	do  for g = [ @Vleft  uni1C34  uni1C35 ];
+			let nameI = "_ins_" + g;
+			{
+				# C V -> V C V -> V C
+			#	sub  @ConsAll' lookup _ins_uni1C29  uni1C29' lookup _del_extra ;
+				sub  @ConsAll' lookup $nameI        $g'      lookup _del_extra ;
+			}
+  
+} Reorder_Cry_VallC ;
 
 
 @M = [ uni1C2D  uni1C2E  uni1C2F  uni1C30  uni1C31  uni1C32  uni1C33 ] ;
@@ -321,9 +351,9 @@ lookup Reorder_CryN_V_delV {
 	do  for v = @Vleft;
 	    { sub  @N  $v' @K'  by  @BogusNull ; }
 	
-	sub  @Vright  @K'  by  @BogusNull ;
+	sub  @Vright  @K'  by  @BogusNull ;   # InDesign only
 	
-	sub  @N  @Left'  by  @BogusNull ;
+	sub  @N  @Left'  by  @BogusNull ;     # InDesign only
 	
 } Reorder_CryN_V_delV ;
 
@@ -391,6 +421,7 @@ lookup Reorder_Vrt_Mt {
 lookup DeleteBogusNull {
 	lookupflag IgnoreMarks ;
 		sub  @ConsAll  @BogusNull  by  @ConsAll ;
+		sub  @Vright   @BogusNull  by  @Vright ;
 } DeleteBogusNull ;
 
 lookup DeleteBogusNull2 {
@@ -401,9 +432,17 @@ lookup DeleteBogusNull2 {
 
 #--- Vowel-sign-I + Kang ligature ---
 
+@Kall = [ uni1C35  uni1C35left ];
+@Iall = [ uni1C27  uni1C27left ];
+
 lookup SignIKang {
 	lookupflag IgnoreMarks;
-		sub  @Kleft  uni1C27  by   uni1C271C35 ;  # note that they have been reordered
+	  # If the reordering was done by the client engine, the kang will be the original, uni1C35.
+	  # If it was done by the OT code, it will be uni1C35left.
+	  
+	  do  for k = @Kall;
+        for i = @Iall;
+	      { sub  $k  $i  by  uni1C271C35; }  # note that they have been reordered
 
 } SignIKang ;
 
@@ -449,42 +488,76 @@ lookup ShiftNukta1C2C {
 
 feature ccmp {  # Glyph Composition/Decomposition
 
-    lookup FontCheck ;
+  script lepc;
+    language dflt;
+    
+      lookup FontCheck ;
+      
+      lookup VtlMarkLig;   # do before built-in OT reordering
+      
+  script DFLT;
+    language dflt;
+    
+      lookup FontCheck ;
 
-		lookup VtlMarkLig ;  # do before built-in OT reordering
-		
-		# The following lookups should probably be in clig. We put them here
-		# to make them happen BEFORE Harfbuzz reordering. This makes the behavior
-		# consistent among various flavors of Harfbuzz and InDesign which
-		# don't all perform reordering correctly (if at all).
+      lookup VtlMarkLig ;
 
-		lookup NuktaLigs ;
+      lookup NuktaLigs ;    # InDesign only
+      lookup RaYaLigatures ;
 		
-		lookup RaYaLigatures ;
-		
-		lookup Reorder_CryN_VK ;
-		lookup Reorder_CryNV_K ;
-		lookup Reorder_CryN_delVK ;
-		
-		lookup Reorder_CryN_VR ;
-		lookup Reorder_Cry_VR ;
-		lookup Reorder_CryN_V ;
-		lookup Reorder_Cry_V ;
+      lookup Reorder_CryN_VK ;
+      lookup Reorder_CryNV_K ;
+      lookup Reorder_CryN_delVK ;
+      
+      lookup Reorder_CryN_VR ;
+      lookup Reorder_Cry_VR ;
+      lookup Reorder_CryN_V ;
+      lookup Reorder_CryN_VallC ;
+      lookup Reorder_Cry_V ;
+      lookup Reorder_Cry_VallC ;
+      
+      lookup Reorder_CryN_V_delV ;
+      
+      lookup Reorder_Vrt_Mt ;
 
-		lookup Reorder_CryN_V_delV ;
-		
-		lookup Reorder_Vrt_Mt ;
-		
-		lookup DeleteBogusNull ;  # harfbuzz actually orders the bogus null glyph!!
-		lookup DeleteBogusNull2 ;
-
+      lookup DeleteBogusNull ;  # harfbuzz actually reorders the bogus null glyph!!
+      lookup DeleteBogusNull2 ;
+      
 } ccmp ;
 
-#--- OpenType reordering occurs here, if there is any left to do (and if we are using Lepc, which we're not). ---
+#--- OpenType reordering occurs here, if there is any left to do. ---
 
 feature clig {  # Contextual Ligatures 
 
-		lookup SignIKang ;
+  script lepc;
+    language dflt;
+    
+      # Mark left-side vowels as having been reordered, to avoid another reorder:
+      lookup MarkLeftSide ;
+    
+      lookup RaYaLigatures ;
+      
+      lookup Reorder_CryN_VK ;
+      lookup Reorder_CryNV_K ;
+      lookup Reorder_CryN_delVK ;
+      
+      lookup Reorder_CryN_VR ;
+      lookup Reorder_Cry_VR ;
+      lookup Reorder_CryN_V ;
+      lookup Reorder_Cry_V ;
+
+      lookup Reorder_CryN_V_delV ;
+      
+      lookup Reorder_Vrt_Mt ;
+      
+      lookup DeleteBogusNull ;
+      lookup DeleteBogusNull2 ;
+  
+      lookup SignIKang ;
+      
+  script DFLT;
+    language dflt;
+      lookup SignIKang ;
 
 } clig ;
 
