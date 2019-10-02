@@ -25,7 +25,7 @@ DEBPKG = 'fonts-sil-mingzat'
 getufoinfo('source/' + FAMILY + '-Regular' + '.ufo')
 BUILDLABEL = "alpha"
 
-ftmlTest('tests/ftml-smith.xsl', fonts = ['reference/Mingzat-Regular.ttf'], addfontindex = 1, fontmode = 'collect')
+# ftmlTest('tests/ftml-smith.xsl', fonts = ['reference/Mingzat-Regular.ttf'], addfontindex = 1, fontmode = 'collect')
 
 fontfamily=APPNAME
 designspace('source/' + FAMILY + '.designspace',
