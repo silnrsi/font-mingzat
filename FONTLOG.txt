@@ -28,7 +28,7 @@ ChangeLog
 ---------
 (This should list both major and minor changes, most recent first.)
 
-25 Sep 2019 Mingzat font updated (Sharon Correll) Mingzat version 1.000
+7 Oct 2019 Mingzat font updated (Sharon Correll) Mingzat version 1.000
 - Move font to new build system
 - Update OpenType because modern computers now support the Lepcha script
 - Add Latin characters to support Recommended characters for non-Roman fonts

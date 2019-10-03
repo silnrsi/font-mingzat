@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 Mingzat-WOFF-metadata.html
-Mingzat Regular v0.900
+Mingzat Regular v1.000
 This file is part of Mingzat font family (http://software.sil.org/mingzat).
 Lepcha glyph design Copyright (c) 2001, GlavyFonts and 
 Copyright (c) 2006 Athinkra, LLC (http://www.athinkra.com)
@@ -18,7 +18,7 @@ If this is not the case, go to (http://scripts.sil.org/OFL) for all the details
 including a FAQ.
 -->
 <metadata version="1.0">
-    <uniqueid id="org.sil.fonts.mingzat.0.900" />
+    <uniqueid id="org.sil.fonts.mingzat.1.000" />
     <vendor name="SIL International" url="http://scripts.sil.org" />
     <credits>
         <credit
@@ -63,6 +63,11 @@ ChangeLog
 ---------
 (This should list both major and minor changes, most recent first.)
 
+7 Oct 2019 Mingzat font updated (Sharon Correll) Mingzat version 1.000
+- Move font to new build system
+- Update OpenType because modern computers now support the Lepcha script
+- Add Latin characters to support Recommended characters for non-Roman fonts
+
 25 Sep 2013 Mingzat font updated (Lorna Evans) Mingzat version 0.100
 - Graphite was updated to handle above AND below marks with conjuncts
   (OpenType was already okay)
@@ -89,10 +94,10 @@ ChangeLog
 			Lepcha glyph design Copyright (c) 2001, GlavyFonts with Reserved Font 
 Name "JG".
 
-OpenType and Graphite code Copyright (c) 2010-2013, SIL International 
+OpenType and Graphite code Copyright (c) 2010-2019, SIL International 
 (http://www.sil.org/) with Reserved Font Name "Mingzat".
 
-Latin glyph design Copyright (c) 1994-2013, SIL International 
+Latin glyph design Copyright (c) 1994-2019, SIL International 
 (http://www.sil.org/), with Reserved Font Names 'SIL' and 'Sophia'. 
       
       This Font Software is licensed under the SIL Open Font License, Version 1.1.
@@ -189,6 +194,6 @@ Latin glyph design Copyright (c) 1994-2013, SIL International
 		</text>
     </license>
     <copyright>
-        <text lang="en">Copyright (c) 2010-2013, SIL International (http://www.sil.org/)</text>
+        <text lang="en">Copyright (c) 2010-2019, SIL International (http://www.sil.org/)</text>
     </copyright>
 </metadata>
