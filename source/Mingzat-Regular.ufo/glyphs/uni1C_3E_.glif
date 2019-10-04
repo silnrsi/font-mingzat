@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni1C3E" format="2">
-  <advance width="653"/>
-  <unicode hex="1C3E"/>
-  <outline>
-    <contour>
-      <point x="192" y="294" type="line"/>
-      <point x="128" y="226" type="line"/>
-      <point x="63" y="294" type="line"/>
-      <point x="128" y="361" type="line"/>
-    </contour>
-    <contour>
-      <point x="628" y="286" type="line"/>
-      <point x="564" y="218" type="line"/>
-      <point x="499" y="286" type="line"/>
-      <point x="564" y="353" type="line"/>
-    </contour>
-    <component base="uni1C3D" xOffset="10"/>
-  </outline>
+	<advance width="653"/>
+	<unicode hex="1C3E"/>
+	<outline>
+		<contour>
+			<point x="564" y="218" type="line"/>
+			<point x="628" y="286" type="line"/>
+			<point x="564" y="353" type="line"/>
+			<point x="499" y="286" type="line"/>
+		</contour>
+		<contour>
+			<point x="128" y="226" type="line"/>
+			<point x="192" y="294" type="line"/>
+			<point x="128" y="361" type="line"/>
+			<point x="63" y="294" type="line"/>
+		</contour>
+		<component base="uni1C3D" xOffset="10"/>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.schriftgestaltung.Glyphs.lastChange</key>
+			<string>2019-10-04 16:14:16 +0000</string>
+		</dict>
+	</lib>
 </glyph>

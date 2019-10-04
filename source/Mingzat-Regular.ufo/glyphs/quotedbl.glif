@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="quotedbl" format="2">
-  <advance width="472"/>
-  <unicode hex="0022"/>
-  <outline>
-    <contour>
-      <point x="392" y="722" type="line"/>
-      <point x="369" y="434" type="line"/>
-      <point x="309" y="434" type="line"/>
-      <point x="286" y="722" type="line"/>
-    </contour>
-    <contour>
-      <point x="186" y="722" type="line"/>
-      <point x="163" y="434" type="line"/>
-      <point x="103" y="434" type="line"/>
-      <point x="80" y="722" type="line"/>
-    </contour>
-  </outline>
+	<advance width="472"/>
+	<unicode hex="0022"/>
+	<outline>
+		<contour>
+			<point x="309" y="434" type="line"/>
+			<point x="369" y="434" type="line"/>
+			<point x="392" y="722" type="line"/>
+			<point x="286" y="722" type="line"/>
+		</contour>
+		<contour>
+			<point x="103" y="434" type="line"/>
+			<point x="163" y="434" type="line"/>
+			<point x="186" y="722" type="line"/>
+			<point x="80" y="722" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.schriftgestaltung.Glyphs.lastChange</key>
+			<string>2019-10-04 16:14:16 +0000</string>
+		</dict>
+	</lib>
 </glyph>

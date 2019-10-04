@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="ellipsis" format="2">
-  <advance width="1014"/>
-  <unicode hex="2026"/>
-  <outline>
-    <contour>
-      <point x="957" y="0" type="line"/>
-      <point x="849" y="0" type="line"/>
-      <point x="849" y="123" type="line"/>
-      <point x="957" y="123" type="line"/>
-    </contour>
-    <contour>
-      <point x="561" y="0" type="line"/>
-      <point x="453" y="0" type="line"/>
-      <point x="453" y="123" type="line"/>
-      <point x="561" y="123" type="line"/>
-    </contour>
-    <contour>
-      <point x="165" y="0" type="line"/>
-      <point x="57" y="0" type="line"/>
-      <point x="57" y="123" type="line"/>
-      <point x="165" y="123" type="line"/>
-    </contour>
-  </outline>
+	<advance width="1014"/>
+	<unicode hex="2026"/>
+	<outline>
+		<contour>
+			<point x="849" y="0" type="line"/>
+			<point x="957" y="0" type="line"/>
+			<point x="957" y="123" type="line"/>
+			<point x="849" y="123" type="line"/>
+		</contour>
+		<contour>
+			<point x="57" y="0" type="line"/>
+			<point x="165" y="0" type="line"/>
+			<point x="165" y="123" type="line"/>
+			<point x="57" y="123" type="line"/>
+		</contour>
+		<contour>
+			<point x="453" y="0" type="line"/>
+			<point x="561" y="0" type="line"/>
+			<point x="561" y="123" type="line"/>
+			<point x="453" y="123" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.schriftgestaltung.Glyphs.lastChange</key>
+			<string>2019-10-04 16:13:46 +0000</string>
+		</dict>
+	</lib>
 </glyph>

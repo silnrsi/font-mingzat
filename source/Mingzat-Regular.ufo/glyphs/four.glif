@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="four" format="2">
-  <advance width="567"/>
-  <unicode hex="0034"/>
-  <outline>
-    <contour>
-      <point x="533" y="176" type="line"/>
-      <point x="444" y="176" type="line"/>
-      <point x="444" y="0" type="line"/>
-      <point x="351" y="0" type="line"/>
-      <point x="351" y="176" type="line"/>
-      <point x="34" y="176" type="line"/>
-      <point x="34" y="281" type="line"/>
-      <point x="334" y="722" type="line"/>
-      <point x="444" y="722" type="line"/>
-      <point x="444" y="259" type="line"/>
-      <point x="533" y="259" type="line"/>
-    </contour>
-    <contour>
-      <point x="351" y="259" type="line"/>
-      <point x="351" y="612" type="line"/>
-      <point x="114" y="259" type="line"/>
-    </contour>
-  </outline>
+	<advance width="567"/>
+	<unicode hex="0034"/>
+	<outline>
+		<contour>
+			<point x="351" y="0" type="line"/>
+			<point x="444" y="0" type="line"/>
+			<point x="444" y="176" type="line"/>
+			<point x="533" y="176" type="line"/>
+			<point x="533" y="259" type="line"/>
+			<point x="444" y="259" type="line"/>
+			<point x="444" y="722" type="line"/>
+			<point x="334" y="722" type="line"/>
+			<point x="34" y="281" type="line"/>
+			<point x="34" y="176" type="line"/>
+			<point x="351" y="176" type="line"/>
+		</contour>
+		<contour>
+			<point x="114" y="259" type="line"/>
+			<point x="351" y="612" type="line"/>
+			<point x="351" y="259" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.schriftgestaltung.Glyphs.lastChange</key>
+			<string>2019-10-04 16:13:08 +0000</string>
+		</dict>
+	</lib>
 </glyph>
