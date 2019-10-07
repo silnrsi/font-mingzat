@@ -2,7 +2,7 @@
 <glyph name="uni1C101C24" format="2">
   <advance width="1484"/>
   <anchor x="759" y="-220" name="L"/>
-  <anchor x="759" y="680" name="U"/>
+  <anchor x="563" y="680" name="U"/>
   <outline>
     <contour>
       <point x="127" y="-217" type="curve" smooth="yes"/>
