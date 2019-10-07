@@ -1,5 +1,5 @@
 README 
-Mingzat Release 0.900
+Mingzat Release 1.000
 ========================
 
 Thank you for your interest in the Mingzat font.

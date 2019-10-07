@@ -31,6 +31,7 @@ ChangeLog
 7 Oct 2019 Mingzat font updated (Sharon Correll) Mingzat version 1.000
 - Move font to new build system
 - Update OpenType because modern computers now support the Lepcha script
+- Update Graphite to fix issue with reordering
 - Add Latin characters to support Recommended characters for non-Roman fonts
   
 25 Sep 2013 Mingzat font updated (Lorna Evans) Mingzat version 0.100
@@ -59,22 +60,22 @@ be sure to add your name (N), email (E), web-address (W) and description
 (D). This list is sorted by last name in alphabetical order.)
 
 N: Walt Agee
-E:  fonts@sil.org
+E: fonts@sil.org
 W: http://scripts.sil.org/
 D: Font designer (for Sophia)
 
 N: Sharon Correl
-E:  fonts@sil.org
+E: fonts@sil.org
 W: http://scripts.sil.org/
 D: Font engineer
 
 N: Lorna Priest Evans
-E:  fonts@sil.org
+E: fonts@sil.org
 W: http://scripts.sil.org/
 D: Font designer (for a few Lepcha glyphs), Font engineer
 
 N: Victor Gaultney
-E:  fonts@sil.org
+E: fonts@sil.org
 W: http://www.sil.org/~gaultney/
 D: Font designer (for Sophia)
 
