@@ -5,11 +5,30 @@
   <key>com.schriftgestaltung.Glyphs.fontUserData</key>
   <dict/>
   <key>com.schriftgestaltung.appVersion</key>
-  <string>1219</string>
-  <key>com.schriftgestaltung.customParameter.GSFont.DisplayStrings</key>
+  <string>1161</string>
+  <key>com.schriftgestaltung.customParameter.GSFont.Axes</key>
   <array>
-    <string>a</string>
+    <dict>
+      <key>Name</key>
+      <string>weight</string>
+      <key>Tag</key>
+      <string>wght</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>width</string>
+      <key>Tag</key>
+      <string>wdth</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>custom</string>
+      <key>Tag</key>
+      <string>XXXX</string>
+    </dict>
   </array>
+  <key>com.schriftgestaltung.customParameter.GSFont.DisplayStrings</key>
+  <string/>
   <key>com.schriftgestaltung.customParameter.GSFont.disablesAutomaticAlignment</key>
   <true/>
   <key>com.schriftgestaltung.customParameter.GSFont.disablesLastChange</key>

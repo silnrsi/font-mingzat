@@ -1,28 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="w" format="2">
-	<advance width="818"/>
-	<unicode hex="0077"/>
-	<outline>
-		<contour>
-			<point x="186" y="0" type="line"/>
-			<point x="276" y="0" type="line"/>
-			<point x="409" y="415" type="line"/>
-			<point x="542" y="0" type="line"/>
-			<point x="632" y="0" type="line"/>
-			<point x="801" y="500" type="line"/>
-			<point x="705" y="500" type="line"/>
-			<point x="587" y="110" type="line"/>
-			<point x="469" y="500" type="line"/>
-			<point x="349" y="500" type="line"/>
-			<point x="231" y="110" type="line"/>
-			<point x="113" y="500" type="line"/>
-			<point x="17" y="500" type="line"/>
-		</contour>
-	</outline>
-	<lib>
-		<dict>
-			<key>com.schriftgestaltung.Glyphs.lastChange</key>
-			<string>2019-10-04 16:11:00 +0000</string>
-		</dict>
-	</lib>
+  <advance width="818"/>
+  <unicode hex="0077"/>
+  <outline>
+    <contour>
+      <point x="186" y="0" type="line"/>
+      <point x="276" y="0" type="line"/>
+      <point x="409" y="415" type="line"/>
+      <point x="542" y="0" type="line"/>
+      <point x="632" y="0" type="line"/>
+      <point x="801" y="500" type="line"/>
+      <point x="705" y="500" type="line"/>
+      <point x="587" y="110" type="line"/>
+      <point x="469" y="500" type="line"/>
+      <point x="349" y="500" type="line"/>
+      <point x="231" y="110" type="line"/>
+      <point x="113" y="500" type="line"/>
+      <point x="17" y="500" type="line"/>
+    </contour>
+  </outline>
 </glyph>

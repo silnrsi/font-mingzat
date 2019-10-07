@@ -1,28 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Icircumflex" format="2">
-	<advance width="257"/>
-	<unicode hex="00CE"/>
-	<outline>
-		<contour>
-			<point x="78" y="0" type="line"/>
-			<point x="179" y="0" type="line"/>
-			<point x="179" y="722" type="line"/>
-			<point x="78" y="722" type="line"/>
-		</contour>
-		<contour>
-			<point x="-16" y="821" type="line"/>
-			<point x="44" y="821" type="line"/>
-			<point x="129" y="931" type="line"/>
-			<point x="214" y="821" type="line"/>
-			<point x="274" y="821" type="line"/>
-			<point x="184" y="991" type="line"/>
-			<point x="74" y="991" type="line"/>
-		</contour>
-	</outline>
-	<lib>
-		<dict>
-			<key>com.schriftgestaltung.Glyphs.lastChange</key>
-			<string>2019-10-04 16:11:00 +0000</string>
-		</dict>
-	</lib>
+  <advance width="257"/>
+  <unicode hex="00CE"/>
+  <outline>
+    <contour>
+      <point x="78" y="0" type="line"/>
+      <point x="179" y="0" type="line"/>
+      <point x="179" y="722" type="line"/>
+      <point x="78" y="722" type="line"/>
+    </contour>
+    <contour>
+      <point x="-16" y="821" type="line"/>
+      <point x="44" y="821" type="line"/>
+      <point x="129" y="931" type="line"/>
+      <point x="214" y="821" type="line"/>
+      <point x="274" y="821" type="line"/>
+      <point x="184" y="991" type="line"/>
+      <point x="74" y="991" type="line"/>
+    </contour>
+  </outline>
 </glyph>

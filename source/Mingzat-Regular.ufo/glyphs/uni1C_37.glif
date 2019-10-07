@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni1C37" format="2">
-	<unicode hex="1C37"/>
-	<outline>
-		<contour>
-			<point x="-409" y="-512" type="line"/>
-			<point x="-303" y="-406" type="line"/>
-			<point x="-409" y="-300" type="line"/>
-			<point x="-515" y="-406" type="line"/>
-		</contour>
-	</outline>
-	<anchor name="L" x="-409" y="-559"/>
-	<anchor name="_L" x="-409" y="-180"/>
-	<lib>
-		<dict>
-			<key>com.schriftgestaltung.Glyphs.lastChange</key>
-			<string>2019-10-04 16:15:10 +0000</string>
-		</dict>
-	</lib>
+  <unicode hex="1C37"/>
+  <anchor x="-409" y="-559" name="L"/>
+  <anchor x="-409" y="-180" name="_L"/>
+  <outline>
+    <contour>
+      <point x="-409" y="-512" type="line"/>
+      <point x="-303" y="-406" type="line"/>
+      <point x="-409" y="-300" type="line"/>
+      <point x="-515" y="-406" type="line"/>
+    </contour>
+  </outline>
 </glyph>
