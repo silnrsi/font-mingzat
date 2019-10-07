@@ -106,7 +106,7 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
   <key>openTypeNameUniqueID</key>
   <string>SIL International: Mingzat Regular: 2019</string>
   <key>openTypeNameVersion</key>
-  <string>Version 0.900</string>
+  <string>Version 1.000</string>
   <key>openTypeOS2CodePageRanges</key>
   <array>
     <integer>0</integer>
@@ -211,9 +211,9 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
   <key>unitsPerEm</key>
   <integer>1000</integer>
   <key>versionMajor</key>
-  <integer>0</integer>
+  <integer>1</integer>
   <key>versionMinor</key>
-  <integer>900</integer>
+  <integer>000</integer>
   <key>xHeight</key>
   <integer>705</integer>
 </dict>
