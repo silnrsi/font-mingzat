@@ -23,7 +23,7 @@ DESC_SHORT = "Unicode font for the Lepcha script"
 DEBPKG = 'fonts-sil-mingzat'
 
 getufoinfo('source/' + FAMILY + '-Regular' + '.ufo')
-# BUILDLABEL = "alpha"
+BUILDLABEL = "alpha"
 
 ftmlTest('tests/ftml-smith.xsl', fonts = ['reference/Mingzat-Regular.ttf'], addfontindex = 1, fontmode = 'collect')
 
