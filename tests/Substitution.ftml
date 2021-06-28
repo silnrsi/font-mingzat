@@ -12,7 +12,6 @@
     <title>Substitution Tests</title>
   </head>
 
-
   <testgroup label="Rendering check">
  		<test label="Check"><string>RenderingUnknown</string></test>
   </testgroup>
@@ -20,7 +19,6 @@
   <testgroup label="Reordering">
  		<test label="Check"><string>\u1C00\u1c34</string></test>
   </testgroup>
-
 
   <testgroup label="Ligatures">  	
 		<test label="ra-ya  1C00 1C25 1C24"><string>\u1C00\u1C25 \u1C00\u1C37\u1C25 \u1C00\u1C25\u1C24 \u1C00\u1C37\u1C25\u1C24 \u1C00\u1C24 \u1C00\u1C37\u1C24</string></test>

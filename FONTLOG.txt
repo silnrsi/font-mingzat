@@ -81,7 +81,7 @@ E: fonts@sil.org
 W: http://scripts.sil.org/
 D: Font designer (for Sophia)
 
-N: Sharon Correl
+N: Sharon Correll
 E: fonts@sil.org
 W: http://scripts.sil.org/
 D: Font engineer

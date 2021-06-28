@@ -15,7 +15,6 @@
   <testgroup label="Rendering check">
  		<test label="Check"><string>RenderingUnknown</string></test>
   </testgroup>
-  
   <testgroup label="Attachment">
 		<test label="upper diacritics"><string>\u1C10\u1C2F \u1C11\u1C29\u1C33 \u1C12\u1C30 \u1C11\u1C31 \u1C15\u1C36 \u1C0A\u1C31 \u1C06\u1C2D \u1C0D\u1C32 \u1C16\u1C2E</string></test>
 		<test label="upper upper"><string>\u1C10\u1C2F\u1C36 \u1C11\u1C29\u1C2F\u1C36 \u1C15\u1C30\u1C36 \u1C0A\u1C31\u1C31 \u1C06\u1C32\u1C2D \u1C06\u1C2D\u1C36 \u1C22\u1C2E\u1C32 \u1C0E\u1C33\u1C30</string></test>

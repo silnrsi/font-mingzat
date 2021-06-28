@@ -17,6 +17,7 @@
       <string>RenderingUnknown</string>
     </test>
   </testgroup>
+  
   <testgroup label="Encoded characters">
     <test label="Subjoined consonants (conjuncts)">
           <comment/>

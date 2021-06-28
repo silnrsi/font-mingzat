@@ -17,7 +17,6 @@
       <string>RenderingUnknown</string>
     </test>
   </testgroup>
-
   <testgroup label="Encoded characters">
     <test label="U+0020">
       <comment>space</comment>
