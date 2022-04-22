@@ -7,7 +7,7 @@
   <key>capHeight</key>
   <integer>1100</integer>
   <key>copyright</key>
-  <string>Lepcha glyph design copyright (c) 2001, GlavyFonts and copyright (c) 2006 Athinkra, LLC. OpenType and Graphite code copyright (c) 2010-2019, SIL International (http://www.sil.org/). Latin glyph design copyright (c) 1994-2019, SIL International (http://www.sil.org/).</string>
+  <string>Lepcha glyph design copyright (c) 2001, GlavyFonts and copyright (c) 2006 Athinkra, LLC. OpenType and Graphite code copyright (c) 2010-2022, SIL International (http://www.sil.org/). Latin glyph design copyright (c) 1994-2019, SIL International (http://www.sil.org/).</string>
   <key>descender</key>
   <integer>-670</integer>
   <key>familyName</key>
@@ -32,7 +32,7 @@
     </dict>
   </array>
   <key>openTypeHeadCreated</key>
-  <string>2019/10/04 16:37:03</string>
+  <string>2022/04/22 15:54:18</string>
   <key>openTypeHheaAscender</key>
   <integer>1427</integer>
   <key>openTypeHheaDescender</key>
@@ -48,7 +48,7 @@
   <key>openTypeNameLicense</key>
   <string>Lepcha glyph design copyright (c) 2001, GlavyFonts and copyright (c) 2006 Athinkra, LLC with Reserved Font Name "Lepcha".
   
-  OpenType and Graphite code copyright (c) 2010-2019, SIL International (http://www.sil.org/) with Reserved Font Name "Mingzat".
+  OpenType and Graphite code copyright (c) 2010-2022, SIL International (http://www.sil.org/) with Reserved Font Name "Mingzat".
   
   Latin glyph design copyright (c) 1994-2019, SIL International (http://www.sil.org/), with Reserved Font Names "SIL" and "Sophia".
 
@@ -104,9 +104,9 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
   <key>openTypeNamePreferredSubfamilyName</key>
   <string>Regular</string>
   <key>openTypeNameUniqueID</key>
-  <string>SIL International: Mingzat Regular: 2019</string>
+  <string>SIL International: Mingzat Regular: 2022</string>
   <key>openTypeNameVersion</key>
-  <string>Version 1.001</string>
+  <string>Version 1.100</string>
   <key>openTypeOS2CodePageRanges</key>
   <array>
     <integer>0</integer>
@@ -124,6 +124,10 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
     <integer>0</integer>
     <integer>0</integer>
     <integer>0</integer>
+  </array>
+  <key>openTypeOS2Selection</key>
+  <array>
+    <integer>7</integer>
   </array>
   <key>openTypeOS2StrikeoutPosition</key>
   <integer>259</integer>
@@ -213,7 +217,75 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
   <key>versionMajor</key>
   <integer>1</integer>
   <key>versionMinor</key>
-  <integer>001</integer>
+  <integer>100</integer>
+  <key>woffMetadataCredits</key>
+  <dict>
+    <key>credits</key>
+    <array>
+      <dict>
+        <key>name</key>
+        <string>Walt Agee</string>
+        <key>role</key>
+        <string>Font designer (for Sophia)</string>
+        <key>url</key>
+        <string>http://scripts.sil.org/</string>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Sharon Correll</string>
+        <key>role</key>
+        <string>Font engineer</string>
+        <key>url</key>
+        <string>http://scripts.sil.org/</string>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Lorna Priest Evans</string>
+        <key>role</key>
+        <string>Font designer (for a few Lepcha glyphs), Font engineer</string>
+        <key>url</key>
+        <string>http://scripts.sil.org/</string>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Victor Gaultney</string>
+        <key>role</key>
+        <string>Font designer (for Sophia)</string>
+        <key>url</key>
+        <string>http://www.sil.org/~gaultney/</string>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Jason Glavy</string>
+        <key>role</key>
+        <string>Font designer (for Lepcha)</string>
+        <key>url</key>
+        <string>http://www.athinkra.com</string>
+      </dict>
+    </array>
+  </dict>
+  <key>woffMetadataDescription</key>
+  <dict>
+    <key>text</key>
+    <array>
+      <dict>
+        <key>text</key>
+        <string>Mingzat is based on Jason Glavy's JG Lepcha font which was a custom-encoded
+font. We have used his design with his generous permission. He also agreed
+to allow the font to be released under the SIL Open Font License (OFL).
+
+The goal for this product was to provide a single Unicode-based font
+that would contain all Lepcha characters. In addition, there is provision
+for other Latin characters and symbols. This font makes use of
+state-of-the-art font technologies (Graphite and OpenType) to support the
+need for conjuncts and to position arbitrary combinations of Lepcha glyphs
+and combining marks optimally.
+</string>
+      </dict>
+    </array>
+    <key>url</key>
+    <string>https://software.sil.org/mingzat</string>
+  </dict>
   <key>xHeight</key>
   <integer>705</integer>
 </dict>

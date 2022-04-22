@@ -2,7 +2,7 @@ Lepcha glyph design Copyright (c) 2001, GlavyFonts and
 Copyright (c) 2006 Athinkra, LLC (http://www.athinkra.com)
 with Reserved Font Name "JG Lepcha".
 
-OpenType and Graphite code Copyright (c) 2010-2019, SIL
+OpenType and Graphite code Copyright (c) 2010-2022, SIL
 International (http://www.sil.org/) with Reserved Font Name "Mingzat".
 
 Latin glyph design Copyright (c) 1994-2019, SIL International

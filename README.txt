@@ -1,5 +1,5 @@
 README 
-Mingzat Release 1.000
+Mingzat Release 1.100
 ========================
 
 Thank you for your interest in the Mingzat font.
@@ -61,7 +61,7 @@ for information on which applications can be used with the Mingzat font.
 INSTALLATION AND CONFIGURATION
 ==============================
 If you are not sure how to install the fonts, please see:
-https://software.sil.org/lcgfonts/resources/installing-and-using-fonts/ for 
+https://software.sil.org/fonts/installation/ for 
 instructions on font installations on various operating systems.
 
 
