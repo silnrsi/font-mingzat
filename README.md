@@ -5,7 +5,7 @@ The Mingzat font supports the Lepcha script.
 
 ## Project status [![Build Status](http://build.palaso.org/app/rest/builds/buildType:Fonts_Mingzat/statusIcon)](http://build.palaso.org/viewType.html?buildTypeId=Fonts_Mingzat&guest=1)  
 
-Mingzat v1.000 has been released. 
+Mingzat v1.100 has been released. 
 
 Mingzat is based on Jason Glavy's JG Lepcha font which was a custom-encoded font. We have used his design with his generous permission. He also agreed to allow the font to be released under the SIL Open Font License (OFL). 
 

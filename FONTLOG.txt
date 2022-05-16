@@ -28,9 +28,11 @@ ChangeLog
 ---------
 (This should list both major and minor changes, most recent first.)
 
-29 Apr 2022 Mingzat font updated (Lorna Evans) Mingzat version 1.100
+16 May 2022 Mingzat font updated (Lorna Evans) Mingzat version 1.100
 - Update nonbreakingspace space to match space
 - Update fs bit to 7
+- Update width for U+2008
+- Added square box to notdef
 
 7 Oct 2019 Mingzat font updated (Sharon Correll) Mingzat version 1.000
 - Move font to new build system
