@@ -12,7 +12,7 @@ Mingzat is released under the SIL Open Font License.
 	
 See the OFL and OFL-FAQ for details of the SIL Open Font License.
 See the FONTLOG for information on this and previous releases.
-See the website (http://software.sil.org/mingzat) for further documentation. 
+See the website (https://software.sil.org/mingzat) for further documentation. 
 
 
 TIPS
@@ -54,7 +54,7 @@ adequate level of support for Graphite or OpenType.
 Lepcha is a complex Indic script which requires reordering. At this time, 
 there is little (or no) support for the Lepcha script in commercial rendering 
 systems. Thus, there are only a few applications which can adequately
-render Lepcha. Please see the Mingzat webpage (http://software.sil.org/mingzat)
+render Lepcha. Please see the Mingzat webpage (https://software.sil.org/mingzat)
 for information on which applications can be used with the Mingzat font.
 
 
@@ -69,7 +69,7 @@ CONTACT
 ========
 For more information please visit the Mingzat page on SIL International's
 Computers and Writing systems website:
-http://software.sil.org/mingzat
+https://software.sil.org/mingzat
 
 Or send an email to fonts@sil.org
 

@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata version="1.0">
   <uniqueid id="“org.sil.fonts”.mingzat.1.100" />
-  <vendor name="SIL International" url="http://scripts.sil.org" />
+  <vendor name="SIL International" url="https://scripts.sil.org" />
   <credits>
     <credit
       name="Walt Agee"
-      url="http://scripts.sil.org/"
+      url="https://scripts.sil.org/"
       role="Font designer (for Sophia)"
     />
     <credit
       name="Sharon Correll"
-      url="http://scripts.sil.org/"
+      url="https://scripts.sil.org/"
       role="Font engineer"
     />
     <credit
       name="Lorna Priest Evans"
-      url="http://scripts.sil.org/"
+      url="https://scripts.sil.org/"
       role="Font designer (for a few Lepcha glyphs), Font engineer"
     />
     <credit
       name="Victor Gaultney"
-      url="http://www.sil.org/~gaultney/"
+      url="https://www.sil.org/~gaultney/"
       role="Font designer (for Sophia)"
     />
     <credit
       name="Jason Glavy"
-      url="http://www.athinkra.com"
+      url="https://www.athinkra.com"
       role="Font designer (for Lepcha)"
     />
   </credits>
@@ -79,15 +79,15 @@
       - release of custom encoded JG Lepcha
     </text>
   </description>
-  <license url="http://scripts.sil.org/OFL" id="org.sil.ofl.1.1">
+  <license url="https://scripts.sil.org/OFL" id="org.sil.ofl.1.1">
     <text lang="en">
       Lepcha glyph design copyright (c) 2001, GlavyFonts and copyright (c) 2006 Athinkra, LLC with Reserved Font Name "Lepcha".
         
-        OpenType and Graphite code copyright (c) 2010-2022, SIL International (http://www.sil.org/) with Reserved Font Name "Mingzat".
+        OpenType and Graphite code copyright (c) 2010-2022, SIL International (https://www.sil.org/) with Reserved Font Name "Mingzat".
         
-        Latin glyph design copyright (c) 1994-2019, SIL International (http://www.sil.org/), with Reserved Font Names "SIL" and "Sophia".
+        Latin glyph design copyright (c) 1994-2019, SIL International (https://www.sil.org/), with Reserved Font Names "SIL" and "Sophia".
       
-      This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL
+      This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is copied below, and is also available with a FAQ at: https://scripts.sil.org/OFL
       
       
       -----------------------------------------------------------
@@ -132,7 +132,7 @@
   </license>
   <copyright>
     <text lang="en">
-      Lepcha glyph design copyright (c) 2001, GlavyFonts and copyright (c) 2006 Athinkra, LLC. OpenType and Graphite code copyright (c) 2010-2022, SIL International (http://www.sil.org/). Latin glyph design copyright (c) 1994-2019, SIL International (http://www.sil.org/).
+      Lepcha glyph design copyright (c) 2001, GlavyFonts and copyright (c) 2006 Athinkra, LLC. OpenType and Graphite code copyright (c) 2010-2022, SIL International (https://www.sil.org/). Latin glyph design copyright (c) 1994-2019, SIL International (https://www.sil.org/).
     </text>
   </copyright>
 </metadata>
