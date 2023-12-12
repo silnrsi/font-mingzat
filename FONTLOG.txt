@@ -84,22 +84,22 @@ be sure to add your name (N), email (E), web-address (W) and description
 
 N: Walt Agee
 E: fonts@sil.org
-W: https://scripts.sil.org/
+W: https://software.sil.org/wstech/
 D: Font designer (for Sophia)
 
 N: Sharon Correll
 E: fonts@sil.org
-W: https://scripts.sil.org/
+W: https://software.sil.org/wstech/
 D: Font engineer
 
 N: Lorna Priest Evans
 E: fonts@sil.org
-W: https://scripts.sil.org/
+W: https://software.sil.org/wstech/
 D: Font designer (for a few Lepcha glyphs), Font engineer
 
 N: Victor Gaultney
 E: fonts@sil.org
-W: https://www.sil.org/~gaultney/
+W: https://software.sil.org/wstech/
 D: Font designer (for Sophia)
 
 N: Jason Glavy

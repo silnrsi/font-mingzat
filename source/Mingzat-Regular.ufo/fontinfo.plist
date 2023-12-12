@@ -7,7 +7,7 @@
   <key>capHeight</key>
   <integer>1100</integer>
   <key>copyright</key>
-  <string>Lepcha glyph design copyright (c) 2001, GlavyFonts and copyright (c) 2006 Athinkra, LLC. OpenType and Graphite code copyright (c) 2010-2022, SIL International (https://www.sil.org/). Latin glyph design copyright (c) 1994-2019, SIL International (https://www.sil.org/).</string>
+  <string>Lepcha glyph design copyright (c) 2001, GlavyFonts and copyright (c) 2006 Athinkra, LLC. OpenType and Graphite code copyright (c) 2010-2024, SIL International (https://www.sil.org/). Latin glyph design copyright (c) 1994-2024, SIL International (https://www.sil.org/).</string>
   <key>descender</key>
   <integer>-670</integer>
   <key>familyName</key>
@@ -32,7 +32,7 @@
     </dict>
   </array>
   <key>openTypeHeadCreated</key>
-  <string>2023/05/04 15:48:33</string>
+  <string>2023/12/12 14:35:40</string>
   <key>openTypeHheaAscender</key>
   <integer>1427</integer>
   <key>openTypeHheaDescender</key>
@@ -44,15 +44,15 @@
   <key>openTypeNameDesigner</key>
   <string>Jason Glavy (Lepcha), Lorna Priest (Lepcha additions), Walt Agee (Sophia), Victor Gaultney (Sophia)</string>
   <key>openTypeNameDesignerURL</key>
-  <string>https://scripts.sil.org/</string>
+  <string>https://software.sil.org/wstech/</string>
   <key>openTypeNameLicense</key>
   <string>Lepcha glyph design copyright (c) 2001, GlavyFonts and copyright (c) 2006 Athinkra, LLC with Reserved Font Name "Lepcha".
   
-  OpenType and Graphite code copyright (c) 2010-2022, SIL International (https://www.sil.org/) with Reserved Font Name "Mingzat".
+  OpenType and Graphite code copyright (c) 2010-2024, SIL International (https://www.sil.org/) with Reserved Font Name "Mingzat".
   
-  Latin glyph design copyright (c) 1994-2019, SIL International (https://www.sil.org/), with Reserved Font Names "SIL" and "Sophia".
+  Latin glyph design copyright (c) 1994-2024, SIL International (https://www.sil.org/), with Reserved Font Names "SIL" and "Sophia".
 
-This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is copied below, and is also available with a FAQ at: https://scripts.sil.org/OFL
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is copied below, and is also available with a FAQ at: https://openfontlicense.org/
 
 
 -----------------------------------------------------------
@@ -94,11 +94,11 @@ This license becomes null and void if any of the above conditions are not met.
 DISCLAIMER
 THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.</string>
   <key>openTypeNameLicenseURL</key>
-  <string>https://scripts.sil.org/OFL</string>
+  <string>https://openfontlicense.org/</string>
   <key>openTypeNameManufacturer</key>
   <string>SIL International</string>
   <key>openTypeNameManufacturerURL</key>
-  <string>https://scripts.sil.org</string>
+  <string>https://software.sil.org/wstech/</string>
   <key>openTypeNamePreferredFamilyName</key>
   <string>Mingzat</string>
   <key>openTypeNamePreferredSubfamilyName</key>
@@ -228,7 +228,7 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
         <key>role</key>
         <string>Font designer (for Sophia)</string>
         <key>url</key>
-        <string>https://scripts.sil.org/</string>
+        <string>https://software.sil.org/wstech/</string>
       </dict>
       <dict>
         <key>name</key>
@@ -236,7 +236,7 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
         <key>role</key>
         <string>Font engineer</string>
         <key>url</key>
-        <string>https://scripts.sil.org/</string>
+        <string>https://software.sil.org/wstech/</string>
       </dict>
       <dict>
         <key>name</key>
@@ -244,7 +244,7 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
         <key>role</key>
         <string>Font designer (for a few Lepcha glyphs), Font engineer</string>
         <key>url</key>
-        <string>https://scripts.sil.org/</string>
+        <string>https://software.sil.org/wstech/</string>
       </dict>
       <dict>
         <key>name</key>
@@ -252,7 +252,7 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
         <key>role</key>
         <string>Font designer (for Sophia)</string>
         <key>url</key>
-        <string>https://www.sil.org/~gaultney/</string>
+        <string>https://software.sil.org/wstech/</string>
       </dict>
       <dict>
         <key>name</key>
