@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata version="1.0">
   <uniqueid id="“org.sil.fonts”.mingzat.1.100" />
-  <vendor name="SIL International" url="https://www.sil.org" />
+  <vendor name="SIL Global" url="https://www.sil.org" />
   <credits>
     <credit
       name="Walt Agee"
@@ -83,9 +83,9 @@
     <text lang="en">
       Lepcha glyph design copyright (c) 2001, GlavyFonts and copyright (c) 2006 Athinkra, LLC with Reserved Font Name "Lepcha".
         
-        OpenType and Graphite code copyright (c) 2010-2024, SIL International (https://www.sil.org/) with Reserved Font Name "Mingzat".
+        OpenType and Graphite code copyright (c) 2010-2026, SIL Global (https://www.sil.org/) with Reserved Font Name "Mingzat".
         
-        Latin glyph design copyright (c) 1994-2024, SIL International (https://www.sil.org/), with Reserved Font Names "SIL" and "Sophia".
+        Latin glyph design copyright (c) 1994-2026, SIL Global (https://www.sil.org/), with Reserved Font Names "SIL" and "Sophia".
       
       This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is copied below, and is also available with a FAQ at: https://openfontlicense.org/
       
@@ -132,7 +132,7 @@
   </license>
   <copyright>
     <text lang="en">
-      Lepcha glyph design copyright (c) 2001, GlavyFonts and copyright (c) 2006 Athinkra, LLC. OpenType and Graphite code copyright (c) 2010-2024, SIL International (https://www.sil.org/). Latin glyph design copyright (c) 1994-2024, SIL International (https://www.sil.org/).
+      Lepcha glyph design copyright (c) 2001, GlavyFonts and copyright (c) 2006 Athinkra, LLC. OpenType and Graphite code copyright (c) 2010-2026, SIL Global (https://www.sil.org/). Latin glyph design copyright (c) 1994-2026, SIL Global (https://www.sil.org/).
     </text>
   </copyright>
 </metadata>

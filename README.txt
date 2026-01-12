@@ -67,7 +67,7 @@ instructions on font installations on various operating systems.
 
 CONTACT
 ========
-For more information please visit the Mingzat page on SIL International's
+For more information please visit the Mingzat page on SIL Global's
 Computers and Writing systems website:
 https://software.sil.org/mingzat
 

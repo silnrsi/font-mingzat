@@ -70,7 +70,7 @@ to best submit your contributions.
 
 To enable us to accept contributions in a way that honors your contribution 
 and respects your copyright while preserving long-term flexibility for open 
-source licensing, you would also need to agree to the SIL International 
+source licensing, you would also need to agree to the SIL Global 
 Contributor License Agreement for Font Software (v1.0) prior to sending us 
 your contribution. To read more about this requirement and find out how to 
 submit the required form, please visit the CLA information page
@@ -108,9 +108,9 @@ W: https://www.athinkra.com/
 D: Font designer (for Lepcha)
 
 
-The Mingzat project is maintained by SIL International.
+The Mingzat project is maintained by SIL Global.
 
-For more information please visit the Mingzat page on SIL International's
+For more information please visit the Mingzat page on SIL Global's
 Computers and Writing systems website:
 https://software.sil.org/mingzat
 
