@@ -4,7 +4,7 @@
   <head>
     <fontscale>250</fontscale>
   	<fontsrc label="Reg-Gr">url(../references/Mingzat-Regular.ttf)</fontsrc>
-  	<fontsrc label="Reg-OT">url(../references/MingzatOT-Regular.ttf)</fontsrc>
+  	<fontsrc label="Reg-OT New">url(../results/Mingzat-Regular.ttf)</fontsrc>
   	<styles>
   		<style feats="'smcp' 1" name="fset_smcp"/>
   		<style feats="'cv17' 1" name="fset_cv17_1"/>
@@ -70,10 +70,6 @@
       <comment/>
       <string>\u0000F8 \u0000F9 \u0000FA \u0000FB \u0000FC \u0000FD \u0000FE \u0000FF </string> 
     </test>
-    <test label="U+034F">
-      <comment>graphemejoinercomb</comment>
-      <string>\u001C00\u00034F</string>
-    </test>
     <test label="U+0131">
       <comment/>
       <string>\u000131 </string> 
@@ -110,6 +106,10 @@
       <comment/>
       <string>\u0002D8 \u0002D9 \u0002DA \u0002DB \u0002DC \u0002DD</string> 
     </test>
+    <test label="U+034F">
+      <comment>graphemejoinercomb</comment>
+      <string>\u00034F</string>
+    </test>
     <test label="U+03C0">
       <comment/>
       <string>\u0003C0</string> 
@@ -120,19 +120,19 @@
     </test>
     <test label="U+1C24">
       <comment>Subjoined consonants</comment>
-      <string>\u001C24 \u001C25 </string> 
+      <string>\u25cc\u001C24 \u25cc\u001C25 </string> 
     </test>
     <test label="U+1C26">
       <comment>Dependent vowels</comment>
-      <string>\u001C26 \u001C27 \u001C28 \u001C29 \u001C2A \u001C2B \u001C2C </string> 
+      <string>\u25cc\u001C26 \u25cc\u001C27 \u25cc\u001C28 \u25cc\u001C29 \u25cc\u001C2A \u25cc\u001C2B \u25cc\u001C2C </string> 
     </test>
     <test label="U+1C2D">
       <comment>Consonant signs</comment>
-      <string>\u001C2D \u001C2E \u001C2F \u001C30 \u001C31 \u001C32 \u001C33 \u001C34 \u001C35 </string> 
+      <string>\u25cc\u001C2D \u25cc\u001C2E \u25cc\u001C2F \u25cc\u001C30 \u25cc\u001C31 \u25cc\u001C32 \u25cc\u001C33 \u25cc\u001C34 \u25cc\u001C35 </string> 
     </test>
     <test label="U+1C36">
       <comment>Various signs</comment>
-      <string>\u001C36 \u001C37 </string> 
+      <string>\u25cc\u001C36 \u25cc\u001C37 </string> 
     </test>
     <test label="U+1C3B">
       <comment>Punctuation</comment>

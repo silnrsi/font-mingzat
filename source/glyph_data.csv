@@ -1,446 +1,443 @@
-USV,,ps_name,sort_final,Comment
-  FFFF,,.notdef,0.00,
-,,.null,1.00,
-,,nonmarkingreturn,2.00,
-  0020,,space,3.00,
-  0021,,exclam,4.00,
-  0022,,quotedbl,5.00,
-  0023,,numbersign,6.00,
-  0024,,dollar,7.00,
-  0025,,percent,8.00,
-  0026,,ampersand,9.00,
-  0027,,quotesingle,10.00,
-  0028,,parenleft,11.00,
-  0029,,parenright,12.00,
-  002A,,asterisk,13.00,
-  002B,,plus,14.00,
-  002C,,comma,15.00,
-  002D,,hyphen,16.00,
-  002E,,period,17.00,
-  002F,,slash,18.00,
-  0030,,zero,19.00,
-  0031,,one,20.00,
-  0032,,two,21.00,
-  0033,,three,22.00,
-  0034,,four,23.00,
-  0035,,five,24.00,
-  0036,,six,25.00,
-  0037,,seven,26.00,
-  0038,,eight,27.00,
-  0039,,nine,28.00,
-  003A,,colon,29.00,
-  003B,,semicolon,30.00,
-  003C,,less,31.00,
-  003D,,equal,32.00,
-  003E,,greater,33.00,
-  003F,,question,34.00,
-  0040,,at,35.00,
-  0041,,A,36.00,
-  0042,,B,37.00,
-  0043,,C,38.00,
-  0044,,D,39.00,
-  0045,,E,40.00,
-  0046,,F,41.00,
-  0047,,G,42.00,
-  0048,,H,43.00,
-  0049,,I,44.00,
-  004A,,J,45.00,
-  004B,,K,46.00,
-  004C,,L,47.00,
-  004D,,M,48.00,
-  004E,,N,49.00,
-  004F,,O,50.00,
-  0050,,P,51.00,
-  0051,,Q,52.00,
-  0052,,R,53.00,
-  0053,,S,54.00,
-  0054,,T,55.00,
-  0055,,U,56.00,
-  0056,,V,57.00,
-  0057,,W,58.00,
-  0058,,X,59.00,
-  0059,,Y,60.00,
-  005A,,Z,61.00,
-  005B,,bracketleft,62.00,
-  005C,,backslash,63.00,
-  005D,,bracketright,64.00,
-  005E,,asciicircum,65.00,
-  005F,,underscore,66.00,
-  0060,,grave,67.00,
-  0061,,a,68.00,
-  0062,,b,69.00,
-  0063,,c,70.00,
-  0064,,d,71.00,
-  0065,,e,72.00,
-  0066,,f,73.00,
-  0067,,g,74.00,
-  0068,,h,75.00,
-  0069,,i,76.00,
-  006A,,j,77.00,
-  006B,,k,78.00,
-  006C,,l,79.00,
-  006D,,m,80.00,
-  006E,,n,81.00,
-  006F,,o,82.00,
-  0070,,p,83.00,
-  0071,,q,84.00,
-  0072,,r,85.00,
-  0073,,s,86.00,
-  0074,,t,87.00,
-  0075,,u,88.00,
-  0076,,v,89.00,
-  0077,,w,90.00,
-  0078,,x,91.00,
-  0079,,y,92.00,
-  007A,,z,93.00,
-  007B,,braceleft,94.00,
-  007C,,bar,95.00,
-  007D,,braceright,96.00,
-  007E,,asciitilde,97.00,
-  00A0,,uni00A0,98.00,
-  00A1,,exclamdown,99.00,
-  00A2,,cent,100.00,
-  00A3,,sterling,101.00,
-  00A4,,currency,102.00,
-  00A5,,yen,103.00,
-  00A6,,brokenbar,104.00,
-  00A7,,section,105.00,
-  00A8,,dieresis,106.00,
-  00A9,,copyright,107.00,
-  00AA,,ordfeminine,108.00,
-  00AB,,guillemotleft,109.00,
-  00AC,,logicalnot,110.00,
-  00AD,,uni00AD,111.00,
-  00AE,,registered,112.00,
-  00AF,,macron,113.00,
-  00B0,,degree,114.00,
-  00B1,,plusminus,115.00,
-  00B2,,twosuperior,116.00,
-  00B3,,threesuperior,117.00,
-  00B4,,acute,118.00,
-  00B5,,mu,119.00,
-  00B6,,paragraph,120.00,
-  00B7,,periodcentered,121.00,
-  00B8,,cedilla,122.00,
-  00B9,,onesuperior,123.00,
-  00BA,,ordmasculine,124.00,
-  00BB,,guillemotright,125.00,
-  00BC,,onequarter,126.00,
-  00BD,,onehalf,127.00,
-  00BE,,threequarters,128.00,
-  00BF,,questiondown,129.00,
-  00C0,,Agrave,130.00,
-  00C1,,Aacute,131.00,
-  00C2,,Acircumflex,132.00,
-  00C3,,Atilde,133.00,
-  00C4,,Adieresis,134.00,
-  00C5,,Aring,135.00,
-  00C6,,AE,136.00,
-  00C7,,Ccedilla,137.00,
-  00C8,,Egrave,138.00,
-  00C9,,Eacute,139.00,
-  00CA,,Ecircumflex,140.00,
-  00CB,,Edieresis,141.00,
-  00CC,,Igrave,142.00,
-  00CD,,Iacute,143.00,
-  00CE,,Icircumflex,144.00,
-  00CF,,Idieresis,145.00,
-  00D0,,Eth,146.00,
-  00D1,,Ntilde,147.00,
-  00D2,,Ograve,148.00,
-  00D3,,Oacute,149.00,
-  00D4,,Ocircumflex,150.00,
-  00D5,,Otilde,151.00,
-  00D6,,Odieresis,152.00,
-  00D7,,multiply,153.00,
-  00D8,,Oslash,154.00,
-  00D9,,Ugrave,155.00,
-  00DA,,Uacute,156.00,
-  00DB,,Ucircumflex,157.00,
-  00DC,,Udieresis,158.00,
-  00DD,,Yacute,159.00,
-  00DE,,Thorn,160.00,
-  00DF,,germandbls,161.00,
-  00E0,,agrave,162.00,
-  00E1,,aacute,163.00,
-  00E2,,acircumflex,164.00,
-  00E3,,atilde,165.00,
-  00E4,,adieresis,166.00,
-  00E5,,aring,167.00,
-  00E6,,ae,168.00,
-  00E7,,ccedilla,169.00,
-  00E8,,egrave,170.00,
-  00E9,,eacute,171.00,
-  00EA,,ecircumflex,172.00,
-  00EB,,edieresis,173.00,
-  00EC,,igrave,174.00,
-  00ED,,iacute,175.00,
-  00EE,,icircumflex,176.00,
-  00EF,,idieresis,177.00,
-  00F0,,eth,178.00,
-  00F1,,ntilde,179.00,
-  00F2,,ograve,180.00,
-  00F3,,oacute,181.00,
-  00F4,,ocircumflex,182.00,
-  00F5,,otilde,183.00,
-  00F6,,odieresis,184.00,
-  00F7,,divide,185.00,
-  00F8,,oslash,186.00,
-  00F9,,ugrave,187.00,
-  00FA,,uacute,188.00,
-  00FB,,ucircumflex,189.00,
-  00FC,,udieresis,190.00,
-  00FD,,yacute,191.00,
-  00FE,,thorn,192.00,
-  00FF,,ydieresis,193.00,
-  0131,,dotlessi,194.00,
-  0152,,OE,195.00,
-  0153,,oe,196.00,
-  0160,,Scaron,197.00,
-  0161,,scaron,198.00,
-  0178,,Ydieresis,199.00,
-  017D,,Zcaron,200.00,
-  017E,,zcaron,201.00,
-  0192,,florin,202.00,
-  02C6,,circumflex,203.00,
-  02C7,,caron,204.00,
-02D0,,uni02D0,204.10,
-  02D8,,breve,205.00,
-  02D9,,dotaccent,206.00,
-  02DA,,ring,207.00,
-  02DB,,ogonek,208.00,
-  02DC,,tilde,209.00,
-034F,,uni034F,209.10,
-  02DD,,hungarumlaut,210.00,
-  03C0,,pi,212.00,
-  1C00,,uni1C00,300.00,
-,,uni1C001C24,300.10,
-,,uni1C001C25,300.20,
-,,uni1C001C251C24,300.30,
-  1C01,,uni1C01,301.00,
-,,uni1C011C24,301.10,
-  1C02,,uni1C02,302.00,
-,,uni1C021C24,302.10,
-  1C03,,uni1C03,303.00,
-,,uni1C031C24,303.10,
-,,uni1C031C25,303.20,
-,,uni1C031C251C24,303.30,
-  1C04,,uni1C04,304.00,
-,,uni1C041C24,304.10,
-  1C05,,uni1C05,305.00,
-,,uni1C051C24,305.10,
-,,uni1C051C25,305.20,
-,,uni1C051C251C24,305.30,
-  1C06,,uni1C06,306.00,
-  1C07,,uni1C07,307.00,
-  1C08,,uni1C08,308.00,
-  1C09,,uni1C09,309.00,
-  1C0A,,uni1C0A,310.00,
-,,uni1C0A1C24,310.10,
-  1C0B,,uni1C0B,311.00,
-,,uni1C0B1C24,311.10,
-  1C0C,,uni1C0C,312.00,
-,,uni1C0C1C24,312.10,
-  1C0D,,uni1C0D,313.00,
-  1C0E,,uni1C0E,314.00,
-,,uni1C0E1C24,314.10,
-,,uni1C0E1C25,314.20,
-,,uni1C0E1C251C24,314.30,
-  1C0F,,uni1C0F,315.00,
-,,uni1C0F1C24,315.10,
-  1C10,,uni1C10,316.00,
-,,uni1C101C24,316.10,
-  1C11,,uni1C11,317.00,
-,,uni1C111C24,317.10,
-,,uni1C111C25,317.20,
-,,uni1C111C251C24,317.30,
-  1C12,,uni1C12,318.00,
-,,uni1C121C24,318.10,
-  1C13,,uni1C13,319.00,
-,,uni1C131C24,319.10,
-,,uni1C131C25,319.20,
-,,uni1C131C251C24,319.30,
-  1C14,,uni1C14,320.00,
-,,uni1C141C24,320.10,
-  1C15,,uni1C15,321.00,
-,,uni1C151C24,321.10,
-,,uni1C151C25,321.20,
-,,uni1C151C251C24,321.30,
-  1C16,,uni1C16,322.00,
-,,uni1C161C24,322.10,
-  1C17,,uni1C17,323.00,
-  1C18,,uni1C18,324.00,
-  1C19,,uni1C19,325.00,
-  1C1A,,uni1C1A,326.00,
-  1C1B,,uni1C1B,327.00,
-,,uni1C1B1C24,327.10,
-  1C1C,,uni1C1C,328.00,
-,,uni1C1C1C24,328.10,
-  1C1D,,uni1C1D,329.00,
-,,uni1C1D1C24,329.10,
-,,uni1C1D1C25,329.20,
-,,uni1C1D1C251C24,329.30,
-  1C1E,,uni1C1E,330.00,
-,,uni1C1E1C24,330.10,
-  1C1F,,uni1C1F,331.00,
-,,uni1C1F1C24,331.10,
-  1C20,,uni1C20,332.00,
-  1C21,,uni1C21,333.00,
-,,uni1C211C24,333.10,
-  1C22,,uni1C22,334.00,
-  1C23,,uni1C23,335.00,
-,,uni1C231C24,335.10,
-  1C24,,uni1C24,336.00,
-  1C25,,uni1C25,337.00,
-  1C26,,uni1C26,338.00,
-  1C27,,uni1C27,339.00,
-,,uni1C271C35,339.10,
-  1C28,,uni1C28,340.00,
-,,uni1C281C35,340.10,
-  1C29,,uni1C29,341.00,
-,,uni1C291C2D,341.10,
-,,uni1C291C2E,341.20,
-,,uni1C291C2F,341.30,
-,,uni1C291C30,341.40,
-,,uni1C291C31,341.50,
-,,uni1C291C32,341.60,
-,,uni1C291C33,341.70,
-,,uni1C291C35,341.80,
-  1C2A,,uni1C2A,342.00,
-  1C2B,,uni1C2B,343.00,
-  1C2C,,uni1C2C,344.00,
-  1C2D,,uni1C2D,345.00,
-,,uni1C2D1C36,345.10,
-  1C2E,,uni1C2E,346.00,
-,,uni1C2E1C36,346.10,
-  1C2F,,uni1C2F,347.00,
-,,uni1C2F1C36,347.10,
-  1C30,,uni1C30,348.00,
-,,uni1C301C36,348.10,
-  1C31,,uni1C31,349.00,
-,,uni1C311C36,349.10,
-  1C32,,uni1C32,350.00,
-,,uni1C321C36,350.10,
-  1C33,,uni1C33,351.00,
-,,uni1C331C36,351.10,
-  1C34,,uni1C34,352.00,
-  1C35,,uni1C35,353.00,
-  1C36,,uni1C36,354.00,
-  1C37,,uni1C37,355.00,
-  1C3B,,uni1C3B,356.00,
-  1C3C,,uni1C3C,357.00,
-  1C3D,,uni1C3D,358.00,
-  1C3E,,uni1C3E,359.00,
-  1C3F,,uni1C3F,360.00,
-  1C40,,uni1C40,361.00,
-  1C41,,uni1C41,362.00,
-  1C42,,uni1C42,363.00,
-  1C43,,uni1C43,364.00,
-  1C44,,uni1C44,365.00,
-  1C45,,uni1C45,366.00,
-  1C46,,uni1C46,367.00,
-  1C47,,uni1C47,368.00,
-  1C48,,uni1C48,369.00,
-  1C49,,uni1C49,370.00,
-  1C4D,,uni1C4D,371.00,
-  1C4E,,uni1C4E,372.00,
-  1C4F,,uni1C4F,373.00,
-2000,,uni2000,400.10,needs adding to the font
-2001,,uni2001,400.20,needs adding to the font
-2002,,uni2002,400.30,needs adding to the font
-2003,,uni2003,400.40,needs adding to the font
-2004,,uni2004,400.50,needs adding to the font
-2005,,uni2005,400.60,needs adding to the font
-2006,,uni2006,400.70,needs adding to the font
-2007,,uni2007,400.80,needs adding to the font
-2008,,uni2008,400.90,needs adding to the font
-2009,,uni2009,401.10,needs adding to the font
-200A,,uni200A,401.20,needs adding to the font
-200B,,uni200B,401.30,needs adding to the font
-200C,,uni200C,401.40,needs adding to the font
-200D,,uni200D,401.50,needs adding to the font
-200E,,uni200E,401.60,needs adding to the font
-200F,,uni200F,401.70,needs adding to the font
-2010,,uni2010,401.80,needs adding to the font
-2011,,uni2011,401.90,needs adding to the font
-2012,,figuredash,402.00,needs adding to the font
-  2013,,endash,402.10,
-  2014,,emdash,402.20,
-2015,,uni2015,402.30,
-  2018,,quoteleft,402.50,
-  2019,,quoteright,402.60,
-201A,,quotesinglbase,402.70,
-  201C,,quotedblleft,405.00,
-  201D,,quotedblright,406.00,
-  201E,,quotedblbase,407.00,
-  2020,,dagger,408.00,
-  2021,,daggerdbl,409.00,
-  2022,,bullet,410.00,
-  2026,,ellipsis,411.00,
-2027,,uni2027,411.10,
-2028,,uni2028,411.20,
-2029,,uni2029,411.30,
-202A,,uni202A,411.40,
-202B,,uni202B,411.50,
-202C,,uni202C,411.60,
-202D,,uni202D,411.70,
-202E,,uni202E,411.80,
-202F,,uni202F,411.90,
-  2030,,perthousand,412.00,
-  2039,,guilsinglleft,413.00,
-  203A,,guilsinglright,414.00,
-  2044,,fraction,415.00,
-2060,,uni2060,415.10,
-  20AC,,Euro,416.00,
-  2122,,trademark,417.00,
-2126,,Omega,417.10,
-  2202,,partialdiff,419.00,
-  2206,,Delta,420.00,
-  220F,,product,421.00,
-  2211,,summation,422.00,
-  2219,,uni2219,423.00,
-  221A,,radical,424.00,
-  221E,,infinity,425.00,
-  222B,,integral,426.00,
-  2248,,approxequal,427.00,
-  2260,,notequal,428.00,
-  2264,,lessequal,429.00,
-  2265,,greaterequal,430.00,
-2423,,blank,430.10,
-  25CA,,lozenge,431.00,
-  25CC,,uni25CC,432.00,
-  FB01,,fi,433.00,
-  FB02,,fl,434.00,
-FE00,,uniFE00,435.00,
-FE01,,uniFE01,436.00,
-FE02,,uniFE02,437.00,
-FE03,,uniFE03,438.00,
-FE04,,uniFE04,439.00,
-FE05,,uniFE05,440.00,
-FE06,,uniFE06,441.00,
-FE07,,uniFE07,442.00,
-FE08,,uniFE08,443.00,
-FE09,,uniFE09,444.00,
-FE0A,,uniFE0A,445.00,
-FE0B,,uniFE0B,446.00,
-FE0C,,uniFE0C,447.00,
-FE0D,,uniFE0D,448.00,
-FE0E,,uniFE0E,449.00,
-FE0F,,uniFE0F,450.00,
-FEFF,,uniFEFF,451.00,
-FFFC,,uniFFFC,452.00,
-FFFD,,uniFFFD,453.00,
-,,uni1C191C37,454.00,
-,,uni1C1B1C37,455.00,
-,,uni1C001C371C25,456.00,
-,,uni1C031C371C25,457.00,
-,,uni1C1D1C371C25,458.00,
-,,uni1C101C37,459.00,
-,,uni1C211C37,460.00,
-,,uni1C001C371C24,461.00,
-,,uni1C001C371C251C24,462.00,
-,,uni1C031C371C24,463.00,
-,,uni1C131C371C25,464.00,
-,,uni1C1D1C371C24,465.00,
-,,uni1C1D1C371C251C24,466.00,
-,,uniE000,467.00,
+USV,glyph_name,ps_name,sort_final
+,,.notdef,0
+0020,,space,3
+0021,,exclam,4
+0022,,quotedbl,5
+0023,,numbersign,6
+0024,,dollar,7
+0025,,percent,8
+0026,,ampersand,9
+0027,,quotesingle,10
+0028,,parenleft,11
+0029,,parenright,12
+002A,,asterisk,13
+002B,,plus,14
+002C,,comma,15
+002D,,hyphen,16
+002E,,period,17
+002F,,slash,18
+0030,,zero,19
+0031,,one,20
+0032,,two,21
+0033,,three,22
+0034,,four,23
+0035,,five,24
+0036,,six,25
+0037,,seven,26
+0038,,eight,27
+0039,,nine,28
+003A,,colon,29
+003B,,semicolon,30
+003C,,less,31
+003D,,equal,32
+003E,,greater,33
+003F,,question,34
+0040,,at,35
+0041,,A,36
+0042,,B,37
+0043,,C,38
+0044,,D,39
+0045,,E,40
+0046,,F,41
+0047,,G,42
+0048,,H,43
+0049,,I,44
+004A,,J,45
+004B,,K,46
+004C,,L,47
+004D,,M,48
+004E,,N,49
+004F,,O,50
+0050,,P,51
+0051,,Q,52
+0052,,R,53
+0053,,S,54
+0054,,T,55
+0055,,U,56
+0056,,V,57
+0057,,W,58
+0058,,X,59
+0059,,Y,60
+005A,,Z,61
+005B,,bracketleft,62
+005C,,backslash,63
+005D,,bracketright,64
+005E,,asciicircum,65
+005F,,underscore,66
+0060,,grave,67
+0061,,a,68
+0062,,b,69
+0063,,c,70
+0064,,d,71
+0065,,e,72
+0066,,f,73
+0067,,g,74
+0068,,h,75
+0069,,i,76
+006A,,j,77
+006B,,k,78
+006C,,l,79
+006D,,m,80
+006E,,n,81
+006F,,o,82
+0070,,p,83
+0071,,q,84
+0072,,r,85
+0073,,s,86
+0074,,t,87
+0075,,u,88
+0076,,v,89
+0077,,w,90
+0078,,x,91
+0079,,y,92
+007A,,z,93
+007B,,braceleft,94
+007C,,bar,95
+007D,,braceright,96
+007E,,asciitilde,97
+00A0,,uni00A0,98
+00A1,,exclamdown,99
+00A2,,cent,100
+00A3,,sterling,101
+00A4,,currency,102
+00A5,,yen,103
+00A6,,brokenbar,104
+00A7,,section,105
+00A8,,dieresis,106
+00A9,,copyright,107
+00AA,,ordfeminine,108
+00AB,,guillemotleft,109
+00AC,,logicalnot,110
+00AD,,uni00AD,111
+00AE,,registered,112
+00AF,,macron,113
+00B0,,degree,114
+00B1,,plusminus,115
+00B2,,twosuperior,116
+00B3,,threesuperior,117
+00B4,,acute,118
+00B5,,mu,119
+00B6,,paragraph,120
+00B7,,periodcentered,121
+00B8,,cedilla,122
+00B9,,onesuperior,123
+00BA,,ordmasculine,124
+00BB,,guillemotright,125
+00BC,,onequarter,126
+00BD,,onehalf,127
+00BE,,threequarters,128
+00BF,,questiondown,129
+00C0,,Agrave,130
+00C1,,Aacute,131
+00C2,,Acircumflex,132
+00C3,,Atilde,133
+00C4,,Adieresis,134
+00C5,,Aring,135
+00C6,,AE,136
+00C7,,Ccedilla,137
+00C8,,Egrave,138
+00C9,,Eacute,139
+00CA,,Ecircumflex,140
+00CB,,Edieresis,141
+00CC,,Igrave,142
+00CD,,Iacute,143
+00CE,,Icircumflex,144
+00CF,,Idieresis,145
+00D0,,Eth,146
+00D1,,Ntilde,147
+00D2,,Ograve,148
+00D3,,Oacute,149
+00D4,,Ocircumflex,150
+00D5,,Otilde,151
+00D6,,Odieresis,152
+00D7,,multiply,153
+00D8,,Oslash,154
+00D9,,Ugrave,155
+00DA,,Uacute,156
+00DB,,Ucircumflex,157
+00DC,,Udieresis,158
+00DD,,Yacute,159
+00DE,,Thorn,160
+00DF,,germandbls,161
+00E0,,agrave,162
+00E1,,aacute,163
+00E2,,acircumflex,164
+00E3,,atilde,165
+00E4,,adieresis,166
+00E5,,aring,167
+00E6,,ae,168
+00E7,,ccedilla,169
+00E8,,egrave,170
+00E9,,eacute,171
+00EA,,ecircumflex,172
+00EB,,edieresis,173
+00EC,,igrave,174
+00ED,,iacute,175
+00EE,,icircumflex,176
+00EF,,idieresis,177
+00F0,,eth,178
+00F1,,ntilde,179
+00F2,,ograve,180
+00F3,,oacute,181
+00F4,,ocircumflex,182
+00F5,,otilde,183
+00F6,,odieresis,184
+00F7,,divide,185
+00F8,,oslash,186
+00F9,,ugrave,187
+00FA,,uacute,188
+00FB,,ucircumflex,189
+00FC,,udieresis,190
+00FD,,yacute,191
+00FE,,thorn,192
+00FF,,ydieresis,193
+0131,,dotlessi,194
+0152,,OE,195
+0153,,oe,196
+0160,,Scaron,197
+0161,,scaron,198
+0178,,Ydieresis,199
+017D,,Zcaron,200
+017E,,zcaron,201
+0192,,florin,202
+02C6,,circumflex,203
+02C7,,caron,204
+02D0,,uni02D0,204.10
+02D8,,breve,205
+02D9,,dotaccent,206
+02DA,,ring,207
+02DB,,ogonek,208
+02DC,,tilde,209
+034F,,uni034F,210
+02DD,,hungarumlaut,211
+03C0,,pi,212
+1C00,,uni1C00,300
+,,uni1C001C24,300.10
+,,uni1C001C25,300.20
+,,uni1C001C251C24,300.30
+1C01,,uni1C01,301
+,,uni1C011C24,301.10
+1C02,,uni1C02,302
+,,uni1C021C24,302.10
+1C03,,uni1C03,303
+,,uni1C031C24,303.10
+,,uni1C031C25,303.20
+,,uni1C031C251C24,303.30
+1C04,,uni1C04,304
+,,uni1C041C24,304.10
+1C05,,uni1C05,305
+,,uni1C051C24,305.10
+,,uni1C051C25,305.20
+,,uni1C051C251C24,305.30
+1C06,,uni1C06,306
+1C07,,uni1C07,307
+1C08,,uni1C08,308
+1C09,,uni1C09,309
+1C0A,,uni1C0A,310
+,,uni1C0A1C24,310.10
+1C0B,,uni1C0B,311
+,,uni1C0B1C24,311.10
+1C0C,,uni1C0C,312
+,,uni1C0C1C24,312.10
+1C0D,,uni1C0D,313
+1C0E,,uni1C0E,314
+,,uni1C0E1C24,314.10
+,,uni1C0E1C25,314.20
+,,uni1C0E1C251C24,314.30
+1C0F,,uni1C0F,315
+,,uni1C0F1C24,315.10
+1C10,,uni1C10,316
+,,uni1C101C24,316.10
+1C11,,uni1C11,317
+,,uni1C111C24,317.10
+,,uni1C111C25,317.20
+,,uni1C111C251C24,317.30
+1C12,,uni1C12,318
+,,uni1C121C24,318.10
+1C13,,uni1C13,319
+,,uni1C131C24,319.10
+,,uni1C131C25,319.20
+,,uni1C131C251C24,319.30
+1C14,,uni1C14,320
+,,uni1C141C24,320.10
+1C15,,uni1C15,321
+,,uni1C151C24,321.10
+,,uni1C151C25,321.20
+,,uni1C151C251C24,321.30
+1C16,,uni1C16,322
+,,uni1C161C24,322.10
+1C17,,uni1C17,323
+1C18,,uni1C18,324
+1C19,,uni1C19,325
+1C1A,,uni1C1A,326
+1C1B,,uni1C1B,327
+,,uni1C1B1C24,327.10
+1C1C,,uni1C1C,328
+,,uni1C1C1C24,328.10
+1C1D,,uni1C1D,329
+,,uni1C1D1C24,329.10
+,,uni1C1D1C25,329.20
+,,uni1C1D1C251C24,329.30
+1C1E,,uni1C1E,330
+,,uni1C1E1C24,330.10
+1C1F,,uni1C1F,331
+,,uni1C1F1C24,331.10
+1C20,,uni1C20,332
+1C21,,uni1C21,333
+,,uni1C211C24,333.10
+1C22,,uni1C22,334
+1C23,,uni1C23,335
+,,uni1C231C24,335.10
+1C24,,uni1C24,336
+1C25,,uni1C25,337
+1C26,,uni1C26,338
+1C27,,uni1C27,339
+,,uni1C271C35,339.10
+1C28,,uni1C28,340
+,,uni1C281C35,340.10
+1C29,,uni1C29,341
+,,uni1C291C2D,341.10
+,,uni1C291C2E,341.20
+,,uni1C291C2F,341.30
+,,uni1C291C30,341.40
+,,uni1C291C31,341.50
+,,uni1C291C32,341.60
+,,uni1C291C33,341.70
+,,uni1C291C35,341.80
+1C2A,,uni1C2A,342
+1C2B,,uni1C2B,343
+1C2C,,uni1C2C,344
+1C2D,,uni1C2D,345
+,,uni1C2D1C36,345.10
+1C2E,,uni1C2E,346
+,,uni1C2E1C36,346.10
+1C2F,,uni1C2F,347
+,,uni1C2F1C36,347.10
+1C30,,uni1C30,348
+,,uni1C301C36,348.10
+1C31,,uni1C31,349
+,,uni1C311C36,349.10
+1C32,,uni1C32,350
+,,uni1C321C36,350.10
+1C33,,uni1C33,351
+,,uni1C331C36,351.10
+1C34,,uni1C34,352
+1C35,,uni1C35,353
+1C36,,uni1C36,354
+1C37,,uni1C37,355
+1C3B,,uni1C3B,356
+1C3C,,uni1C3C,357
+1C3D,,uni1C3D,358
+1C3E,,uni1C3E,359
+1C3F,,uni1C3F,360
+1C40,,uni1C40,361
+1C41,,uni1C41,362
+1C42,,uni1C42,363
+1C43,,uni1C43,364
+1C44,,uni1C44,365
+1C45,,uni1C45,366
+1C46,,uni1C46,367
+1C47,,uni1C47,368
+1C48,,uni1C48,369
+1C49,,uni1C49,370
+1C4D,,uni1C4D,371
+1C4E,,uni1C4E,372
+1C4F,,uni1C4F,373
+2000,,uni2000,400.10
+2001,,uni2001,400.20
+2002,,uni2002,400.30
+2003,,uni2003,400.40
+2004,,uni2004,400.50
+2005,,uni2005,400.60
+2006,,uni2006,400.70
+2007,,uni2007,400.80
+2008,,uni2008,400.90
+2009,,uni2009,401.10
+200A,,uni200A,401.20
+200B,,uni200B,401.30
+200C,,uni200C,401.40
+200D,,uni200D,401.50
+200E,,uni200E,401.60
+200F,,uni200F,401.70
+2010,,uni2010,401.80
+2011,,uni2011,401.90
+2012,,figuredash,402
+2013,,endash,402.10
+2014,,emdash,402.20
+2015,,uni2015,402.30
+2018,,quoteleft,402.50
+2019,,quoteright,402.60
+201A,,quotesinglbase,402.70
+201C,,quotedblleft,405
+201D,,quotedblright,406
+201E,,quotedblbase,407
+2020,,dagger,408
+2021,,daggerdbl,409
+2022,,bullet,410
+2026,,ellipsis,411
+2027,,uni2027,411.10
+2028,,uni2028,411.20
+2029,,uni2029,411.30
+202A,,uni202A,411.40
+202B,,uni202B,411.50
+202C,,uni202C,411.60
+202D,,uni202D,411.70
+202E,,uni202E,411.80
+202F,,uni202F,411.90
+2030,,perthousand,412
+2039,,guilsinglleft,413
+203A,,guilsinglright,414
+2044,,fraction,415
+2060,,uni2060,415.10
+20AC,,Euro,416
+2122,,trademark,417
+2126,,Omega,417.10
+2202,,partialdiff,419
+2206,,Delta,420
+220F,,product,421
+2211,,summation,422
+2219,,uni2219,423
+221A,,radical,424
+221E,,infinity,425
+222B,,integral,426
+2248,,approxequal,427
+2260,,notequal,428
+2264,,lessequal,429
+2265,,greaterequal,430
+2423,,blank,430.10
+25CA,,lozenge,431
+25CC,,uni25CC,432
+FB01,,fi,433
+FB02,,fl,434
+FE00,,uniFE00,435
+FE01,,uniFE01,436
+FE02,,uniFE02,437
+FE03,,uniFE03,438
+FE04,,uniFE04,439
+FE05,,uniFE05,440
+FE06,,uniFE06,441
+FE07,,uniFE07,442
+FE08,,uniFE08,443
+FE09,,uniFE09,444
+FE0A,,uniFE0A,445
+FE0B,,uniFE0B,446
+FE0C,,uniFE0C,447
+FE0D,,uniFE0D,448
+FE0E,,uniFE0E,449
+FE0F,,uniFE0F,450
+FEFF,,uniFEFF,451
+FFFC,,uniFFFC,452
+FFFD,,uniFFFD,453
+,,uni1C191C37,454
+,,uni1C1B1C37,455
+,,uni1C001C371C25,456
+,,uni1C031C371C25,457
+,,uni1C1D1C371C25,458
+,,uni1C101C37,459
+,,uni1C211C37,460
+,,uni1C001C371C24,461
+,,uni1C001C371C251C24,462
+,,uni1C031C371C24,463
+,,uni1C131C371C25,464
+,,uni1C1D1C371C24,465
+,,uni1C1D1C371C251C24,466

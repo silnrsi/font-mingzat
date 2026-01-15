@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata version="1.0">
-  <uniqueid id="“org.sil.fonts”.mingzat.1.100" />
-  <vendor name="SIL Global" url="https://www.sil.org" />
+  <uniqueid id="org.sil.fonts.Mingzat.1.100" />
+  <vendor name="SIL Global" url="https://software.sil.org/wstech/" />
   <credits>
     <credit
       name="Walt Agee"
@@ -29,7 +29,7 @@
       role="Font designer (for Lepcha)"
     />
   </credits>
-  <description>
+  <description url="https://software.sil.org/mingzat">
     <text lang="en">
       Mingzat is based on Jason Glavy's JG Lepcha font which was a custom-encoded
       font. We have used his design with his generous permission. He also agreed
@@ -41,45 +41,9 @@
       state-of-the-art font technologies (Graphite and OpenType) to support the
       need for conjuncts and to position arbitrary combinations of Lepcha glyphs
       and combining marks optimally.
-      
-      One font from this typeface family is included in this release:
-      
-      * Mingzat Regular
-      
-      ChangeLog
-      ---------
-      (This should list both major and minor changes, most recent first.)
-      
-      29 Apr 2022 Mingzat font updated (Lorna Evans) Mingzat version 1.200
-      - Update nonbreakingspace space to match space
-      - Update fs bit to 7
-      
-      7 Oct 2019 Mingzat font updated (Sharon Correll) Mingzat version 1.000
-      - Move font to new build system
-      - Update OpenType because modern computers now support the Lepcha script
-      - Update Graphite to fix issue with reordering
-      - Add Latin characters to support Recommended characters for non-Roman fonts
-      
-      25 Sep 2013 Mingzat font updated (Lorna Evans) Mingzat version 0.100
-      - Graphite was updated to handle above AND below marks with conjuncts
-      (OpenType was already okay)
-      
-      14 Dec 2011 Mingzat font created (Lorna Priest) Mingzat version 0.020
-      - Basic Latin characters were added (from SIL Sophia)
-      - Lepcha characters were added (U+1C3B..U+1C3E, U+1C4D..U+1C4F)
-      - Unicode encoded
-      - OpenType and Graphite code added for Lepcha conjuncts and combining marks
-      - adjustment of a few shapes
-      
-      23 Jan 2008 (SIL NRSI team) SIL Sophia original source files
-      - First version released under the SIL Open Font License
-      - Used as sources for the SIL Encore Fonts, v. 3
-      
-      25 Nov 2001 JG Lepcha font created (Jason Glavy)
-      - release of custom encoded JG Lepcha
     </text>
   </description>
-  <license url="https://openfontlicense.org/" id="org.sil.ofl.1.1">
+  <license url="https://openfontlicense.org" id="org.openfontlicense.1.1">
     <text lang="en">
       Lepcha glyph design copyright (c) 2001, GlavyFonts and copyright (c) 2006 Athinkra, LLC with Reserved Font Name "Lepcha".
         
@@ -135,4 +99,7 @@
       Lepcha glyph design copyright (c) 2001, GlavyFonts and copyright (c) 2006 Athinkra, LLC. OpenType and Graphite code copyright (c) 2010-2026, SIL Global (https://www.sil.org/). Latin glyph design copyright (c) 1994-2026, SIL Global (https://www.sil.org/).
     </text>
   </copyright>
+  <trademark>
+    <text lang="en">Mingzat is a trademark of SIL Global.</text>
+  </trademark>
 </metadata>
