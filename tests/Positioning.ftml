@@ -4,7 +4,7 @@
   <head>
     <fontscale>250</fontscale>
   	<fontsrc label="Reg-Gr">url(../references/Mingzat-Regular.ttf)</fontsrc>
-  	<fontsrc label="Reg-OT">url(../references/MingzatOT-Regular.ttf)</fontsrc>
+  	<fontsrc label="Reg-OT New">url(../results/Mingzat-Regular.ttf)</fontsrc>
   	<styles>
   		<style feats="'smcp' 1" name="fset_smcp"/>
   		<style feats="'cv17' 1" name="fset_cv17_1"/>

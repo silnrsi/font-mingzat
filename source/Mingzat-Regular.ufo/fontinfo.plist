@@ -12,27 +12,8 @@
   <integer>-670</integer>
   <key>familyName</key>
   <string>Mingzat</string>
-  <key>guidelines</key>
-  <array>
-    <dict>
-      <key>y</key>
-      <integer>365</integer>
-    </dict>
-    <dict>
-      <key>y</key>
-      <integer>979</integer>
-    </dict>
-    <dict>
-      <key>y</key>
-      <integer>451</integer>
-    </dict>
-    <dict>
-      <key>y</key>
-      <integer>979</integer>
-    </dict>
-  </array>
   <key>openTypeHeadCreated</key>
-  <string>2026/01/15 11:59:54</string>
+  <string>2026/01/15 14:03:30</string>
   <key>openTypeHheaAscender</key>
   <integer>1427</integer>
   <key>openTypeHheaDescender</key>
@@ -112,19 +93,6 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
     <integer>0</integer>
     <integer>29</integer>
   </array>
-  <key>openTypeOS2Panose</key>
-  <array>
-    <integer>2</integer>
-    <integer>0</integer>
-    <integer>0</integer>
-    <integer>0</integer>
-    <integer>0</integer>
-    <integer>0</integer>
-    <integer>0</integer>
-    <integer>0</integer>
-    <integer>0</integer>
-    <integer>0</integer>
-  </array>
   <key>openTypeOS2Selection</key>
   <array>
     <integer>7</integer>
@@ -189,11 +157,6 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
   <integer>1427</integer>
   <key>openTypeOS2WinDescent</key>
   <integer>670</integer>
-  <key>postscriptBlueValues</key>
-  <array>
-    <integer>-20</integer>
-    <integer>0</integer>
-  </array>
   <key>postscriptFontName</key>
   <string>Mingzat-Regular</string>
   <key>postscriptFullName</key>
