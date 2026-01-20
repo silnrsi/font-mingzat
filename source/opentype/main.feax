@@ -1,6 +1,13 @@
+#**********************************
 #
-# Hand-crafted FEA code
+# Mingzat OpenType code
+# Copyright (c) 2010-2026 SIL Global (https://www.sil.org)
+# Released under the MIT License (https://opensource.org/licenses/MIT)
 #
+#**********************************
+
+
+include(../../source/opentype/classes.txt);
 
 languagesystem DFLT dflt;
 languagesystem lepc dflt;
@@ -38,16 +45,6 @@ lookup FontCheck {
 # Substitution lookups
 #
 
-@OrigRight = [ uni1C27  uni1C28  uni1C29
-    uni1C291C2D  uni1C291C2E  uni1C291C2F  uni1C291C30
-    uni1C291C31  uni1C291C32  uni1C291C33  uni1C291C35 
-    uni1C35 ] ;
-    
-@MovedLeft = [ uni1C27left  uni1C28left  uni1C29left
-    uni1C291C2Dleft  uni1C291C2Eleft  uni1C291C2Fleft  uni1C291C30left
-    uni1C291C31left  uni1C291C32left  uni1C291C33left  uni1C291C35left
-    uni1C35left ] ;
-
 lookup MarkMovedLeft {
    # Mark left-side vowels as having been reordered; this happens immediately after the 
    # automatic reordering. This keeps them from being reordered again in the custom rules.
@@ -60,12 +57,6 @@ lookup MarkMovedLeft {
 # This is a kludge for InDesign which does not handle the nuktas correctly
 # (cons signs following forms with nuktas are not attached).
 # Here we only handle nuktas that happen in real life.
-
-@ConsNukta = [ uni1C101C37  uni1C191C37  uni1C1B1C37  uni1C211C37  
-		uni1C001C371C25  uni1C001C371C24  uni1C001C371C251C24
-		uni1C031C371C25  uni1C031C371C24  uni1C031C371C251C24
-		uni1C131C371C25
-		uni1C1D1C371C25  uni1C1D1C371C24  uni1C1D1C371C251C24] ;
 
 lookup NuktaLigs {
 
@@ -91,8 +82,6 @@ lookup NuktaLigs {
 # Move final mark onto Vtl ligature
 # This should be done before built-in OT reordering.
 
-@MarksOnVtl =  [ uni1C2D      uni1C2E    uni1C2F     uni1C30     uni1C31     uni1C32     uni1C33     uni1C35     ] ;
-@VtlPlusMark = [ uni1C291C2D uni1C291C2E uni1C291C2F uni1C291C30 uni1C291C31 uni1C291C32 uni1C291C33 uni1C291C35 ] ;
 
 lookup VtlMarkLig {
 		sub uni1C29'  @MarksOnVtl' by  @VtlPlusMark;
@@ -101,31 +90,7 @@ lookup VtlMarkLig {
 
 #--- Ra/Ya ligatures ---
 
-@Cons =   [  #uni25CC
-		uni1C00  uni1C01  uni1C02  uni1C03  uni1C04  uni1C05  uni1C06  uni1C07  uni1C08
-		uni1C09  uni1C0A  uni1C0B  uni1C0C  uni1C0D  uni1C0E  uni1C0F  uni1C10  uni1C11  uni1C12
-		uni1C13  uni1C14  uni1C15  uni1C16  uni1C17  uni1C18  uni1C19  uni1C1A  uni1C1B  uni1C1C
-		uni1C1D  uni1C1E  uni1C1F  uni1C20  uni1C21  uni1C22  uni1C23  uni1C4D  uni1C4E  uni1C4F ] ;
-
-@TakesYa = [
-		uni1C00      uni1C01      uni1C02      uni1C03      uni1C04      uni1C05      uni1C0A      uni1C0B
-    uni1C0C      uni1C0E      uni1C0F      uni1C10      uni1C11      uni1C12      uni1C13      uni1C14  
-    uni1C15      uni1C16      uni1C1B      uni1C1C      uni1C1D      uni1C1E      uni1C1F      uni1C21      uni1C23 ] ;
-@ConsYa = [
-		uni1C001C24  uni1C011C24  uni1C021C24  uni1C031C24  uni1C041C24  uni1C051C24  uni1C0A1C24  uni1C0B1C24
-    uni1C0C1C24  uni1C0E1C24  uni1C0F1C24  uni1C101C24  uni1C111C24  uni1C121C24  uni1C131C24  uni1C141C24
-    uni1C151C24  uni1C161C24  uni1C1B1C24  uni1C1C1C24  uni1C1D1C24  uni1C1E1C24  uni1C1F1C24  uni1C211C24  uni1C231C24 ] ;
-
-@TakesRaAndRaYa = [ 
-    uni1C00          uni1C03          uni1C05          uni1C0E          uni1C11
-    uni1C13          uni1C15          uni1C1D ] ;
-@ConsRa =     [
-    uni1C001C25      uni1C031C25      uni1C051C25      uni1C0E1C25      uni1C111C25
-    uni1C131C25      uni1C151C25      uni1C1D1C25 ] ;
-@ConsRaYa =  [
-    uni1C001C251C24  uni1C031C251C24  uni1C051C251C24  uni1C0E1C251C24  uni1C111C251C24
-    uni1C131C251C24  uni1C151C251C24  uni1C1D1C251C24 ] ;
-    
+ 
 lookup RaYaLigatures {
 
 	lookupflag IgnoreMarks;
@@ -134,30 +99,6 @@ lookup RaYaLigatures {
   	sub @TakesRaAndRaYa  uni1C25  uni1C24  by  @ConsRaYa ;
   	
 } RaYaLigatures;
-
-
-
-@ConsAll = [ @Cons  @ConsYa  @ConsRa  @ConsRaYa  @ConsNukta ] ;
-
-@N = [ uni1C37 ] ;
-@K = [ uni1C35 ] ;
-@Ran   = [ uni1C36 ] ;
-
-# top-left vowel (1C29) with cons-sign marks:
-@VtlAll = [ uni1C29  uni1C291C2D uni1C291C2E uni1C291C2F uni1C291C30 uni1C291C31 uni1C291C32 uni1C291C33 uni1C291C35 ] ;
-
-@Vright = [ uni1C26  uni1C2A  uni1C2B ] ;
-@Vleft =  [ uni1C27  uni1C28 ] ;
-@Vbottom = [uni1C2C ] ;
-@Vrb = [ @Vright  @Vbottom ] ;
-
-
-@Left = [ @VtlAll  @Vleft  uni1C34  uni1C35 ] ;
-@LeftWRan = [ @VtlAll ] ;  # left vowels that also require moving the Ran (NOT left consonants)
-
-@Vall = [ @Vright  @VtlAll  @Vleft  @Vbottom ];
-
-@BogusNull = [ uniE000 ] ;
 
 # Delete the original vowel (and ran or kang) that has now been moved to the left.
 lookup _del_extra {
@@ -174,8 +115,6 @@ lookup _del_extra {
 # KLUDGE needed for InDesign which doesn't do reordering.
 
 # Alternate kang glyph which will not be reordered a second time:
-@Kleft = [ uni1C35left ];
-
 
 lookup _ins_V1C27K { sub @ConsAll  by  @Kleft  uni1C27  @ConsAll;   } _ins_V1C27K ;
 lookup _ins_V1C28K { sub @ConsAll  by  @Kleft  uni1C28  @ConsAll;   } _ins_V1C28K ;
@@ -347,8 +286,6 @@ lookup Reorder_Cry_VallC {  # also handles cons signs
 } Reorder_Cry_VallC ;
 
 
-@M = [ uni1C2D  uni1C2E  uni1C2F  uni1C30  uni1C31  uni1C32  uni1C33 ] ;
-
 lookup Reorder_CryN_V_delV {
 
 	sub @Left'  @M'  by  @M ;
@@ -397,7 +334,6 @@ lookup _delMark {
 # I'm not sure that it's really necessary to include the consonant and nukta in the context
 # of these rules, but it feels safer.
 
-@ConsOrN = [ @ConsAll  @N ];
 
 lookup Reorder_Vrt_Mt {
   # We should be able to use the following statement and remove the rules with the
@@ -427,7 +363,6 @@ lookup Reorder_Vrt_Mt {
 
 # They only occur at the end of syllables, after cons ligatures + nuktas + top-left vowel.
 
-@RaYaLigs = [ @ConsRa  @ConsYa  @ConsRaYa ] ;
 
 lookup DeleteBogusNull {
 	lookupflag IgnoreMarks ;
@@ -443,9 +378,6 @@ lookup DeleteBogusNull2 {
 
 #--- Vowel-sign-I + Kang ligature ---
 
-@Kall = [ uni1C35  uni1C35left ];
-@Iall = [ uni1C27  uni1C27left ];
-
 lookup SignIKang {
 	lookupflag IgnoreMarks;
 	  # If the reordering was done by the client engine, the kang will be the original, uni1C35.
@@ -456,41 +388,6 @@ lookup SignIKang {
 	      { sub  $k  $i  by  uni1C271C35; }  # note that they have been reordered
 
 } SignIKang ;
-
-
-#********************************************
-# Positioning lookups
-#
-
-#markClass uni1C37 <anchor -409 -180> @_N;
-
-lookup AttachMarks {
-	lookupflag 0;
-		pos base @U mark @_U ;
-		pos base @L mark @_L ;
-} AttachMarks ;
-
-
-lookup AttachMarks2 {
-	lookupflag 0;
-		pos mark @U_MarkBase mark @_U ;
-		pos mark @L_MarkBase mark @_L ;    # attach 1C2C to nukta
-} AttachMarks2 ;
-
-
-#--- Kludge to handle nukta + lower diacritic ---
-
-# Normally the 1C2C diacritic would attach to the lower nukta.  That doesn't work
-# presumably because of the reordering that was needed to create the base ligature
-# (pulling the nukta out from between the base and the ra/ya).
-# So we just shift the diacritic down instead of attaching it.
-
-lookup ShiftNukta1C2C {
-
-	lookupflag 0;
-		pos  @RaYaLigs  @N  uni1C2C' <0 -380 0 0> ;
-		
-} ShiftNukta1C2C ;
 
 
 #************************************************************
@@ -573,9 +470,39 @@ feature clig {  # Contextual Ligatures
 } clig ;
 
 
-#************************************************************
-# GPOS features                                             *
-#************************************************************
+#**********************************
+# GPOS (Positioning) lookups
+#**********************************
+
+#markClass uni1C37 <anchor -409 -180> @_N;
+
+lookup AttachMarks {
+	lookupflag 0;
+		pos base @U mark @_U ;
+		pos base @L mark @_L ;
+} AttachMarks ;
+
+
+lookup AttachMarks2 {
+	lookupflag 0;
+		pos mark @U_MarkBase mark @_U ;
+		pos mark @L_MarkBase mark @_L ;    # attach 1C2C to nukta
+} AttachMarks2 ;
+
+
+#--- Kludge to handle nukta + lower diacritic ---
+
+# Normally the 1C2C diacritic would attach to the lower nukta.  That doesn't work
+# presumably because of the reordering that was needed to create the base ligature
+# (pulling the nukta out from between the base and the ra/ya).
+# So we just shift the diacritic down instead of attaching it.
+
+lookup ShiftNukta1C2C {
+
+	lookupflag 0;
+		pos  @RaYaLigs  @N  uni1C2C' <0 -380 0 0> ;
+		
+} ShiftNukta1C2C ;
 
 feature mark {
 
