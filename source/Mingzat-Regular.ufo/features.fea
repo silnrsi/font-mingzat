@@ -1,6 +1,6 @@
 
 # Main Classes
-@GDEF_bases = [.notdef A AE Aacute Acircumflex Adieresis Agrave Aring Atilde B C Ccedilla D Delta E Eacute Ecircumflex Edieresis Egrave Eth Euro F G H I Iacute Icircumflex Idieresis Igrave J K L M N Ntilde O OE Oacute Ocircumflex Odieresis Ograve Omega Oslash Otilde P Q R S Scaron T Thorn U Uacute Ucircumflex Udieresis Ugrave V W X Y Yacute Ydieresis Z Zcaron a aacute acircumflex acute adieresis ae agrave ampersand approxequal aring asciicircum asciitilde asterisk at atilde b backslash bar blank braceleft braceright bracketleft bracketright breve brokenbar bullet c caron ccedilla cedilla cent circumflex colon comma copyright currency d dagger daggerdbl degree dieresis divide dollar dotaccent dotlessi e eacute ecircumflex edieresis egrave eight ellipsis emdash endash equal eth exclam exclamdown f fi figuredash five fl florin four fraction g germandbls grave greater greaterequal guillemotleft guillemotright guilsinglleft guilsinglright h hungarumlaut hyphen i iacute icircumflex idieresis igrave infinity integral j k l less lessequal logicalnot lozenge m macron mu multiply n nine notequal ntilde numbersign o oacute ocircumflex odieresis oe ogonek ograve one onehalf onequarter onesuperior ordfeminine ordmasculine oslash otilde p paragraph parenleft parenright partialdiff percent period periodcentered perthousand pi plus plusminus product q question questiondown quotedbl quotedblbase quotedblleft quotedblright quoteleft quoteright quotesinglbase quotesingle r radical registered ring s scaron section semicolon seven six slash space sterling summation t thorn three threequarters threesuperior tilde trademark two twosuperior u uacute ucircumflex udieresis ugrave underscore uni00A0 uni00AD uni02D0 uni034F uni1C00 uni1C001C24 uni1C001C25 uni1C001C251C24 uni1C001C371C24 uni1C001C371C25 uni1C001C371C251C24 uni1C01 uni1C011C24 uni1C02 uni1C021C24 uni1C03 uni1C031C24 uni1C031C25 uni1C031C251C24 uni1C031C371C24 uni1C031C371C25 uni1C031C371C251C24 uni1C04 uni1C041C24 uni1C05 uni1C051C24 uni1C051C25 uni1C051C251C24 uni1C06 uni1C07 uni1C08 uni1C09 uni1C0A uni1C0A1C24 uni1C0B uni1C0B1C24 uni1C0C uni1C0C1C24 uni1C0D uni1C0E uni1C0E1C24 uni1C0E1C25 uni1C0E1C251C24 uni1C0F uni1C0F1C24 uni1C10 uni1C101C24 uni1C101C37 uni1C11 uni1C111C24 uni1C111C25 uni1C111C251C24 uni1C12 uni1C121C24 uni1C13 uni1C131C24 uni1C131C25 uni1C131C251C24 uni1C131C371C25 uni1C14 uni1C141C24 uni1C15 uni1C151C24 uni1C151C25 uni1C151C251C24 uni1C16 uni1C161C24 uni1C17 uni1C18 uni1C19 uni1C191C37 uni1C1A uni1C1B uni1C1B1C24 uni1C1B1C37 uni1C1C uni1C1C1C24 uni1C1D uni1C1D1C24 uni1C1D1C25 uni1C1D1C251C24 uni1C1D1C371C24 uni1C1D1C371C25 uni1C1D1C371C251C24 uni1C1E uni1C1E1C24 uni1C1F uni1C1F1C24 uni1C20 uni1C21 uni1C211C24 uni1C211C37 uni1C22 uni1C23 uni1C231C24 uni1C24 uni1C25 uni1C26 uni1C27 uni1C271C35 uni1C27left uni1C28 uni1C281C35 uni1C28left uni1C29 uni1C291C2D uni1C291C2Dleft uni1C291C2E uni1C291C2Eleft uni1C291C2F uni1C291C2Fleft uni1C291C30 uni1C291C30left uni1C291C31 uni1C291C31left uni1C291C32 uni1C291C32left uni1C291C33 uni1C291C33left uni1C291C35 uni1C291C35left uni1C29left uni1C2A uni1C2B uni1C34 uni1C35 uni1C35left uni1C3B uni1C3C uni1C3D uni1C3E uni1C3F uni1C40 uni1C41 uni1C42 uni1C43 uni1C44 uni1C45 uni1C46 uni1C47 uni1C48 uni1C49 uni1C4D uni1C4E uni1C4F uni2000 uni2001 uni2002 uni2003 uni2004 uni2005 uni2006 uni2007 uni2008 uni2009 uni200A uni200B uni200C uni200D uni200E uni200F uni2010 uni2011 uni2015 uni2027 uni2028 uni2029 uni202A uni202B uni202C uni202D uni202E uni202F uni2060 uni2219 uni25CC uniE000 uniFE00 uniFE01 uniFE02 uniFE03 uniFE04 uniFE05 uniFE06 uniFE07 uniFE08 uniFE09 uniFE0A uniFE0B uniFE0C uniFE0D uniFE0E uniFE0F uniFEFF uniFFFC uniFFFD v w x y yacute ydieresis yen z zcaron zero];
+@GDEF_bases = [.notdef A AE Aacute Acircumflex Adieresis Agrave Aring Atilde B C Ccedilla D Delta E Eacute Ecircumflex Edieresis Egrave Eth Euro F G H I Iacute Icircumflex Idieresis Igrave J K L M N Ntilde O OE Oacute Ocircumflex Odieresis Ograve Omega Oslash Otilde P Q R S Scaron T Thorn U Uacute Ucircumflex Udieresis Ugrave V W X Y Yacute Ydieresis Z Zcaron a aacute acircumflex acute adieresis ae agrave ampersand approxequal aring asciicircum asciitilde asterisk at atilde b backslash bar blank braceleft braceright bracketleft bracketright breve brokenbar bullet c caron ccedilla cedilla cent circumflex colon comma copyright currency d dagger daggerdbl degree dieresis divide dollar dotaccent dotlessi e eacute ecircumflex edieresis egrave eight ellipsis emdash endash equal eth exclam exclamdown f fi figuredash five fl florin four fraction g germandbls grave greater greaterequal guillemotleft guillemotright guilsinglleft guilsinglright h hungarumlaut hyphen i iacute icircumflex idieresis igrave infinity integral j k l less lessequal logicalnot lozenge m macron mu multiply n nine notequal ntilde numbersign o oacute ocircumflex odieresis oe ogonek ograve one onehalf onequarter onesuperior ordfeminine ordmasculine oslash otilde p paragraph parenleft parenright partialdiff percent period periodcentered perthousand pi plus plusminus product q question questiondown quotedbl quotedblbase quotedblleft quotedblright quoteleft quoteright quotesinglbase quotesingle r radical registered ring s scaron section semicolon seven six slash space sterling summation t thorn three threequarters threesuperior tilde trademark two twosuperior u uacute ucircumflex udieresis ugrave underscore uni00A0 uni00AD uni02D0 uni034F uni1C00 uni1C001C24 uni1C001C25 uni1C001C251C24 uni1C001C371C24 uni1C001C371C25 uni1C001C371C251C24 uni1C01 uni1C011C24 uni1C02 uni1C021C24 uni1C03 uni1C031C24 uni1C031C25 uni1C031C251C24 uni1C031C371C24 uni1C031C371C25 uni1C031C371C251C24 uni1C04 uni1C041C24 uni1C05 uni1C051C24 uni1C051C25 uni1C051C251C24 uni1C06 uni1C07 uni1C08 uni1C09 uni1C0A uni1C0A1C24 uni1C0B uni1C0B1C24 uni1C0C uni1C0C1C24 uni1C0D uni1C0E uni1C0E1C24 uni1C0E1C25 uni1C0E1C251C24 uni1C0F uni1C0F1C24 uni1C10 uni1C101C24 uni1C101C37 uni1C11 uni1C111C24 uni1C111C25 uni1C111C251C24 uni1C12 uni1C121C24 uni1C13 uni1C131C24 uni1C131C25 uni1C131C251C24 uni1C131C371C25 uni1C14 uni1C141C24 uni1C15 uni1C151C24 uni1C151C25 uni1C151C251C24 uni1C16 uni1C161C24 uni1C17 uni1C18 uni1C19 uni1C191C37 uni1C1A uni1C1B uni1C1B1C24 uni1C1B1C37 uni1C1C uni1C1C1C24 uni1C1D uni1C1D1C24 uni1C1D1C25 uni1C1D1C251C24 uni1C1D1C371C24 uni1C1D1C371C25 uni1C1D1C371C251C24 uni1C1E uni1C1E1C24 uni1C1F uni1C1F1C24 uni1C20 uni1C21 uni1C211C24 uni1C211C37 uni1C22 uni1C23 uni1C231C24 uni1C24 uni1C25 uni1C26 uni1C27 uni1C271C35 uni1C27left uni1C28 uni1C281C35 uni1C28left uni1C29 uni1C291C2D uni1C291C2D1C36left uni1C291C2Dleft uni1C291C2E uni1C291C2E1C36left uni1C291C2Eleft uni1C291C2F uni1C291C2F1C36left uni1C291C2Fleft uni1C291C30 uni1C291C301C36left uni1C291C30left uni1C291C31 uni1C291C311C36left uni1C291C31left uni1C291C32 uni1C291C321C36left uni1C291C32left uni1C291C33 uni1C291C331C36left uni1C291C33left uni1C291C35 uni1C291C351C36left uni1C291C35left uni1C291C36 uni1C291C36left uni1C29left uni1C2A uni1C2B uni1C34 uni1C35 uni1C35left uni1C3B uni1C3C uni1C3D uni1C3E uni1C3F uni1C40 uni1C41 uni1C42 uni1C43 uni1C44 uni1C45 uni1C46 uni1C47 uni1C48 uni1C49 uni1C4D uni1C4E uni1C4F uni2000 uni2001 uni2002 uni2003 uni2004 uni2005 uni2006 uni2007 uni2008 uni2009 uni200A uni200B uni200C uni200D uni200E uni200F uni2010 uni2011 uni2015 uni2027 uni2028 uni2029 uni202A uni202B uni202C uni202D uni202E uni202F uni2060 uni2219 uni25CC uniE000 uniFE00 uniFE01 uniFE02 uniFE03 uniFE04 uniFE05 uniFE06 uniFE07 uniFE08 uniFE09 uniFE0A uniFE0B uniFE0C uniFE0D uniFE0E uniFE0F uniFEFF uniFFFC uniFFFD v w x y yacute ydieresis yen z zcaron zero];
 @GDEF_marks = [uni1C2C uni1C2D uni1C2D1C36 uni1C2E uni1C2E1C36 uni1C2F uni1C2F1C36 uni1C30 uni1C301C36 uni1C31 uni1C311C36 uni1C32 uni1C321C36 uni1C33 uni1C331C36 uni1C36 uni1C37];
 
 # Positioning classes and statements
@@ -61,7 +61,7 @@
 # baseClass uni1C37 <anchor -409 -559> @L_MarkBase;
 
 # AP: U
-@U = [uni1C00 uni1C001C25 uni1C001C251C24 uni1C001C371C25 uni1C001C371C251C24 uni1C001C24 uni1C001C371C24 uni1C01 uni1C011C24 uni1C02 uni1C021C24 uni1C03 uni1C031C24 uni1C031C25 uni1C031C251C24 uni1C031C371C24 uni1C031C371C25 uni1C031C371C251C24 uni1C04 uni1C041C24 uni1C05 uni1C051C24 uni1C051C25 uni1C051C251C24 uni1C06 uni1C07 uni1C08 uni1C09 uni1C0A uni1C0A1C24 uni1C0B uni1C0B1C24 uni1C0C uni1C0C1C24 uni1C0D uni1C0E uni1C0E1C24 uni1C0E1C25 uni1C0E1C251C24 uni1C0F uni1C0F1C24 uni1C10 uni1C101C24 uni1C101C37 uni1C11 uni1C111C24 uni1C111C25 uni1C111C251C24 uni1C12 uni1C121C24 uni1C13 uni1C131C24 uni1C131C25 uni1C131C251C24 uni1C131C371C25 uni1C1F1C24 uni1C14 uni1C141C24 uni1C15 uni1C151C24 uni1C151C25 uni1C151C251C24 uni1C16 uni1C161C24 uni1C17 uni1C18 uni1C19 uni1C191C37 uni1C1A uni1C1B uni1C1B1C37 uni1C1B1C24 uni1C1C uni1C1C1C24 uni1C1D uni1C1D1C24 uni1C1D1C25 uni1C1D1C251C24 uni1C1D1C371C24 uni1C1D1C371C25 uni1C1D1C371C251C24 uni1C1E uni1C1E1C24 uni1C1F uni1C20 uni1C21 uni1C211C24 uni1C211C37 uni1C22 uni1C23 uni1C231C24 uni1C29 uni1C291C2Dleft uni1C29left uni1C291C2D uni1C291C2E uni1C291C2Eleft uni1C291C2F uni1C291C2Fleft uni1C291C30 uni1C291C30left uni1C291C31 uni1C291C31left uni1C291C32 uni1C291C32left uni1C291C33 uni1C291C33left uni1C291C35 uni1C291C35left uni1C4D uni1C4E uni1C4F uni25CC];
+@U = [uni1C00 uni1C001C25 uni1C001C251C24 uni1C001C371C25 uni1C001C371C251C24 uni1C001C24 uni1C001C371C24 uni1C01 uni1C011C24 uni1C02 uni1C021C24 uni1C03 uni1C031C24 uni1C031C25 uni1C031C251C24 uni1C031C371C24 uni1C031C371C25 uni1C031C371C251C24 uni1C04 uni1C041C24 uni1C05 uni1C051C24 uni1C051C25 uni1C051C251C24 uni1C06 uni1C07 uni1C08 uni1C09 uni1C0A uni1C0A1C24 uni1C0B uni1C0B1C24 uni1C0C uni1C0C1C24 uni1C0D uni1C0E uni1C0E1C24 uni1C0E1C25 uni1C0E1C251C24 uni1C0F uni1C0F1C24 uni1C10 uni1C101C24 uni1C101C37 uni1C11 uni1C111C24 uni1C111C25 uni1C111C251C24 uni1C12 uni1C121C24 uni1C13 uni1C131C24 uni1C131C25 uni1C131C251C24 uni1C131C371C25 uni1C1F1C24 uni1C14 uni1C141C24 uni1C15 uni1C151C24 uni1C151C25 uni1C151C251C24 uni1C16 uni1C161C24 uni1C17 uni1C18 uni1C19 uni1C191C37 uni1C1A uni1C1B uni1C1B1C37 uni1C1B1C24 uni1C1C uni1C1C1C24 uni1C1D uni1C1D1C24 uni1C1D1C25 uni1C1D1C251C24 uni1C1D1C371C24 uni1C1D1C371C25 uni1C1D1C371C251C24 uni1C1E uni1C1E1C24 uni1C1F uni1C20 uni1C21 uni1C211C24 uni1C211C37 uni1C22 uni1C23 uni1C231C24 uni1C29 uni1C291C2D1C36left uni1C29left uni1C291C2D uni1C291C2Dleft uni1C291C2E uni1C291C2E1C36left uni1C291C2Eleft uni1C291C2F uni1C291C2F1C36left uni1C291C2Fleft uni1C291C30 uni1C291C301C36left uni1C291C30left uni1C291C31 uni1C291C311C36left uni1C291C31left uni1C291C32 uni1C291C321C36left uni1C291C32left uni1C291C33 uni1C291C331C36left uni1C291C33left uni1C291C36 uni1C291C36left uni1C291C35 uni1C291C351C36left uni1C291C35left uni1C4D uni1C4E uni1C4F uni25CC];
 @U_MarkBase = [uni1C2D uni1C2E uni1C2F uni1C30 uni1C31 uni1C32 uni1C33];
 # baseClass [uni1C00 uni1C001C25 uni1C001C251C24 uni1C001C371C25 uni1C001C371C251C24] <anchor 810 680> @U;
 # baseClass [uni1C001C24 uni1C001C371C24] <anchor 795 680> @U;
@@ -106,15 +106,15 @@
 # baseClass uni1C22 <anchor 816 758> @U;
 # baseClass uni1C23 <anchor 515 760> @U;
 # baseClass uni1C231C24 <anchor 550 760> @U;
-# baseClass [uni1C29 uni1C291C2Dleft uni1C29left] <anchor 890 830> @U;
-# baseClass uni1C291C2D <anchor 874 1240> @U;
-# baseClass [uni1C291C2E uni1C291C2Eleft] <anchor 854 1080> @U;
-# baseClass [uni1C291C2F uni1C291C2Fleft] <anchor 854 1250> @U;
-# baseClass [uni1C291C30 uni1C291C30left] <anchor 874 1200> @U;
-# baseClass [uni1C291C31 uni1C291C31left] <anchor 884 1240> @U;
-# baseClass [uni1C291C32 uni1C291C32left] <anchor 854 1200> @U;
-# baseClass [uni1C291C33 uni1C291C33left] <anchor 854 1060> @U;
-# baseClass [uni1C291C35 uni1C291C35left] <anchor 1154 830> @U;
+# baseClass [uni1C29 uni1C291C2D1C36left uni1C29left] <anchor 890 830> @U;
+# baseClass [uni1C291C2D uni1C291C2Dleft] <anchor 874 1240> @U;
+# baseClass [uni1C291C2E uni1C291C2E1C36left uni1C291C2Eleft] <anchor 854 1080> @U;
+# baseClass [uni1C291C2F uni1C291C2F1C36left uni1C291C2Fleft] <anchor 854 1250> @U;
+# baseClass [uni1C291C30 uni1C291C301C36left uni1C291C30left] <anchor 874 1200> @U;
+# baseClass [uni1C291C31 uni1C291C311C36left uni1C291C31left] <anchor 884 1240> @U;
+# baseClass [uni1C291C32 uni1C291C321C36left uni1C291C32left] <anchor 854 1200> @U;
+# baseClass [uni1C291C33 uni1C291C331C36left uni1C291C33left uni1C291C36 uni1C291C36left] <anchor 854 1060> @U;
+# baseClass [uni1C291C35 uni1C291C351C36left uni1C291C35left] <anchor 1154 830> @U;
 # baseClass [uni1C4D uni1C4E] <anchor 398 680> @U;
 # baseClass uni1C4F <anchor 516 772> @U;
 # baseClass uni25CC <anchor 473 680> @U;
@@ -146,9 +146,64 @@ markClass uni1C321C36 <anchor -404 680> @_U;
 markClass uni1C33 <anchor -431 680> @_U;
 markClass uni1C331C36 <anchor -472 680> @_U;
 markClass uni1C36 <anchor -414 705> @_U;
+#**********************************
 #
-# Hand-crafted FEA code
+# Mingzat OpenType code
+# Copyright (c) 2010-2026 SIL Global (https://www.sil.org)
+# Released under the MIT License (https://opensource.org/licenses/MIT)
 #
+#**********************************
+#**********************************
+#
+# Copyright (c) 2025-2026 SIL Global  (https://www.sil.org)
+# Released under the MIT License (https://opensource.org/licenses/MIT)
+#
+#**********************************
+#**********************************
+#  Classes
+#**********************************
+# Next 2 should match
+@OrigRight = [uni1C27 uni1C28 uni1C29 uni1C291C2D uni1C291C2E uni1C291C2F uni1C291C30 uni1C291C31 uni1C291C32 uni1C291C33 uni1C291C35 uni1C35];
+@MovedLeft = [uni1C27left uni1C28left uni1C29left uni1C291C2Dleft uni1C291C2Eleft uni1C291C2Fleft uni1C291C30left uni1C291C31left uni1C291C32left uni1C291C33left uni1C291C35left uni1C35left];
+@ConsNukta = [uni1C101C37 uni1C191C37 uni1C1B1C37 uni1C211C37 uni1C001C371C25 uni1C001C371C24 uni1C001C371C251C24 uni1C031C371C25 uni1C031C371C24 uni1C031C371C251C24 uni1C131C371C25 uni1C1D1C371C25 uni1C1D1C371C24 uni1C1D1C371C251C24];
+# Next 2 should match
+@MarksOnVtl = [uni1C2D uni1C2E uni1C2F uni1C30 uni1C31 uni1C32 uni1C33 uni1C35];
+@VtlPlusMark = [uni1C291C2D uni1C291C2E uni1C291C2F uni1C291C30 uni1C291C31 uni1C291C32 uni1C291C33 uni1C291C35];
+@VtlPlusMarkRan = [uni1C291C2D1C36left uni1C291C2E1C36left uni1C291C2F1C36left uni1C291C301C36left uni1C291C311C36left uni1C291C321C36left uni1C291C331C36left uni1C291C351C36left];
+@Cons = [uni1C00 uni1C01 uni1C02 uni1C03 uni1C04 uni1C05 uni1C06 uni1C07 uni1C08 uni1C09 uni1C0A uni1C0B uni1C0C uni1C0D uni1C0E uni1C0F uni1C10 uni1C11 uni1C12 uni1C13 uni1C14 uni1C15 uni1C16 uni1C17 uni1C18 uni1C19 uni1C1A uni1C1B uni1C1C uni1C1D uni1C1E uni1C1F uni1C20 uni1C21 uni1C22 uni1C23 uni1C4D uni1C4E uni1C4F];
+#uni25CC
+@TakesYa = [uni1C00 uni1C01 uni1C02 uni1C03 uni1C04 uni1C05 uni1C0A uni1C0B uni1C0C uni1C0E uni1C0F uni1C10 uni1C11 uni1C12 uni1C13 uni1C14 uni1C15 uni1C16 uni1C1B uni1C1C uni1C1D uni1C1E uni1C1F uni1C21 uni1C23];
+@ConsYa = [uni1C001C24 uni1C011C24 uni1C021C24 uni1C031C24 uni1C041C24 uni1C051C24 uni1C0A1C24 uni1C0B1C24 uni1C0C1C24 uni1C0E1C24 uni1C0F1C24 uni1C101C24 uni1C111C24 uni1C121C24 uni1C131C24 uni1C141C24 uni1C151C24 uni1C161C24 uni1C1B1C24 uni1C1C1C24 uni1C1D1C24 uni1C1E1C24 uni1C1F1C24 uni1C211C24 uni1C231C24];
+@TakesRaAndRaYa = [uni1C00 uni1C03 uni1C05 uni1C0E uni1C11 uni1C13 uni1C15 uni1C1D];
+@ConsRa = [uni1C001C25 uni1C031C25 uni1C051C25 uni1C0E1C25 uni1C111C25 uni1C131C25 uni1C151C25 uni1C1D1C25];
+@ConsRaYa = [uni1C001C251C24 uni1C031C251C24 uni1C051C251C24 uni1C0E1C251C24 uni1C111C251C24 uni1C131C251C24 uni1C151C251C24 uni1C1D1C251C24];
+@ConsAll = [@Cons @ConsYa @ConsRa @ConsRaYa @ConsNukta];
+@N = [uni1C37];
+@K = [uni1C35];
+@Ran = [uni1C36];
+# top-left vowel (1C29) with cons-sign marks:
+@VtlAll = [uni1C29 uni1C291C2D uni1C291C2E uni1C291C2F uni1C291C30 uni1C291C31 uni1C291C32 uni1C291C33 uni1C291C35];
+# dependent vowels on right
+@Vright = [uni1C26 uni1C2A uni1C2B];
+# dependent vowels on left, not including the wrap around 1C29
+@Vleft = [uni1C27 uni1C28];
+# dependent vowels below
+@Vbottom = [uni1C2C];
+# dependent vowels that I guess don't need reordering
+@Vrb = [@Vright @Vbottom];
+@Left = [@VtlAll @Vleft uni1C34 uni1C35];
+@LeftWRan = [@VtlAll];
+# left vowels that also require moving the Ran (NOT left consonants)
+@Vall = [@Vright @VtlAll @Vleft @Vbottom];
+@BogusNull = [uniE000];
+# Alternate kang glyph which will not be reordered a second time:
+@Kleft = [uni1C35left];
+@M = [uni1C2D uni1C2E uni1C2F uni1C30 uni1C31 uni1C32 uni1C33];
+@ConsOrN = [@ConsAll @N];
+@RaYaLigs = [@ConsRa @ConsYa @ConsRaYa];
+#--- Vowel-sign-I + Kang ligature ---
+@Kall = [uni1C35 uni1C35left];
+@Iall = [uni1C27 uni1C27left];
 languagesystem DFLT dflt;
 languagesystem lepc dflt;
 #********************************************
@@ -173,8 +228,6 @@ lookup FontCheck {
 #********************************************
 # Substitution lookups
 #
-@OrigRight = [uni1C27 uni1C28 uni1C29 uni1C291C2D uni1C291C2E uni1C291C2F uni1C291C30 uni1C291C31 uni1C291C32 uni1C291C33 uni1C291C35 uni1C35];
-@MovedLeft = [uni1C27left uni1C28left uni1C29left uni1C291C2Dleft uni1C291C2Eleft uni1C291C2Fleft uni1C291C30left uni1C291C31left uni1C291C32left uni1C291C33left uni1C291C35left uni1C35left];
 lookup MarkMovedLeft {
     # Mark left-side vowels as having been reordered; this happens immediately after the 
     # automatic reordering. This keeps them from being reordered again in the custom rules.
@@ -185,7 +238,6 @@ lookup MarkMovedLeft {
 # This is a kludge for InDesign which does not handle the nuktas correctly
 # (cons signs following forms with nuktas are not attached).
 # Here we only handle nuktas that happen in real life.
-@ConsNukta = [uni1C101C37 uni1C191C37 uni1C1B1C37 uni1C211C37 uni1C001C371C25 uni1C001C371C24 uni1C001C371C251C24 uni1C031C371C25 uni1C031C371C24 uni1C031C371C251C24 uni1C131C371C25 uni1C1D1C371C25 uni1C1D1C371C24 uni1C1D1C371C251C24];
 lookup NuktaLigs {
     sub uni1C10 uni1C37 by uni1C101C37;
     sub uni1C19 uni1C37 by uni1C191C37;
@@ -205,8 +257,6 @@ lookup NuktaLigs {
 
 # Move final mark onto Vtl ligature
 # This should be done before built-in OT reordering.
-@MarksOnVtl = [uni1C2D uni1C2E uni1C2F uni1C30 uni1C31 uni1C32 uni1C33 uni1C35];
-@VtlPlusMark = [uni1C291C2D uni1C291C2E uni1C291C2F uni1C291C30 uni1C291C31 uni1C291C32 uni1C291C33 uni1C291C35];
 lookup VtlMarkLig {
     sub uni1C29' uni1C2D' by uni1C291C2D;
     sub uni1C29' uni1C2E' by uni1C291C2E;
@@ -216,16 +266,18 @@ lookup VtlMarkLig {
     sub uni1C29' uni1C32' by uni1C291C32;
     sub uni1C29' uni1C33' by uni1C291C33;
     sub uni1C29' uni1C35' by uni1C291C35;
+    sub uni1C29' uni1C36' by uni1C291C36left;
+    sub uni1C29' uni1C2D' uni1C36' by uni1C291C2D1C36left;
+    sub uni1C29' uni1C2E' uni1C36' by uni1C291C2E1C36left;
+    sub uni1C29' uni1C2F' uni1C36' by uni1C291C2F1C36left;
+    sub uni1C29' uni1C30' uni1C36' by uni1C291C301C36left;
+    sub uni1C29' uni1C31' uni1C36' by uni1C291C311C36left;
+    sub uni1C29' uni1C32' uni1C36' by uni1C291C321C36left;
+    sub uni1C29' uni1C33' uni1C36' by uni1C291C331C36left;
+    sub uni1C29' uni1C35' uni1C36' by uni1C291C351C36left;
 } VtlMarkLig;
 
 #--- Ra/Ya ligatures ---
-@Cons = [uni1C00 uni1C01 uni1C02 uni1C03 uni1C04 uni1C05 uni1C06 uni1C07 uni1C08 uni1C09 uni1C0A uni1C0B uni1C0C uni1C0D uni1C0E uni1C0F uni1C10 uni1C11 uni1C12 uni1C13 uni1C14 uni1C15 uni1C16 uni1C17 uni1C18 uni1C19 uni1C1A uni1C1B uni1C1C uni1C1D uni1C1E uni1C1F uni1C20 uni1C21 uni1C22 uni1C23 uni1C4D uni1C4E uni1C4F];
-#uni25CC
-@TakesYa = [uni1C00 uni1C01 uni1C02 uni1C03 uni1C04 uni1C05 uni1C0A uni1C0B uni1C0C uni1C0E uni1C0F uni1C10 uni1C11 uni1C12 uni1C13 uni1C14 uni1C15 uni1C16 uni1C1B uni1C1C uni1C1D uni1C1E uni1C1F uni1C21 uni1C23];
-@ConsYa = [uni1C001C24 uni1C011C24 uni1C021C24 uni1C031C24 uni1C041C24 uni1C051C24 uni1C0A1C24 uni1C0B1C24 uni1C0C1C24 uni1C0E1C24 uni1C0F1C24 uni1C101C24 uni1C111C24 uni1C121C24 uni1C131C24 uni1C141C24 uni1C151C24 uni1C161C24 uni1C1B1C24 uni1C1C1C24 uni1C1D1C24 uni1C1E1C24 uni1C1F1C24 uni1C211C24 uni1C231C24];
-@TakesRaAndRaYa = [uni1C00 uni1C03 uni1C05 uni1C0E uni1C11 uni1C13 uni1C15 uni1C1D];
-@ConsRa = [uni1C001C25 uni1C031C25 uni1C051C25 uni1C0E1C25 uni1C111C25 uni1C131C25 uni1C151C25 uni1C1D1C25];
-@ConsRaYa = [uni1C001C251C24 uni1C031C251C24 uni1C051C251C24 uni1C0E1C251C24 uni1C111C251C24 uni1C131C251C24 uni1C151C251C24 uni1C1D1C251C24];
 lookup RaYaLigatures {
     lookupflag IgnoreMarks;
     sub uni1C00 uni1C24 by uni1C001C24;
@@ -271,21 +323,6 @@ lookup RaYaLigatures {
     sub uni1C1D uni1C25 uni1C24 by uni1C1D1C251C24;
 } RaYaLigatures;
 
-@ConsAll = [@Cons @ConsYa @ConsRa @ConsRaYa @ConsNukta];
-@N = [uni1C37];
-@K = [uni1C35];
-@Ran = [uni1C36];
-# top-left vowel (1C29) with cons-sign marks:
-@VtlAll = [uni1C29 uni1C291C2D uni1C291C2E uni1C291C2F uni1C291C30 uni1C291C31 uni1C291C32 uni1C291C33 uni1C291C35];
-@Vright = [uni1C26 uni1C2A uni1C2B];
-@Vleft = [uni1C27 uni1C28];
-@Vbottom = [uni1C2C];
-@Vrb = [@Vright @Vbottom];
-@Left = [@VtlAll @Vleft uni1C34 uni1C35];
-@LeftWRan = [@VtlAll];
-# left vowels that also require moving the Ran (NOT left consonants)
-@Vall = [@Vright @VtlAll @Vleft @Vbottom];
-@BogusNull = [uniE000];
 # Delete the original vowel (and ran or kang) that has now been moved to the left.
 lookup _del_extra {
     sub uni1C00' @LeftWRan' @Ran' by uni1C00;
@@ -677,7 +714,6 @@ lookup _del_extra {
 #--- Reorder left-vowel and kang (when nukta is present) ---
 # KLUDGE needed for InDesign which doesn't do reordering.
 # Alternate kang glyph which will not be reordered a second time:
-@Kleft = [uni1C35left];
 lookup _ins_V1C27K {
     sub uni1C00 by @Kleft uni1C27 uni1C00;
     sub uni1C01 by @Kleft uni1C27 uni1C01;
@@ -6154,7 +6190,6 @@ lookup Reorder_Cry_VallC {
 
 } Reorder_Cry_VallC;
 
-@M = [uni1C2D uni1C2E uni1C2F uni1C30 uni1C31 uni1C32 uni1C33];
 lookup Reorder_CryN_V_delV {
     sub @Left' uni1C2D' by uni1C2D;
     sub @Left' uni1C2E' by uni1C2E;
@@ -6297,7 +6332,6 @@ lookup _delMark {
 
 # I'm not sure that it's really necessary to include the consonant and nukta in the context
 # of these rules, but it feels safer.
-@ConsOrN = [@ConsAll @N];
 lookup Reorder_Vrt_Mt {
     # We should be able to use the following statement and remove the rules with the
     # nuktas, but that seemed to break the entire lookup. Instead I just merged the
@@ -6327,7 +6361,6 @@ lookup Reorder_Vrt_Mt {
 
 #--- Delete bogus null glyph that was used as a kludge ---
 # They only occur at the end of syllables, after cons ligatures + nuktas + top-left vowel.
-@RaYaLigs = [@ConsRa @ConsYa @ConsRaYa];
 lookup DeleteBogusNull {
     lookupflag IgnoreMarks;
     sub uni1C00 @BogusNull by uni1C00;
@@ -6435,8 +6468,6 @@ lookup DeleteBogusNull2 {
 } DeleteBogusNull2;
 
 #--- Vowel-sign-I + Kang ligature ---
-@Kall = [uni1C35 uni1C35left];
-@Iall = [uni1C27 uni1C27left];
 lookup SignIKang {
     lookupflag IgnoreMarks;
     # If the reordering was done by the client engine, the kang will be the original, uni1C35.
@@ -6449,9 +6480,67 @@ lookup SignIKang {
 
 } SignIKang;
 
-#********************************************
-# Positioning lookups
-#
+#************************************************************
+# GSUB features                                             *
+#************************************************************
+feature ccmp {
+    # Glyph Composition/Decomposition
+    script lepc;
+    language dflt;
+    lookup FontCheck;
+    lookup VtlMarkLig;
+    # do before built-in OT reordering
+    script DFLT;
+    language dflt;
+    lookup FontCheck;
+    lookup VtlMarkLig;
+    lookup NuktaLigs;
+    # InDesign only
+    lookup RaYaLigatures;
+    lookup Reorder_CryN_VK;
+    lookup Reorder_CryNV_K;
+    lookup Reorder_CryN_delVK;
+    lookup Reorder_CryN_VR;
+    lookup Reorder_Cry_VR;
+    lookup Reorder_CryN_V;
+    lookup Reorder_CryN_VallC;
+    lookup Reorder_Cry_V;
+    lookup Reorder_Cry_VallC;
+    lookup Reorder_CryN_V_delV;
+    lookup Reorder_Vrt_Mt;
+    lookup DeleteBogusNull;
+    # harfbuzz actually reorders the bogus null glyph!!
+    lookup DeleteBogusNull2;
+} ccmp;
+
+#--- OpenType reordering occurs here, if there is any left to do. ---
+feature clig {
+    # Contextual Ligatures 
+    script lepc;
+    language dflt;
+    # Mark left-side vowels as having been reordered, to avoid another reorder:
+    lookup MarkMovedLeft;
+    lookup RaYaLigatures;
+    lookup Reorder_CryN_VK;
+    lookup Reorder_CryNV_K;
+    lookup Reorder_CryN_delVK;
+    lookup Reorder_CryN_VR;
+    lookup Reorder_Cry_VR;
+    lookup Reorder_CryN_V;
+    lookup Reorder_Cry_V;
+    lookup Reorder_CryN_V_delV;
+    lookup Reorder_Vrt_Mt;
+    lookup DeleteBogusNull;
+    lookup DeleteBogusNull2;
+    lookup SignIKang;
+    script DFLT;
+    language dflt;
+    lookup SignIKang;
+} clig;
+
+#**********************************
+# GPOS (Positioning) lookups
+#**********************************
 #markClass uni1C37 <anchor -409 -180> @_N;
 lookup AttachMarks {
     lookupflag 0;
@@ -6498,15 +6587,15 @@ lookup AttachMarks {
     pos base uni1C22 <anchor 816 758> mark @_U;
     pos base uni1C23 <anchor 515 760> mark @_U;
     pos base uni1C231C24 <anchor 550 760> mark @_U;
-    pos base [uni1C29 uni1C291C2Dleft uni1C29left] <anchor 890 830> mark @_U;
-    pos base uni1C291C2D <anchor 874 1240> mark @_U;
-    pos base [uni1C291C2E uni1C291C2Eleft] <anchor 854 1080> mark @_U;
-    pos base [uni1C291C2F uni1C291C2Fleft] <anchor 854 1250> mark @_U;
-    pos base [uni1C291C30 uni1C291C30left] <anchor 874 1200> mark @_U;
-    pos base [uni1C291C31 uni1C291C31left] <anchor 884 1240> mark @_U;
-    pos base [uni1C291C32 uni1C291C32left] <anchor 854 1200> mark @_U;
-    pos base [uni1C291C33 uni1C291C33left] <anchor 854 1060> mark @_U;
-    pos base [uni1C291C35 uni1C291C35left] <anchor 1154 830> mark @_U;
+    pos base [uni1C29 uni1C291C2D1C36left uni1C29left] <anchor 890 830> mark @_U;
+    pos base [uni1C291C2D uni1C291C2Dleft] <anchor 874 1240> mark @_U;
+    pos base [uni1C291C2E uni1C291C2E1C36left uni1C291C2Eleft] <anchor 854 1080> mark @_U;
+    pos base [uni1C291C2F uni1C291C2F1C36left uni1C291C2Fleft] <anchor 854 1250> mark @_U;
+    pos base [uni1C291C30 uni1C291C301C36left uni1C291C30left] <anchor 874 1200> mark @_U;
+    pos base [uni1C291C31 uni1C291C311C36left uni1C291C31left] <anchor 884 1240> mark @_U;
+    pos base [uni1C291C32 uni1C291C321C36left uni1C291C32left] <anchor 854 1200> mark @_U;
+    pos base [uni1C291C33 uni1C291C331C36left uni1C291C33left uni1C291C36 uni1C291C36left] <anchor 854 1060> mark @_U;
+    pos base [uni1C291C35 uni1C291C351C36left uni1C291C35left] <anchor 1154 830> mark @_U;
     pos base [uni1C4D uni1C4E] <anchor 398 680> mark @_U;
     pos base uni1C4F <anchor 516 772> mark @_U;
     pos base uni25CC <anchor 473 680> mark @_U;
@@ -6585,67 +6674,6 @@ lookup ShiftNukta1C2C {
     pos @RaYaLigs @N uni1C2C' <0 -380 0 0>;
 } ShiftNukta1C2C;
 
-#************************************************************
-# GSUB features                                             *
-#************************************************************
-feature ccmp {
-    # Glyph Composition/Decomposition
-    script lepc;
-    language dflt;
-    lookup FontCheck;
-    lookup VtlMarkLig;
-    # do before built-in OT reordering
-    script DFLT;
-    language dflt;
-    lookup FontCheck;
-    lookup VtlMarkLig;
-    lookup NuktaLigs;
-    # InDesign only
-    lookup RaYaLigatures;
-    lookup Reorder_CryN_VK;
-    lookup Reorder_CryNV_K;
-    lookup Reorder_CryN_delVK;
-    lookup Reorder_CryN_VR;
-    lookup Reorder_Cry_VR;
-    lookup Reorder_CryN_V;
-    lookup Reorder_CryN_VallC;
-    lookup Reorder_Cry_V;
-    lookup Reorder_Cry_VallC;
-    lookup Reorder_CryN_V_delV;
-    lookup Reorder_Vrt_Mt;
-    lookup DeleteBogusNull;
-    # harfbuzz actually reorders the bogus null glyph!!
-    lookup DeleteBogusNull2;
-} ccmp;
-
-#--- OpenType reordering occurs here, if there is any left to do. ---
-feature clig {
-    # Contextual Ligatures 
-    script lepc;
-    language dflt;
-    # Mark left-side vowels as having been reordered, to avoid another reorder:
-    lookup MarkMovedLeft;
-    lookup RaYaLigatures;
-    lookup Reorder_CryN_VK;
-    lookup Reorder_CryNV_K;
-    lookup Reorder_CryN_delVK;
-    lookup Reorder_CryN_VR;
-    lookup Reorder_Cry_VR;
-    lookup Reorder_CryN_V;
-    lookup Reorder_Cry_V;
-    lookup Reorder_CryN_V_delV;
-    lookup Reorder_Vrt_Mt;
-    lookup DeleteBogusNull;
-    lookup DeleteBogusNull2;
-    lookup SignIKang;
-    script DFLT;
-    language dflt;
-    lookup SignIKang;
-} clig;
-
-#************************************************************
-# GPOS features                                             *
-#************************************************************
 feature mark {
     lookup AttachMarks;
     lookup AttachMarks2;

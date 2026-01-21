@@ -85,6 +85,8 @@ lookup NuktaLigs {
 
 lookup VtlMarkLig {
 		sub uni1C29'  @MarksOnVtl' by  @VtlPlusMark;
+		sub uni1C29' uni1C36' by uni1C291C36left ;
+		sub uni1C29' @MarksOnVtl' uni1C36' by @VtlPlusMarkRan ;
 } VtlMarkLig ;
 
 

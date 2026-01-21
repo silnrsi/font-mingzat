@@ -27,8 +27,10 @@
 		uni1C1D1C371C25  uni1C1D1C371C24  uni1C1D1C371C251C24] ;
 
 # Next 2 should match
-@MarksOnVtl =  [ uni1C2D      uni1C2E    uni1C2F     uni1C30     uni1C31     uni1C32     uni1C33     uni1C35     ] ;
-@VtlPlusMark = [ uni1C291C2D uni1C291C2E uni1C291C2F uni1C291C30 uni1C291C31 uni1C291C32 uni1C291C33 uni1C291C35 ] ;
+@MarksOnVtl =  [ uni1C2D      uni1C2E    uni1C2F     uni1C30     uni1C31     uni1C32     uni1C33     uni1C35] ;
+@VtlPlusMark = [ uni1C291C2D uni1C291C2E uni1C291C2F uni1C291C30 uni1C291C31 uni1C291C32 uni1C291C33 uni1C291C35] ;
+
+@VtlPlusMarkRan = [ uni1C291C2D1C36left uni1C291C2E1C36left uni1C291C2F1C36left uni1C291C301C36left uni1C291C311C36left uni1C291C321C36left uni1C291C331C36left uni1C291C351C36left] ;
 
 @Cons =   [  #uni25CC
 		uni1C00  uni1C01  uni1C02  uni1C03  uni1C04  uni1C05  uni1C06  uni1C07  uni1C08
@@ -65,9 +67,17 @@
 # top-left vowel (1C29) with cons-sign marks:
 @VtlAll = [ uni1C29  uni1C291C2D uni1C291C2E uni1C291C2F uni1C291C30 uni1C291C31 uni1C291C32 uni1C291C33 uni1C291C35 ] ;
 
+# dependent vowels on right
 @Vright = [ uni1C26  uni1C2A  uni1C2B ] ;
+
+# dependent vowels on left, not including the wrap around 1C29
 @Vleft =  [ uni1C27  uni1C28 ] ;
+
+# dependent vowels below
+
 @Vbottom = [uni1C2C ] ;
+
+# dependent vowels that I guess don't need reordering
 @Vrb = [ @Vright  @Vbottom ] ;
 
 
