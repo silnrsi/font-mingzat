@@ -1,5 +1,5 @@
 README 
-Mingzat Release 1.100
+Mingzat
 ========================
 
 Thank you for your interest in the Mingzat font.
@@ -22,10 +22,9 @@ As this font is distributed at no cost, we are unable to provide a
 commercial level of personal technical support. The font has, however, 
 been through some testing on various platforms to be sure it works in most
 situations. In particular, it has been tested and shown to work on 
-Windows 7. Graphite capabilities have been tested 
-on Graphite-supported platforms.
+Windows 11. 
 
-If you do find a problem, please do report it to fonts@sil.org.
+If you do find a problem, please do report it on the contact form at https://software.sil.org/mingzat.
 We can't guarantee any direct response, but will try to fix reported bugs in
 future versions. 
 
@@ -46,10 +45,10 @@ keyboard is available:
 https://keyman.com/keyboards/sil_lepcha
 
 Rendering:
-This font is designed to work with Graphite or Opentype advanced font 
+This font is designed to work with the Opentype advanced font 
 technologies. To take advantage of the advanced typographic 
 capabilities of this font, you must be using applications that provide an
-adequate level of support for Graphite or OpenType. 
+adequate level of support for OpenType. 
 
 Lepcha is a complex Indic script which requires reordering. At this time, 
 there is little (or no) support for the Lepcha script in commercial rendering 
@@ -70,6 +69,3 @@ CONTACT
 For more information please visit the Mingzat page on SIL Global's
 Computers and Writing systems website:
 https://software.sil.org/mingzat
-
-Or send an email to fonts@sil.org
-

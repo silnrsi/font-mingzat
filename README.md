@@ -2,7 +2,7 @@
 
 Mingzat is based on Jason Glavy's JG Lepcha font which was a custom-encoded font. We have used his design with his generous permission. He also agreed to allow the font to be released under the SIL Open Font License (OFL). 
 
-This font has both OpenType and Graphite support. 
+This font has OpenType support. 
 
 ## See also
 

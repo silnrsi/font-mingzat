@@ -23,11 +23,6 @@ designspace('source/' + FAMILY + '.designspace',
             target = "${DS:FILENAME_BASE}.ttf",
             ap = 'source/${DS:FILENAME_BASE}_ap.xml',
             version = VERSION,  # Needed to ensure dev information on version string
-#            graphite = gdl('./source/Mingzat_glyphs.gdl',
-#                    master = 'source/graphite/main.gdl', 
-#                    params = '-D -w3541 -w2504 -w4510',
-#                    depends = ['source/graphite/main.gdl', 'source/graphite/stddef.gdh']
-#                ),
             opentype = fea('source/${DS:FILENAME_BASE}.fea',
                     master = 'source/opentype/main.feax',     # 'source/opentype/${DS:FILENAME_BASE}.fea',
                     mapfile = 'source/${DS:FILENAME_BASE}.map'
