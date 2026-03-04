@@ -4,6 +4,6 @@
   <anchor x="874" y="1200" name="U"/>
   <outline>
     <component base="uni1C291C30"/>
-    <component base="uni1C36" xOffset="1291" yOffset="490"/>
+    <component base="uni1C36" xOffset="1291" yOffset="510"/>
   </outline>
 </glyph>
