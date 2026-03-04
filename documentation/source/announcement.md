@@ -3,7 +3,7 @@ title: Mingzat - Announcement
 fontversion: 1.200
 ---
 
-### Release Notes for Version 2.100
+### Release Notes for Version 1.200
 
 #### Changes
 
