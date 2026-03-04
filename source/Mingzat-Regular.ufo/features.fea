@@ -200,6 +200,9 @@ markClass [uniE000 uniFE00 uniFE01 uniFE02 uniFE03 uniFE04 uniFE05 uniFE06 uniFE
 #--- Vowel-sign-I + Kang ligature ---
 @Kall = [uni1C35 uni1C35left];
 @Iall = [uni1C27 uni1C27left];
+#**********************************
+#  Language Systems
+#**********************************
 languagesystem DFLT dflt;
 languagesystem lepc dflt;
 #********************************************

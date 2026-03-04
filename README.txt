@@ -46,7 +46,7 @@ https://keyman.com/keyboards/sil_lepcha
 
 Rendering:
 This font is designed to work with the Opentype advanced font 
-technologies. To take advantage of the advanced typographic 
+technology. To take advantage of the advanced typographic 
 capabilities of this font, you must be using applications that provide an
 adequate level of support for OpenType. 
 

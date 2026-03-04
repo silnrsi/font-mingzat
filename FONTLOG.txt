@@ -26,7 +26,7 @@ One font from this typeface family is included in this release:
 ---------
 (This should list both major and minor changes, most recent first.)
 
-### 2026-0x-xx (SIL WSTech team) Mingzat version 1.200
+### 2026 Mar 05 (SIL WSTech team) Mingzat version 1.200
 - Fixed positioning of LEPCHA SIGN RAN above LEPCHA VOWEL SIGN OO in OpenType
 - Fixed positioning of LEPCHA CONSONANT SIGN NYIN-DO in Opentype for combinations considered non-valid
 - Removed Graphite support
@@ -66,14 +66,14 @@ One font from this typeface family is included in this release:
 
 We welcome contributions to this font project, such as new glyphs, enhanced 
 smart font code, or bug fixes. The best way to begin the process is to file 
-an issue in the Github project (https://github.com/silnrsi/font-lateef) 
+an issue in the Github project (https://github.com/silnrsi/font-mingzat) 
 or respond to an existing issue and express your interest. Then we can begin 
 to correspond with you regarding what all might be required and discuss how 
 to best submit your contributions.
 
 To enable us to accept contributions in a way that honors your contribution 
 and respects your copyright while preserving long-term flexibility for open 
-source licensing, you would also need to agree to the SIL International 
+source licensing, you would also need to agree to the SIL Global 
 Contributor License Agreement for Font Software (v1.0) prior to sending us 
 your contribution. To read more about this requirement and find out how to 
 submit the required form, please visit the CLA information page

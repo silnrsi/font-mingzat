@@ -27,8 +27,6 @@ Mingzat is a font for the Lepcha script which is used by the <a href="https://ww
 </tbody>
 </table>
 
-A selection of characters from various other Unicode blocks is included in Mingzat. A utility such as <a href="http://scripts.sil.org/ViewGlyph_home" title="" class="external">SIL ViewGlyph</a> can be used to examine the exact repertoire of this font.
-
 ¹Inclusion of basic Latin repertoire is provided as a convenience, e.g., for use in menus or for displaying markup in text files. These fonts are not intended for extensive Latin script use.
 
 This <a href="https://software.sil.org/downloads/r/mingzat/Mingzat-typesample.pdf">Type Sample</a> document demonstrates the characters and a sample text.
@@ -51,7 +49,7 @@ A compiled and uncompiled TECkit <a href="https://github.com/silnrsi/wsresources
 
 <h3>Keyboarding</h3>
 
-Mingzat can be used with any Unicode Lepcha keyboarding program. The <a href="https://keyman.com/keyboards/sil_lepcha" title="" class="external">Lepcha (SIL) Unicode keyboard</a> for MacOS and Windows is based on a phonetic representation of the script.
+Mingzat can be used with any Unicode Lepcha keyboarding program. The <a href="https://keyman.com/keyboards/sil_lepcha" title="" class="external">Lepcha (SIL) keyboard</a> for Linux, MacOS, Windows, and mobile devices is based on a phonetic representation of the script.
 
 <h3 id="downloads">Downloads</h3>
 
@@ -63,13 +61,12 @@ This font is licensed under the <a href="https://openfontlicense.org/" title="" 
 
 [sil_download style="table" sort="name" where="info.type == 'font'"]
 
-<h3>Release Notes for Version 1.100</h3>
+<h3>Release Notes for Version 1.200</h3>
 
 <ul>
-<li>Update fs bit to 7</li>
-<li>Update advanced width of U+00A0 NO-BREAK SPACE to match U+0020 SPACE</li>
-<li>Update advanced width of U+2008 PUNCTUATION SPACE to match U+002E FULL STOP</li>
-<li>Added visible square box to .notdef</li>
+<li>Fixed positioning of LEPCHA SIGN RAN above LEPCHA VOWEL SIGN OO in OpenType</li>
+<li>Fixed positioning of LEPCHA CONSONANT SIGN NYIN-DO in Opentype for combinations considered non-valid</li>
+<li>Removed Graphite support</li>
 </ul>
 
 <h4>Known issues</h4>
@@ -108,11 +105,11 @@ Mingzat is licensed according to the terms of the SIL Open Font License. The lat
 
 <h3 id="support">Support</h3>
 
-As these fonts and utilities are distributed at no cost, we are unable to provide a commercial level of personal technical support. We will, however, try to resolve problems that are reported to us.
+These fonts are provided at no cost; however, they are expensive to produce and maintain. Please consider donating to SIL’s font development efforts to support future development. Go to <a href="https://give.sil.org/give/485238">SIL’s Give Direct page</a>. <strong>Thank you!</strong>
 
-We do hope that you will report problems so they can be addressed in future releases. Even if you are not having any specific problems, but have an idea on how this system could be improved, we want to hear your ideas and suggestions.
 
-Please note that these fonts are intended for use by experienced computer users. Installing and using these fonts is not a trivial matter. The most effective technical support is usually provided by an experienced computer user who can personally sit down with you at your computer to troubleshoot the problem.
+we are unable to provide a commercial level of personal technical support. We will, however, try to resolve problems that are reported to us. We do hope that you will report problems so they can be addressed in future releases. Even if you are not having any specific problems, but have an idea on how this system could be improved, we want to hear your ideas and suggestions. These problems or suggestions can be reported to us through creating an issue on the <a href="https://github.com/silnrsi/font-mingzat/issues" title="" class="external">Github project</a>. 
+
 
 [top]
 

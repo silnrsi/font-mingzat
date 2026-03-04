@@ -9,6 +9,11 @@
 
 include(../../source/opentype/classes.txt);
 
+
+#**********************************
+#  Language Systems
+#**********************************
+
 languagesystem DFLT dflt;
 languagesystem lepc dflt;
 
