@@ -138,7 +138,7 @@ markClass uni1C30 <anchor -378 680> @_U;
 markClass uni1C31 <anchor -420 680> @_U;
 markClass uni1C32 <anchor -460 680> @_U;
 markClass uni1C33 <anchor -431 680> @_U;
-markClass uni1C36 <anchor -414 705> @_U;
+markClass uni1C36 <anchor -414 685> @_U;
 
 # AP: _none
 markClass [uniE000 uniFE00 uniFE01 uniFE02 uniFE03 uniFE04 uniFE05 uniFE06 uniFE07 uniFE08 uniFE09 uniFE0A uniFE0B uniFE0C uniFE0D uniFE0E uniFE0F] <anchor 0 0> @_none;
